@@ -5,10 +5,18 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    Vector2 movement;
     float inputX;
     float inputY;
-    float speed = 5f;
-    Vector2 movement;
+    
+    public float speed = 5f;
+    public float sprintSpeed = 7.5f;
+    public float accel = 2f;
+
+    bool isSlow = false;
+    public Rigidbody2D rigidBody;
+
+    LayerMask groundLayer;
 
 
 
@@ -23,6 +31,20 @@ public class PlayerMovement : MonoBehaviour
         inputX = Input.GetAxis("Horizontal");
         inputY = Input.GetAxis("Vertical");
 
-        transform.Translate(new Vector2(inputX, inputY) * Time.deltaTime * speed);
+        if (Input.GetKey("left shift"))
+        {
+            transform.Translate(new Vector2(inputX, inputY) * Time.deltaTime * (speed + sprintSpeed));
+        }
+        else {
+            transform.Translate(new Vector2(inputX, inputY) * Time.deltaTime * speed);
+        }
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.collider.CompareTag("Wall"))
+        {
+            rigidBody.velocity = Vector3.zero;
+        }
     }
 }
