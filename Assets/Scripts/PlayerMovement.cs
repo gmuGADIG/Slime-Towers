@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    //player movement variables
     Vector2 movement;
-    float inputX;
-    float inputY;
+    float inputX, inputY;
     
     public float speed = 5f;
     public float sprintSpeed = 7.5f;
@@ -15,8 +14,11 @@ public class PlayerMovement : MonoBehaviour
 
     bool isSlow = false;
     public Rigidbody2D rigidBody;
-
+    
     LayerMask groundLayer;
+
+
+    //player interaction
 
 
 
@@ -47,4 +49,10 @@ public class PlayerMovement : MonoBehaviour
             rigidBody.velocity = Vector3.zero;
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other)
+    }
+
 }
