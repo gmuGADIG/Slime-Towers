@@ -23,18 +23,23 @@ private float speed = 4.0f;
     	if (Input.GetKey(KeyCode.E)){
     	
     	}
-        if (Input.GetKey(KeyCode.LeftArrow)){
+
+        //If player inputs WASD or the arrow keys, it'll move the player object
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
 
         	rb2d.velocity = new Vector2(-speed, rb2d.velocity.y);
         }
-        if (Input.GetKey(KeyCode.RightArrow)){
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)){
 
         	rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
         }
-        if (Input.GetKey(KeyCode.DownArrow)){
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
         	rb2d.velocity = new Vector2(rb2d.velocity.x, -speed);
         }
-        if (Input.GetKey(KeyCode.UpArrow)){
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        {
         	rb2d.velocity = new Vector2(rb2d.velocity.x, speed);
         }
     }
