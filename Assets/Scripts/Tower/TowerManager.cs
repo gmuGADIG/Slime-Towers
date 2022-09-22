@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class TowerManager : MonoBehaviour
 {
-    private const int GRIDSIZE = 20;
+    public const int GRIDSIZE = 10;
+    public const int DISTANCEBETWEENCELLS = 2;
+
+    private GameObject[,] towerGrid = new GameObject[GRIDSIZE, GRIDSIZE];
 
     public Vector2 gridStart;
+    public GameObject towerPlaceholder;
 
     public Vector2Int FindMousePosition()
     {
@@ -19,7 +23,14 @@ public class TowerManager : MonoBehaviour
 
     void Start()
     {
-        
+        for(int i = 0; i < GRIDSIZE; i++)
+        {
+            for(int k = 0; k < GRIDSIZE; k++)
+            {
+                towerGrid[i, k] = Instantiate(towerPlaceholder, new Vector3(k*DISTANCEBETWEENCELLS + gridStart.x, i*DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
+            }
+
+        }
     }
 
     
