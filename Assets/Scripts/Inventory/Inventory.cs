@@ -4,16 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using System;
-using System.Linq;
-using System.Reflection;
 
-using Material = SlimeTowers.Material;
+using MaterialType = SlimeTowers.MaterialType;
 
 public class Inventory : MonoBehaviour
 {
-    Dictionary<Material.MaterialType, int> materials;
+    Dictionary<MaterialType, int> materials;
 
-    public Inventory() => materials = new Dictionary<Material.MaterialType, int>();
+    private void Start()
+    {
+        materials = new Dictionary<MaterialType, int>();
+        foreach (MaterialType mt in Enum.GetValues(typeof(MaterialType))) {
+            materials.Add(mt, 0);
+        }
+    }
 
     /// <summary>
     /// 
@@ -21,7 +25,7 @@ public class Inventory : MonoBehaviour
     /// <param name="materialType"></param>
     /// <returns>int with items remaining - if item type doesnt exist we return -1</returns>
 
-    public int MaterialsRemaining(Material.MaterialType materialType)
+    public int MaterialsRemaining(MaterialType materialType)
     {
         // check if the current material type exists
         int curMatCount = -1;
@@ -36,7 +40,7 @@ public class Inventory : MonoBehaviour
     /// </summary>
     /// <param name="material"></param>
     /// <returns>bool -> whether or not there are enough materials</returns>
-    public int RemoveType(Material.MaterialType materialType, int count)
+    public int RemoveType(MaterialType materialType, int count)
     {
         // check if the current material type exists
         int curMatCount = -1;
@@ -53,7 +57,7 @@ public class Inventory : MonoBehaviour
         return -1;
     }
 
-    public int AddItem(Material.MaterialType materialType, int count)
+    public int AddItem(MaterialType materialType, int count)
     {
         if (materials.ContainsKey(materialType)) {
             materials[materialType] += count;
