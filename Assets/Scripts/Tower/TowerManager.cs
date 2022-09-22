@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerManager : MonoBehaviour
+
 {
     public const int GRIDSIZE = 10;
     public const int DISTANCEBETWEENCELLS = 2;
@@ -28,6 +29,8 @@ public class TowerManager : MonoBehaviour
             for(int k = 0; k < GRIDSIZE; k++)
             {
                 towerGrid[i, k] = Instantiate(towerPlaceholder, new Vector3(k*DISTANCEBETWEENCELLS + gridStart.x, i*DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
+                towerGrid[i, k].GetComponent<Tower>().setPosition(k, i);
+                towerGrid[i, k].transform.SetParent(transform);
             }
 
         }
