@@ -9,7 +9,7 @@ public class EnemyBehavior : MonoBehaviour
     public Queue<Vector2> path;
     Vector3 target;
     Rigidbody2D rigidbody;
-    
+    float stunTimer = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +22,13 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Move();
+        if (stunTimer > 0)
+        {
+            stunTimer -= Time.deltaTime;
+        } else
+        {
+            Move();
+        }
         if (health <= 0) {
             Die();
         }
