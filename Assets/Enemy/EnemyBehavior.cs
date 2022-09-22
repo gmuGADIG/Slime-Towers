@@ -66,7 +66,10 @@ public class EnemyBehavior : MonoBehaviour
             {
                 Die();
             }
-            target = path.Dequeue();
+            else
+            {
+                target = path.Dequeue();
+            }
             
         }
 
