@@ -29,11 +29,11 @@ public class DrillControls : MonoBehaviour
     {
                 // FIRST: FIGURE OUT ANGLE (maybe move each of these to a seperate method lol)
         Vector3 mousePos = Input.mousePosition;
-        Vector2 playerPos = 0;  // i prolly need an object for player first lol.
+        Vector2 playerPos = new Vector2(0,0);  // i prolly need an object for player first lol.
 
-        int xDif = mousePos.x - playerPos.x;
-        int yDif = mousePos.y - playerPos.y;
-        angle = Mathf.Atan( yDif / xDif );
+        float xDif = mousePos.x - playerPos.x;
+        float yDif = mousePos.y - playerPos.y;
+        angle = Mathf.Atan( (yDif / xDif) );
 
         // Angle is a result in radians, between [(pi/2),-(pi/2)]
         // Arctan only makes angles in the 1st and 4th quadrants! Fix hehe
