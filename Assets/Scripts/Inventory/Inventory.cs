@@ -9,7 +9,7 @@ using MaterialType = SlimeTowers.MaterialType;
 
 public class Inventory : MonoBehaviour
 {
-    Dictionary<MaterialType, int> materials;
+    public Dictionary<MaterialType, int> materials;
 
     private void Start()
     {
