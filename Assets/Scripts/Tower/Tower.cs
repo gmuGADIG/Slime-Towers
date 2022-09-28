@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public enum Slime_Type
 {
@@ -16,7 +17,7 @@ public class Tower : MonoBehaviour
     //HP of tower
     private int HP = -1;
     //Name of the tower
-    private string name = "Tower";
+    private string towerName = "Tower";
     //Amount of damage this tower does
     private int damage = -1;
     //Type of slime in the tower
@@ -28,20 +29,31 @@ public class Tower : MonoBehaviour
     //Spriterenderer of this object
     public SpriteRenderer spriteRenderer;
 
-    private Vector2 position = new Vector2(0, 0);
+    private Vector2Int position = new Vector2Int(0, 0);
 
-    public void Start()
+    public void Awake()
     {
-        if (!exist)
-        {
-            //Sprite disabled here
-        }
+        //spriteRenderer.enabled = exist;
     }
 
-    public void setPosition(float posX, float posY)
+    public Vector2Int getPosition()
     {
+        return position;
+    }
 
+    public void setPosition(int x, int y)
+    {
+        position = new Vector2Int(x, y);
+    }
 
+    private void OnMouseEnter()
+    {
+        spriteRenderer.color = Color.red;
+    }
+
+    private void OnMouseExit()
+    {
+        spriteRenderer.color = Color.green;
     }
 
 }
