@@ -52,7 +52,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other)
+        if(other){
+            
+        }
     }
 
 }
