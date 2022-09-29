@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed = 7.5f;
     public float accel = 2f;
 
+    public Vector2 velocity;
+
     bool isSlow = false;
     public Rigidbody2D rigidBody;
     
@@ -35,11 +37,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("left shift"))
         {
-            transform.Translate(new Vector2(inputX, inputY) * Time.deltaTime * (speed + sprintSpeed));
+            velocity = new Vector2(inputX, inputY) * Time.deltaTime * (speed + sprintSpeed);
         }
         else {
-            transform.Translate(new Vector2(inputX, inputY) * Time.deltaTime * speed);
+            velocity = new Vector2(inputX, inputY) * Time.deltaTime * speed;
         }
+
+        transform.Translate(velocity);
     }
 
     void OnCollisionEnter(Collision col)
