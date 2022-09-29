@@ -9,7 +9,8 @@ public class WallTower : Tower
     {
         if (destroyMode)
         {
-
+            GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position, destroyMode);
+            Destroy(gameObject);
         }
     }
 }

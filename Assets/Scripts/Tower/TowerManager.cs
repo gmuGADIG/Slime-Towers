@@ -16,6 +16,8 @@ public class TowerManager : MonoBehaviour
     public GameObject[] towers;
     public int selectedTower = 0;
 
+    public bool destroyMode = false;
+
     public Vector2Int FindMousePosition()
     {
         Vector2Int gridPosition = new Vector2Int(0, 0);
@@ -40,16 +42,31 @@ public class TowerManager : MonoBehaviour
         }
     }
 
-    public void setTower(Vector2Int position)
+    public void setTower(Vector2Int position, bool destroy)
     {
         int i = position.x, k = position.y;
-        towerGrid[i, k] = Instantiate(towers[selectedTower], new Vector3(i * DISTANCEBETWEENCELLS + gridStart.x, k * DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
+        towerGrid[i, k] = Instantiate(destroy ? towerPlaceholder : towers[selectedTower], new Vector3(i * DISTANCEBETWEENCELLS + gridStart.x, k * DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
         towerGrid[i, k].GetComponent<Tower>().setPosition(k, i);
         towerGrid[i, k].transform.SetParent(transform);
     }
     
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            destroyMode = !destroyMode;
+            changeDeleteMode(destroyMode);
+        }
+    }
+
+    void changeDeleteMode(bool mode)
+    {
+        for(int i = 0; i < GRIDSIZE; i++)
+        {
+            for(int k = 0; k < GRIDSIZE; k++)
+            {
+                towerGrid[i, k].GetComponent<Tower>().setDestroyMode(mode);
+            }
+        }
     }
 }

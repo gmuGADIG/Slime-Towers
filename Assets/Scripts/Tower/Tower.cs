@@ -17,7 +17,7 @@ public class Tower : MonoBehaviour
     //HP of tower
     protected int HP = -1;
     //Name of the tower
-    protected string towerName = "Tower";
+    public string towerName = "Tower";
     //Amount of damage this tower does
     protected int damage = -1;
     //Type of slime in the tower
@@ -31,7 +31,7 @@ public class Tower : MonoBehaviour
     //If true allows towers to be destroyed and replaced with the placeholders
     protected bool destroyMode;
 
-    private Vector2Int position = new Vector2Int(0, 0);
+    protected Vector2Int position = new Vector2Int(0, 0);
 
     public void Awake()
     {
@@ -48,6 +48,16 @@ public class Tower : MonoBehaviour
         position = new Vector2Int(x, y);
     }
 
+    public void setDestroyMode(bool mode)
+    {
+        destroyMode = mode;
+    }
+
+    public string getTitle()
+    {
+        return towerName;
+    }
+
     private void OnMouseEnter()
     {
         //spriteRenderer.color = Color.red;
@@ -60,8 +70,22 @@ public class Tower : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position);
-        Destroy(gameObject);
+        if (towerName.Equals("Tower"))
+        {
+            if (!destroyMode)
+            {
+                GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position, destroyMode);
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            if (destroyMode)
+            {
+                GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position, destroyMode);
+                Destroy(gameObject);
+            }
+        }
     }
 
 }
