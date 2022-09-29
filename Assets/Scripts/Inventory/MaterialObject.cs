@@ -15,7 +15,7 @@ public class MaterialObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        collectEffect = GetComponentInChildren<ParticleSystem>();
     }
 
     // Update is called once per frame
