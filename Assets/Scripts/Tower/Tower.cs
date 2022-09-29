@@ -15,21 +15,21 @@ public enum Slime_Type
 public class Tower : MonoBehaviour
 {
     //HP of tower
-    int HP = -1;
+    protected int HP = -1;
     //Name of the tower
-    string towerName = "Tower";
+    protected string towerName = "Tower";
     //Amount of damage this tower does
-    int damage = -1;
+    protected int damage = -1;
     //Type of slime in the tower
-    Slime_Type slime = Slime_Type.None;
+    protected Slime_Type slime = Slime_Type.None;
     //Amount of pierce the bullet has
-    int piercing = 0;
+    protected int piercing = 0;
     //whether or not this tower exists
-    bool exist = false;
+    protected bool exist = false;
     //Spriterenderer of this object
     public SpriteRenderer spriteRenderer;
     //If true allows towers to be destroyed and replaced with the placeholders
-    bool destroyMode;
+    protected bool destroyMode;
 
     private Vector2Int position = new Vector2Int(0, 0);
 

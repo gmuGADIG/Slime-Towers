@@ -7,6 +7,9 @@ public class WallTower : Tower
 
     private void OnMouseDown()
     {
-        
+        if (destroyMode)
+        {
+
+        }
     }
 }
