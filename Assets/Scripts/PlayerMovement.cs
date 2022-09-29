@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    //player interaction variables
+    private PolygonCollider2D bodyCollider;
+    private CircleCollider2D interact2D;
+    private bool drillPresent = false;
+    private bool inDrill = false;
+
+    private List<GameObject> items;
+    private GameObject mostRecent;
+
+
+
     //player movement variables
     Vector2 movement;
     float inputX, inputY;
     
+        //modifiable values
     public float speed = 5f;
     public float sprintSpeed = 7.5f;
     public float accel = 2f;
 
-    bool isSlow = false;
+    public bool isSlow = false;
     public Rigidbody2D rigidBody;
     
     LayerMask groundLayer;
-
-
-    //player interaction
 
 
 
@@ -28,32 +38,48 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    void Update()
-    {
+    void Update() {
+        
+        //player movement
         inputX = Input.GetAxis("Horizontal");
         inputY = Input.GetAxis("Vertical");
-
-        if (Input.GetKey("left shift"))
-        {
+        if (Input.GetKey("left shift")){
             transform.Translate(new Vector2(inputX, inputY) * Time.deltaTime * (speed + sprintSpeed));
         }
         else {
             transform.Translate(new Vector2(inputX, inputY) * Time.deltaTime * speed);
         }
+
+        //player interact
+        if (Input.GetButtonDown("E")) { 
+            if (drillPresent) {
+
+            }
+        }
+
     }
 
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.collider.CompareTag("Wall"))
-        {
-            rigidBody.velocity = Vector3.zero;
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag.Equals("Drill")){
+            //highlight drill
+            Debug.Log("Drill in Range");
+            drillPresent = true;
+            mostRecent = collision.gameObject;  //stores object in script
+        }
+        else {
+            mostRecent = collision.gameObject;  //stores object in script
+            items.Add(collision.gameObject);
         }
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if(other){
-            
+    private void OnTriggerExit2D(Collider2D collision){
+        if (collision.tag.Equals("Drill")){
+            //unhighlight drill
+            Debug.Log("Drill out of range");
+            drillPresent = false;
+
+            items.Add(collision.gameObject);
+
         }
     }
 
