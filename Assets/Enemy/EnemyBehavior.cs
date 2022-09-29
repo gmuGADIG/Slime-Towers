@@ -33,6 +33,21 @@ public class EnemyBehavior : MonoBehaviour
             Die();
         }
     }
+
+    GameObject GetClosestTower()
+    {
+        GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
+        if (towers.Length == 0) return null;
+        GameObject closest = towers[0];
+        //Iterate through the list of towers to find the closest one
+        for(int i = 1; i < towers.Length; i++)
+        {
+            //if(Vector3.Distance(towers[i].]))
+        }
+
+
+        return null;
+    }
     void Pathfind()
     {
         GameObject[] pathNodes = GameObject.FindGameObjectsWithTag("Finish");
