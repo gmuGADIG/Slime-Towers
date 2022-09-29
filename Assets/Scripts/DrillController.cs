@@ -5,15 +5,11 @@ using UnityEngine;
 // Hannah writing this - I work in pseudocode before actual code hehe
 public class DrillControls : MonoBehaviour
 {
-    // NOTES FROM DESIGN: It has full 360 degree control. Used for collecting resources.
-    // ASSUMPTIONS: Used to interact JUST with the "Resource Nodes" object. Drill and it will interact and drop the resource.
-    //              Sprite for DrillArm can be rotated a full 360 degrees it sounds? Clarify with design.
-
-
-    // Maybe resource nodes should be same priority level?
+    // NOTES FROM DESIGN:   It has full 360 degree control. Used to interact JUST with the "Resource Nodes" object. Will cause
+    //                      the node to drop resources. Sprite for DrillArm can be rotated a full 360 degrees.
 
     // I have the extra turning on and off in case there's special animations where it changes in speed, it doesn't instantly
-    // drill, etc.
+    // drill, etc. Not used for now.
     enum State {Idle, Drill, TurnOn, TurnOff };
     State currentState;
     float angle;
@@ -24,7 +20,6 @@ public class DrillControls : MonoBehaviour
         angle = 0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
                 // FIRST: FIGURE OUT ANGLE (maybe move each of these to a seperate method lol)
@@ -51,16 +46,12 @@ public class DrillControls : MonoBehaviour
         if ( Input.GetKeyUp( KeyCode.Mouse0 ) ) {
             currentState = State.Idle;
         }
+
+        if ( currentState == State.Drill ) {
+            // Resource nodes have NOT been implemented yet. I will come back to this later :)
+            // BUT it would check for collisions with the resource object
+        }
         // nothing for turnon and turnoff yet, but might change later
         
-        // is left mouse button being clicked?
-            // set to drill
-        // its NOT?
-            // set to idle
-
-            // IF DRILLING
-        // check for collisions with resource object
-            // call drill (object will have timer for between drops?)
-            // really gonna need to make resource node to finish this part
     }
 }
