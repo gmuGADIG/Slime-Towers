@@ -15,19 +15,21 @@ public enum Slime_Type
 public class Tower : MonoBehaviour
 {
     //HP of tower
-    private int HP = -1;
+    int HP = -1;
     //Name of the tower
-    private string towerName = "Tower";
+    string towerName = "Tower";
     //Amount of damage this tower does
-    private int damage = -1;
+    int damage = -1;
     //Type of slime in the tower
-    private Slime_Type slime = Slime_Type.None;
+    Slime_Type slime = Slime_Type.None;
     //Amount of pierce the bullet has
-    private int piercing = 0;
+    int piercing = 0;
     //whether or not this tower exists
-    private bool exist = false;
+    bool exist = false;
     //Spriterenderer of this object
     public SpriteRenderer spriteRenderer;
+    //If true allows towers to be destroyed and replaced with the placeholders
+    bool destroyMode;
 
     private Vector2Int position = new Vector2Int(0, 0);
 
@@ -48,12 +50,18 @@ public class Tower : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        spriteRenderer.color = Color.red;
+        //spriteRenderer.color = Color.red;
     }
 
     private void OnMouseExit()
     {
-        spriteRenderer.color = Color.green;
+        //spriteRenderer.color = Color.green;
+    }
+
+    private void OnMouseDown()
+    {
+        GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position);
+        Destroy(gameObject);
     }
 
 }
