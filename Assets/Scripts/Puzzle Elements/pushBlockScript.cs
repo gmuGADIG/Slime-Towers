@@ -33,7 +33,7 @@ public class pushBlockScript : MonoBehaviour
             {
                 vel = new Vector2(collision.gameObject.GetComponent<PlayerMovement>().velocity.x,0);
             }
-            transform.Translate(vel/Time.fixedDeltaTime);
+            transform.Translate(vel);
         }
         
         //Debug.Log("Test");
