@@ -10,6 +10,7 @@ public class EnemyBehavior : MonoBehaviour
     Vector3 target;
     Rigidbody2D rigidbody;
     float stunTimer = 0f;
+    public float MinAvoidancDistance = 2f; 
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(GetClosestTower().name);
         if (stunTimer > 0)
         {
             stunTimer -= Time.deltaTime;
@@ -32,6 +34,24 @@ public class EnemyBehavior : MonoBehaviour
         if (health <= 0) {
             Die();
         }
+    }
+
+    GameObject GetClosestTower()
+    {
+        GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
+        if (towers.Length == 0) return null;
+        GameObject closest = towers[0];
+        //Iterate through the list of towers to find the closest one
+        for(int i = 1; i < towers.Length; i++)
+        {
+            if (Vector3.Distance(towers[i].transform.position, this.transform.position) < Vector3.Distance(closest.transform.position, this.transform.position))
+            {
+                closest = towers[i];
+            }
+        }
+
+        Debug.Log(Vector3.Distance(closest.transform.position, this.transform.position));
+        return closest;
     }
     void Pathfind()
     {
@@ -64,7 +84,7 @@ public class EnemyBehavior : MonoBehaviour
     void Move()
     {
         
-        Debug.Log(Vector2.Distance(target, this.transform.position));
+        //Debug.Log(Vector2.Distance(target, this.transform.position));
         if(Vector2.Distance(target, this.transform.position) < 1)
         {
             if (path.Count == 0)
@@ -82,8 +102,25 @@ public class EnemyBehavior : MonoBehaviour
         DirectionToTargetVec.Normalize();
         rigidbody.velocity = DirectionToTargetVec * speed;
 
+        GameObject ClosestTower = GetClosestTower();
+        if (ClosestTower != null)
+        {
+            if (Vector3.Distance(this.transform.position, ClosestTower.transform.position) < MinAvoidancDistance)
+            {
+                rigidbody.velocity += GetAvoidanceVector(ClosestTower) * speed;
+            }
+        }
+
 
     }
+
+    Vector2 GetAvoidanceVector(GameObject toavoid)
+    {
+        Vector2 avoidancedirection = this.transform.position - toavoid.transform.position;
+        avoidancedirection.Normalize();
+        return avoidancedirection;
+    }
+
     void TakeDamage(int DamageTaken)
     {
         health -= DamageTaken;
