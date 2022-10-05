@@ -6,9 +6,10 @@ public class DrillHealth : MonoBehaviour
 {
     //Script for the drill
     int health = 100;
-
-
     bool playerPresent = false;
+
+    public GameObject slimeProjectile;
+    public Transform slimeProjectileTransform;
     public float attackCooldown = 2.5f; //custom cooldowns for slime projectiles ?
     public float slimeSpeed = 1.5f;
     
@@ -23,24 +24,34 @@ public class DrillHealth : MonoBehaviour
     // Update is called once per frame
     void Update() {
 
+
+
+
         //Mouse position used as reference for where to aim AoE attacks
         Vector3 mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
         Vector2 direction = new Vector2(mousePos.x - transform.position.x, mousePos.y - transform.position.y);
-        Debug.Log("MOUSE POSITION: " + direction.ToString());
+        //Debug.Log("MOUSE POSITION: " + direction.ToString());
 
         if (playerPresent){
 
             //play drill animation
 
             //player attack
-            if (Input.GetButtonDown("Fire1") && Time.time > attackCooldown) {
+            if (Input.GetButtonDown("Fire1") && Time.time > attackCooldown)
+            {
+
+                Debug.Log("Firing");
+                Instantiate(slimeProjectile, slimeProjectileTransform.position, Quaternion.identity);
 
                 //get mouse location
                 //calculate arc* (for now just a straight line)
-                //instantiate cooldown
-
+                //instantiate cooldown 
             }
+            else {
+                Debug.Log("recharging... Can't fire");
+            }
+
         }
         else {
             //play drill stop animation
