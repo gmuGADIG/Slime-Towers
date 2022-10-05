@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private bool drillPresent = false;
     private bool inDrill = false;
 
-    private List<GameObject> items;
+    private List<GameObject> items = new List<GameObject>();
     private GameObject mostRecent;
 
 
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //player interact
-        if (Input.GetButtonDown("E")) { 
+        if (Input.GetKeyDown(KeyCode.E)) { 
             if (drillPresent) {
 
             }

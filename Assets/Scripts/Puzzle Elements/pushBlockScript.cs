@@ -20,6 +20,7 @@ public class pushBlockScript : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
+        Debug.Log("Hit");
         if (collision.gameObject.CompareTag("Player"))
         {
             Vector2 dir = collision.transform.position - transform.position;
@@ -32,7 +33,7 @@ public class pushBlockScript : MonoBehaviour
             {
                 vel = new Vector2(collision.gameObject.GetComponent<PlayerMovement>().velocity.x,0);
             }
-            transform.Translate(vel);
+            transform.Translate(vel/Time.fixedDeltaTime);
         }
         
         //Debug.Log("Test");
