@@ -15,21 +15,23 @@ public enum Slime_Type
 public class Tower : MonoBehaviour
 {
     //HP of tower
-    private int HP = -1;
+    protected int HP = -1;
     //Name of the tower
-    private string towerName = "Tower";
+    public string towerName = "Tower";
     //Amount of damage this tower does
-    private int damage = -1;
+    protected int damage = -1;
     //Type of slime in the tower
-    private Slime_Type slime = Slime_Type.None;
+    protected Slime_Type slime = Slime_Type.None;
     //Amount of pierce the bullet has
-    private int piercing = 0;
+    protected int piercing = 0;
     //whether or not this tower exists
-    private bool exist = false;
+    protected bool exist = false;
     //Spriterenderer of this object
     public SpriteRenderer spriteRenderer;
+    //If true allows towers to be destroyed and replaced with the placeholders
+    protected bool destroyMode;
 
-    private Vector2Int position = new Vector2Int(0, 0);
+    protected Vector2Int position = new Vector2Int(0, 0);
 
     public void Awake()
     {
@@ -46,14 +48,44 @@ public class Tower : MonoBehaviour
         position = new Vector2Int(x, y);
     }
 
+    public void setDestroyMode(bool mode)
+    {
+        destroyMode = mode;
+    }
+
+    public string getTitle()
+    {
+        return towerName;
+    }
+
     private void OnMouseEnter()
     {
-        spriteRenderer.color = Color.red;
+        //spriteRenderer.color = Color.red;
     }
 
     private void OnMouseExit()
     {
-        spriteRenderer.color = Color.green;
+        //spriteRenderer.color = Color.green;
+    }
+
+    private void OnMouseDown()
+    {
+        if (towerName.Equals("Tower"))
+        {
+            if (!destroyMode)
+            {
+                GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position, destroyMode);
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            if (destroyMode)
+            {
+                GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position, destroyMode);
+                Destroy(gameObject);
+            }
+        }
     }
 
 }
