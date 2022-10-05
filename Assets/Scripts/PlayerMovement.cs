@@ -25,7 +25,9 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed = 7.5f;
     public float accel = 2f;
 
-    public bool isSlow = false;
+    public Vector2 velocity;
+
+    bool isSlow = false;
     public Rigidbody2D rigidBody;
     
     LayerMask groundLayer;
@@ -43,11 +45,13 @@ public class PlayerMovement : MonoBehaviour
         //player movement
         inputX = Input.GetAxis("Horizontal");
         inputY = Input.GetAxis("Vertical");
-        if (Input.GetKey("left shift")){
-            transform.Translate(new Vector2(inputX, inputY) * Time.deltaTime * (speed + sprintSpeed));
+
+        if (Input.GetKey("left shift"))
+        {
+            velocity = new Vector2(inputX, inputY) * Time.deltaTime * (speed + sprintSpeed);
         }
         else {
-            transform.Translate(new Vector2(inputX, inputY) * Time.deltaTime * speed);
+            velocity = new Vector2(inputX, inputY) * Time.deltaTime * speed;
         }
 
         //player interact
@@ -57,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        transform.Translate(velocity);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
