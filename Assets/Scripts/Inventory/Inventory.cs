@@ -67,4 +67,14 @@ public class Inventory : MonoBehaviour
 
         return materials[materialType];
     }
+
+    public void logStatus()
+    {
+        String s = "";
+        foreach (MaterialType m in materials.Keys)
+        {
+            s = s + m.ToString() + ": " + materials[m] + "\n";
+        }
+        Debug.Log(s);
+    }
 }
