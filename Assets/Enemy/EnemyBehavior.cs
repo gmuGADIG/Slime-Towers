@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
+
     public int health;
     public int speed = 2;
     public Queue<Vector2> path;
