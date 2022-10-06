@@ -24,4 +24,12 @@ public class EnemyManager : MonoBehaviour
 
     }
     
+    void findPath()
+    {
+        List<Vector2> currentPath = new List<Vector2>();
+        HashSet<Vector2> openSet = new HashSet<Vector2>();
+        
+    }
+
+
 }
