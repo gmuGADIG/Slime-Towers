@@ -3,28 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerManager : MonoBehaviour
-
 {
+    //Constants for the grid specifically the size of the grid and the distance between the cells
     public const int GRIDSIZE = 10;
     public const int DISTANCEBETWEENCELLS = 1;
-
+    //The 2D array that holds all of the towers
     private GameObject[,] towerGrid = new GameObject[GRIDSIZE, GRIDSIZE];
-
+    //
     public Vector2 gridStart;
     public GameObject towerPlaceholder;
 
-    public GameObject[] towers;
+    public List<GameObject> activeTowers = new List<GameObject>();
+
+    public GameObject[] towerTypes;
     public int selectedTower = 0;
 
     public bool destroyMode = false;
 
-    public Vector2Int FindMousePosition()
+    public List<GameObject> getActiveTowers()
     {
-        Vector2Int gridPosition = new Vector2Int(0, 0);
-        Vector2 mousePosition = Input.mousePosition;
-        //if()
-
-        return gridPosition;
+        return activeTowers;
     }
 
     void Start()
@@ -44,10 +42,15 @@ public class TowerManager : MonoBehaviour
 
     public void setTower(Vector2Int position, bool destroy)
     {
-        int i = position.x, k = position.y;
-        towerGrid[i, k] = Instantiate(destroy ? towerPlaceholder : towers[selectedTower], new Vector3(i * DISTANCEBETWEENCELLS + gridStart.x, k * DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
+        int i = position.y, k = position.x;
+        towerGrid[i, k] = Instantiate(destroy ? towerPlaceholder : towerTypes[selectedTower], new Vector3(k * DISTANCEBETWEENCELLS + gridStart.x, i * DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
         towerGrid[i, k].GetComponent<Tower>().setPosition(k, i);
         towerGrid[i, k].transform.SetParent(transform);
+        towerGrid[i, k].GetComponent<Tower>().setDestroyMode(destroy);
+        if (!destroy)
+        {
+            activeTowers.Add(towerGrid[i, k]);
+        }
     }
     
     void Update()
@@ -58,6 +61,8 @@ public class TowerManager : MonoBehaviour
             changeDeleteMode(destroyMode);
         }
     }
+
+
 
     void changeDeleteMode(bool mode)
     {

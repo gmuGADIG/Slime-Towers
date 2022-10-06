@@ -82,7 +82,9 @@ public class Tower : MonoBehaviour
         {
             if (destroyMode)
             {
-                GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position, destroyMode);
+                GameObject towerManager = GameObject.Find("TowerManager");
+                towerManager.GetComponent<TowerManager>().setTower(position, destroyMode);
+                towerManager.GetComponent<TowerManager>().getActiveTowers().Remove(gameObject);
                 Destroy(gameObject);
             }
         }
