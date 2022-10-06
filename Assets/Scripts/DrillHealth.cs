@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrillHealth : MonoBehaviour
+public class Drill : MonoBehaviour
 {
     //Script for the drill
     int health = 100;
     bool playerPresent = false;
 
+    public GameObject player;
     public GameObject slimeProjectile;
     public Transform slimeProjectileTransform;
     public float attackCooldown = 2.5f; //custom cooldowns for slime projectiles ?
@@ -23,9 +24,6 @@ public class DrillHealth : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-
-
-
 
         //Mouse position used as reference for where to aim AoE attacks
         Vector3 mousePos = Input.mousePosition;
