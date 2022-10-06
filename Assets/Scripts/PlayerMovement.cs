@@ -54,6 +54,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /*
+     * pseudocode for tile hop method:
+     * if a gap is a certain distance and the player is moving in the direction of the gap:
+     * there will be a short pause, then do the jump
+     */
+
     private void OnTriggerStay(Collider other)
     {
         if(other){
