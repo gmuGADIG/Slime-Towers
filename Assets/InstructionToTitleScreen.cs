@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Return : MonoBehaviour
-{
+public class InstructionToTitleScreen : MonoBehaviour{
     public void HandleButton(){
         SceneManager.LoadScene("Title Menu");
-        //Debug.Log( "Button Clicked" );
-        //SceneManager.UnloadScene( "Instruction Menu" );
     }
 }
