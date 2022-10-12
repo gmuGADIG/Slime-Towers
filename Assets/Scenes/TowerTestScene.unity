@@ -154,7 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridStart: {x: 0, y: 0}
   towerPlaceholder: {fileID: 4472277294801973321, guid: 02d2316e3d1b0de4bb5ff77a1eae3605, type: 3}
-  towers:
+  activeTowers: []
+  towerTypes:
   - {fileID: 4472277294801973321, guid: 92dc95261abc43c488bba98a122c9196, type: 3}
   selectedTower: 0
   destroyMode: 0
