@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//defunct
 public class Player : MonoBehaviour
 {
     private CircleCollider2D interact;

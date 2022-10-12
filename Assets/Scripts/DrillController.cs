@@ -54,4 +54,5 @@ public class DrillControls : MonoBehaviour
         // nothing for turnon and turnoff yet, but might change later
         
     }
+    public void test() { }
 }
