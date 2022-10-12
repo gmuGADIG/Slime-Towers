@@ -11,4 +11,10 @@ public class GameStart : MonoBehaviour
         Debug.Log("Button Clicked");
         SceneManager.UnloadScene("Title Menu");
     }
+
+    public void optionsButton(){
+        //SceneManager.LoadScene("Options");
+        //Debug.log("Options button clicked");
+        //SceneManager.UnloadScene("Title Menu");
+    }
 }
