@@ -74,4 +74,14 @@ public class TowerManager : MonoBehaviour
             }
         }
     }
+
+    GameObject getTower(Vector2Int position)
+    {
+        return towerGrid[position.y, position.x];
+    }
+
+    GameObject getTower(int x, int y)
+    {
+        return towerGrid[y, x];
+    }
 }
