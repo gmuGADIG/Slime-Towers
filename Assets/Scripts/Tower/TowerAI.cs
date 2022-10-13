@@ -48,21 +48,26 @@ public class TowerAI : MonoBehaviour
             // Does the ray intersect any objects excluding the player layer
             if (hit.collider)
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right), Color.grey, Mathf.Infinity);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right), Color.yellow, Mathf.Infinity);
                 Debug.Log("Did Hit");
                 hitEnemy = true;
+                hit.collider.gameObject.SetActive(false);
             }
             else
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1000, Color.green);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1000, Color.red);
                 Debug.Log("Did not Hit");
                 hitEnemy = false;
             }
-            hitTimer = timeToHit;
+            if (hit.collider.gameObject.tag == "enemy") 
+            {
+                Debug.DrawRay(transform.position, transform.forward, Color.green); print("Hit"); 
+            }
+            hitTimer = timeToHit + 100;
         }
     }
     
-    void OnDrawGizmosSelected()
+    /*void OnDrawGizmosSelected()
     {
         if (TargetedEnemy != null)
         {
@@ -70,7 +75,7 @@ public class TowerAI : MonoBehaviour
             Gizmos.color = Color.blue;
             Gizmos.DrawLine(transform.position, TargetedEnemy.transform.position);
         }
-    }
+    }*/
 
     void OnTriggerEnter2D(Collider2D collision)
     {
