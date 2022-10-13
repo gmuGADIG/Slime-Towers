@@ -12,6 +12,8 @@ public class TowerAI : MonoBehaviour
     public List<GameObject> TargetedEnemyList;
     public float timeToHit = 5f;
     public float hitTimer;
+    public float rotationSpeed = 3.0f;
+    public bool hitEnemy = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,23 +35,28 @@ public class TowerAI : MonoBehaviour
             targ.y = targ.y - objectPos.y;
 
             float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            Quaternion target = Quaternion.Euler(new Vector3(0, 0, angle));
+            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * rotationSpeed);
         }
 
+
         hitTimer -= Time.deltaTime;
-        if(timeToHit <= 0)
+        if(hitTimer <= 0 )
         {
-            RaycastHit hit;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up);
+
             // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+            if (hit.collider)
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right), Color.grey, Mathf.Infinity);
                 Debug.Log("Did Hit");
+                hitEnemy = true;
             }
             else
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1000, Color.green);
                 Debug.Log("Did not Hit");
+                hitEnemy = false;
             }
             hitTimer = timeToHit;
         }
