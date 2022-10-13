@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
+
     public int health;
-    public int speed;
+    public int speed = 2;
     public Queue<Vector2> path;
     Vector3 target;
     Rigidbody2D rigidbody;
     float stunTimer = 0f;
-    public float MinAvoidancDistance = 2f; 
+    public float MinAvoidancDistance = 1f; 
     // Start is called before the first frame update
     void Start()
     {
@@ -107,10 +108,12 @@ public class EnemyBehavior : MonoBehaviour
         {
             if (Vector3.Distance(this.transform.position, ClosestTower.transform.position) < MinAvoidancDistance)
             {
-                rigidbody.velocity += GetAvoidanceVector(ClosestTower) * speed;
+                rigidbody.velocity += GetAvoidanceVector(ClosestTower) * speed / Vector2.Distance(ClosestTower.transform.position, this.transform.position);  
             }
         }
 
+        rigidbody.velocity.Normalize();
+        //rigidbody.velocity *= speed;
 
     }
 

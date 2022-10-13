@@ -935,6 +935,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1079465770}
     m_Modifications:
+    - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8117608861621738069}
+    - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HandleButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InstructionsButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Instruction Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 278580525388267408, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_Name
       value: How To Play
@@ -1050,3 +1082,20 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6280028778946469330, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
   m_PrefabInstance: {fileID: 8117608861621738066}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8117608861621738068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 278580525388267408, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
+  m_PrefabInstance: {fileID: 8117608861621738066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8117608861621738069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117608861621738068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023edf8cccd1cac26b5376574076206d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

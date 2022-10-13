@@ -122,6 +122,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+<<<<<<< HEAD
   m_Constraints: 0
 --- !u!61 &5671609868196950225
 BoxCollider2D:
@@ -149,3 +150,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+=======
+  m_Constraints: 4
+>>>>>>> 1a7bf8804ac500b11dcd6bc6029eb742b717a691
