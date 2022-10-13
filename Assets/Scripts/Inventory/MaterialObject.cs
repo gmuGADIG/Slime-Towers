@@ -28,7 +28,7 @@ public class MaterialObject : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            Inventory inventory = collision.gameObject.GetComponent<Inventory>();
+            Inventory inventory = Inventory.inventory;
             inventory.AddItem(material, 1); //TODO multi-item pickups?
             inventory.logStatus();
 
@@ -36,7 +36,6 @@ public class MaterialObject : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             collectEffect.Play();
             Destroy(gameObject,5);
-            
         }
     }
 }

@@ -1,6 +1,5 @@
 namespace SlimeTowers
 {
-    
     public enum MaterialType
     {
         CRYSTAL_ROD, 

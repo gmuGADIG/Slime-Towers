@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
 
         //player sprite rotate
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log("mousePosition: " + worldPosition.ToString());
+        //Debug.Log("mousePosition: " + worldPosition.ToString());
 
         transform.Translate(velocity);
     }
