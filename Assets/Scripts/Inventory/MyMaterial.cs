@@ -4,7 +4,8 @@ namespace SlimeTowers
     public enum MaterialType
     {
         CRYSTAL_ROD, 
-        STURDY_STONE
+        STURDY_STONE,
+        SLIME
     }
 
     public struct MyMaterial
