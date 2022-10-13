@@ -9,5 +9,6 @@ public class SlimeSelector : MonoBehaviour
 	void OnMouseDown()
 	{
 		towerParent.GetComponent<Tower>().setSlime(slimeType);
+		Debug.Log(slimeType);
 	}
 }

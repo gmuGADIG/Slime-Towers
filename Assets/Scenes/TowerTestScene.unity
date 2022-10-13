@@ -242,7 +242,7 @@ MonoBehaviour:
   towerTypes:
   - {fileID: 4472277294801973321, guid: 92dc95261abc43c488bba98a122c9196, type: 3}
   - {fileID: 4472277294801973321, guid: 02d2316e3d1b0de4bb5ff77a1eae3605, type: 3}
-  selectedTower: 0
+  selectedTower: 1
   destroyMode: 0
   managing: 0
   squareSelector: {fileID: 307399772}
@@ -352,10 +352,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1631098060738589251, guid: 02d2316e3d1b0de4bb5ff77a1eae3605, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4472277294801973318, guid: 02d2316e3d1b0de4bb5ff77a1eae3605, type: 3}
       propertyPath: m_RootOrder
       value: 2
