@@ -7,7 +7,7 @@ public class ManagerScript : MonoBehaviour
     
     private GameState gameState;
     private AudioListener audioManager;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +33,7 @@ public class ManagerScript : MonoBehaviour
         switch (this.gameState) {
             case GameState.EXPLORE:
                 Time.timeScale = 1f;
-                AudioListener.volume = 0.7f;
+                AudioListener.volume = 1f;
                 break;
             case GameState.ATTACK:
                 Time.timeScale = 1f;
@@ -41,11 +41,11 @@ public class ManagerScript : MonoBehaviour
                 break;
             case GameState.DIALOGUE:
                 Time.timeScale = 1f;
-                AudioListener.volume = 0.4f;
+                AudioListener.volume = 0.5f;
                 break;
             case GameState.PAUSE:
                 Time.timeScale = 0f;
-                AudioListener.volume = 0.1f;
+                AudioListener.volume = 0.25f;
                 break;
             default:
                 break;
