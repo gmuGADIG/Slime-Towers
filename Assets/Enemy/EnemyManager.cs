@@ -10,26 +10,46 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void placeMarkers()
     {
 
     }
-    
-    void findPath()
+    /**
+     * Gets the towerNode from the TowerManager that is closests to pos
+     */
+    GameObject getClosestTowerNode(Vector2 pos)
     {
-        List<Vector2> currentPath = new List<Vector2>();
-        HashSet<Vector2> openSet = new HashSet<Vector2>();
+        //If pos is outside the grid of towers
+        if (pos.x < towerManager.gameObject.transform.position.x || pos.x > towerManager.gameObject.transform.position.x + TowerManager.GRIDSIZE * TowerManager.DISTANCEBETWEENCELLS || pos.y < towerManager.gameObject.transform.position.y || pos.y > towerManager.gameObject.transform.position.y + TowerManager.GRIDSIZE * TowerManager.DISTANCEBETWEENCELLS)
+        {
+            
+        }
+        else //It is in the grid
+        {
+            //Get the tower that is closest to the position
+            int x = (int)((pos.x - towerManager.gameObject.transform.position.x) / TowerManager.DISTANCEBETWEENCELLS);
+            int y = (int)((pos.y - towerManager.gameObject.transform.position.y) / TowerManager.DISTANCEBETWEENCELLS);
+            //return towerManager.towerGrid[y, x];
+        }
+        return null;
+    }
+    void GetPath()
+    {
+        GameObject closestStartTowerCell;
+        GameObject closestEndToweCell;
         
     }
+
+
 
 
 }
