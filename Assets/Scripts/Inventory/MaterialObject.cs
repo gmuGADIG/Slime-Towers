@@ -4,8 +4,7 @@ using UnityEngine;
 
 using MaterialType = SlimeTowers.MaterialType;
 
-public class MaterialObject : MonoBehaviour
-{
+public class MaterialObject : MonoBehaviour {
 
     public ParticleSystem collectEffect;
     public AudioClip collectSound;
