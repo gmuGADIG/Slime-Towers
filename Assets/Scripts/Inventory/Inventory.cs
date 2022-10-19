@@ -9,7 +9,17 @@ using MaterialType = SlimeTowers.MaterialType;
 
 public class Inventory : MonoBehaviour
 {
-    public Dictionary<MaterialType, int> materials;
+    public static Dictionary<MaterialType, int> materials;
+    public static Inventory inventory;
+
+    private void Awake()
+    {
+        if(!inventory) {
+            inventory = this;
+        }else{
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -31,7 +41,6 @@ public class Inventory : MonoBehaviour
         int curMatCount = -1;
         if (materials.TryGetValue(materialType, out curMatCount))
             return curMatCount;
-
         return -1;
     }
 
@@ -70,7 +79,7 @@ public class Inventory : MonoBehaviour
 
     public void logStatus()
     {
-        String s = "";
+        string s = "";
         foreach (MaterialType m in materials.Keys)
         {
             s = s + m.ToString() + ": " + materials[m] + "\n";
