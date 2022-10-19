@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1292e7007e09be64798e1bf9410bd34e
+guid: 3e4eb535b9d8e5448ad1394a2bc960dc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,988 +104,988 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_0
+      name: WallTileSet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
-        width: 32
-        height: 32
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e81db4b73f951947b84f9813b94a9d0
-      internalID: 385912323
+      spriteID: 4edd21c5ddd2ead4f87a2194a69960e7
+      internalID: 689399320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 115873d2b2fe91b4da79899a0cca7b42
-      internalID: -24296073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87740c857129a474783bb626935d6787
-      internalID: -932648499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3151cc5cb4eba441a66b8429928854a
-      internalID: -1775665769
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_4
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18fdd614b468e6e43af7e2ec39c4196c
-      internalID: 1137826650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_5
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 743a9f2b17a7a7247af59667bab76259
-      internalID: -575983062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_6
+      name: WallTileSet_1
       rect:
         serializedVersion: 2
         x: 256
-        y: 192
-        width: 32
-        height: 32
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09df0479888c8b4469b57c61143d7b9e
-      internalID: 1662834903
+      spriteID: 8d7c5dbbd2739f144bd132d70e8e3beb
+      internalID: -1974672191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_7
+      name: WallTileSet_2
       rect:
         serializedVersion: 2
-        x: 288
-        y: 192
-        width: 32
-        height: 32
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f6566d949559fd47bfec3480abeb22b
-      internalID: 1094119675
+      spriteID: 0384be003a8980847806773be0e1c616
+      internalID: 334552062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_8
+      name: WallTileSet_3
       rect:
         serializedVersion: 2
-        x: 320
-        y: 192
-        width: 32
-        height: 32
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6568feee292da8c4caed16b6b59e5ad8
-      internalID: -1425312149
+      spriteID: e87faf4495eb3224a89e593f4422262f
+      internalID: -686531503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_9
+      name: WallTileSet_5
       rect:
         serializedVersion: 2
-        x: 352
-        y: 192
-        width: 32
-        height: 32
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d988988cf01ff3346859a529e9a11d12
-      internalID: 1690777990
+      spriteID: 1dd8a4a1e14df564ca44ce2ff21229ca
+      internalID: 1780087584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_10
+      name: WallTileSet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c1d377555ba184395a22a26763f89e
+      internalID: -1702502711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e685bb9f7f17fe43a43976bfc62802c
+      internalID: 262703042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_9
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896f53ab28d6c1e4f9fabe057fd814fb
+      internalID: -1535971586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_10
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa50cf9ce9235c4f9caf8598e9f2849
+      internalID: 803366741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_11
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e481c4ecf0bd44fa36d07d50315e96
+      internalID: -5180520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_12
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 32
-        height: 32
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f2b2495a0bfef348ab0e30aff64f2ce
-      internalID: -352601895
+      spriteID: f530c68b1f7790e42914e7764a27fd80
+      internalID: 1897862956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_11
+      name: WallTileSet_14
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
-        height: 32
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 067f21a8a2c767944911bf4446d24096
-      internalID: -1002060358
+      spriteID: 7bcc512c2b7197442b12fdb438bbd8ca
+      internalID: -237097432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_12
+      name: WallTileSet_15
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
-        width: 32
-        height: 32
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fc3e2e58cea0064988985348eec7659
-      internalID: 674405081
+      spriteID: 7791d110e5884b34fb169b1af29fce4a
+      internalID: -1039533511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_13
+      name: WallTileSet_17
       rect:
         serializedVersion: 2
-        x: 160
-        y: 160
-        width: 32
-        height: 32
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53a8ab17dfa7b144f8313c10295f2b76
-      internalID: -211312219
+      spriteID: 47546713a6af1a445950213ef5662191
+      internalID: 1324810648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_14
+      name: WallTileSet_18
       rect:
         serializedVersion: 2
-        x: 192
-        y: 160
-        width: 32
-        height: 32
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5114801d477b685478e66a2d15f8592f
-      internalID: -215158977
+      spriteID: e6b9d809f09f60741b9c993d8e748666
+      internalID: 1804237196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_15
+      name: WallTileSet_20
       rect:
         serializedVersion: 2
-        x: 256
-        y: 160
-        width: 32
-        height: 32
+        x: 2048
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ceb216655dfc51429d71a29ae27b64c
-      internalID: -1978263131
+      spriteID: 24e297e841313bc4a91d75187aca01b4
+      internalID: -984513061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_16
+      name: WallTileSet_21
       rect:
         serializedVersion: 2
-        x: 288
-        y: 160
-        width: 32
-        height: 32
+        x: 2304
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4149b8fbcf40ed8479e2e63ef756cfc1
-      internalID: -833123012
+      spriteID: d57d0ef86ae936f4eb1f3f401deecfc5
+      internalID: -1023238888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_17
+      name: WallTileSet_22
       rect:
         serializedVersion: 2
-        x: 320
-        y: 160
-        width: 32
-        height: 32
+        x: 2560
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cf5e66ed9f83f746b32dd87406c2e3e
-      internalID: -652763600
+      spriteID: 667b2d5971eb87c45a5afb7db729dc74
+      internalID: -726219333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_18
+      name: WallTileSet_23
       rect:
         serializedVersion: 2
-        x: 352
-        y: 160
-        width: 32
-        height: 32
+        x: 2816
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34707e0b1ae9bc24bb789389afe3f28f
-      internalID: -1209771061
+      spriteID: c26c215d91ce1fc408d2b81bbf88bd08
+      internalID: 1062612502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_19
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05fdba4dfc291c04f9af2ed8ca8db223
-      internalID: -1278614160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_20
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3790cee550727648a7f6d4129d2e429
-      internalID: -2132774693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_21
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 665f00b0e35151e4c8166f9b9d8e76ba
-      internalID: 1215231349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_22
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07dce5c064061b542808eda923287d12
-      internalID: 95078398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_23
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e8d7baa94c442d49a88a77968e8d002
-      internalID: 150931180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_24
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e073aa745fe49164f82399c222a6981c
-      internalID: -2074407318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_25
+      name: WallTileSet_24
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f68d40363e8e620408d07f682b284f8f
-      internalID: -946124302
+      spriteID: e1f07344be2833d4c8878373992fa418
+      internalID: -40004392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_26
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 472ec130173112c4fb9c78c4f6f317ad
-      internalID: -514572615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_27
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7273a0e5cdeb804f8a1208599fe4a67
-      internalID: -1404000098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_28
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70463aebe34aa364e81ea9537b16cdf9
-      internalID: 136630996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_29
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 632a86d088bb7224d8f498287815a11e
-      internalID: 644170896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_30
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68ef02f923eb7454390e5dfe6ca17ec1
-      internalID: -271901035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_31
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 601aa5a33174c0e4f8655db5c46151e1
-      internalID: -716443790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_32
+      name: WallTileSet_25
       rect:
         serializedVersion: 2
         x: 256
-        y: 64
-        width: 32
-        height: 32
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf608bcd64555354baf8c40f32a94437
-      internalID: -984548971
+      spriteID: 5b4fecad0bdfeb347b79030288385ce3
+      internalID: 1768496506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_33
+      name: WallTileSet_26
       rect:
         serializedVersion: 2
-        x: 288
-        y: 64
-        width: 32
-        height: 32
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87cd99142430d55498876d1aa6787f13
-      internalID: -2136511819
+      spriteID: 616f7f93cac4d0942b5d45978ff6194d
+      internalID: 2019029408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_34
+      name: WallTileSet_30
       rect:
         serializedVersion: 2
-        x: 320
-        y: 64
-        width: 32
-        height: 32
+        x: 2048
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f11c70bbb6283f147a93e6187b398101
-      internalID: -745554044
+      spriteID: eef4b11d1d00ca542b9223c5e3e7b3a8
+      internalID: -1512389973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_35
+      name: WallTileSet_31
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20be7b40d5b056949b8cdb29123d7c90
+      internalID: -424392421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_32
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cdad6935d293c4db2fa54e7cf1fb8d
+      internalID: -2018816301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_44
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31ebb47d87dd45f42ac3735d9923d884
-      internalID: -939902092
+      spriteID: 726f2e6475515904e928be22e79bbfbe
+      internalID: -179313340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_36
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51188cd96c9044346a7cc1e34aee85c2
-      internalID: 23797453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_37
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28456c669bae3a948abe09b0f4446aa9
-      internalID: 1417019628
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_38
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bace3534e15cc064a88227f65f04ab4a
-      internalID: -2031698050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_39
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2affb9c30d27d6489221a6e78c74720
-      internalID: 993816242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_40
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37bd147488cdca64f947f944036f88bf
-      internalID: 1216447980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_41
+      name: WallTileSet_45
       rect:
         serializedVersion: 2
         x: 256
-        y: 32
-        width: 32
-        height: 32
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6020edb2c6f6c44459d013b85ffb7a82
-      internalID: 903675414
+      spriteID: 999dd62cd1bfa254aa19ec5ebf79337d
+      internalID: 777606737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_42
+      name: WallTileSet_46
       rect:
         serializedVersion: 2
-        x: 288
-        y: 32
-        width: 32
-        height: 32
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 757d0566cb94f934b9cd1205f9eac569
-      internalID: -1161991889
+      spriteID: 97ec10922c23adc4fa0fc7d79b84fad2
+      internalID: 1574507965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_43
+      name: WallTileSet_47
       rect:
         serializedVersion: 2
-        x: 320
-        y: 32
-        width: 32
-        height: 32
+        x: 768
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e57824247151eb54e95cccae64125a40
-      internalID: -2094619039
+      spriteID: d043dc4caa834ac40afe2577dc0cdd38
+      internalID: 1714742678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_44
+      name: WallTileSet_49
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab052bcda55d91843b21ee7427c96e3b
+      internalID: 624236173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_50
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea54e555f817d0245a2036359ad89cf3
+      internalID: 1768777353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_51
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03abf825f5521914ca9124052650a977
+      internalID: -850592799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_52
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4f4f7bbb1f5054b9c1d7403ae85171
+      internalID: -1104237723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_53
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b0aa7e9aec3694eb6b7acc1216eb62
+      internalID: 1542281579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_54
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4f1e6e88eddc54791b8b81a6fcc84f
+      internalID: 499471636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca69890c4dc66024a8b6aaefed598f03
+      internalID: 1835042564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_57
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c2fcad51c3d1a46a7a1f23470169a5
+      internalID: 1819019586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_58
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236123d244bcd0b4192b7566e246f05b
+      internalID: -48067819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_60
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11ed293ac725e04c9abde8609a241bb
+      internalID: 662171679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_61
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c66b44dd2428b34e98fa12c99c1b8f4
+      internalID: 345984582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_62
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424dea0ad8489ae4582ebc48f49bc94b
+      internalID: 59433167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_63
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dabf68473d72f9c4bada903a87221556
+      internalID: 1321891037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_64
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3476e0026117e4db7c4f7c32686205
+      internalID: -109921946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_65
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9011073e16471fc4f9fa60d747a9115f
+      internalID: -827750485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTileSet_67
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9d435df0c889d845bc347644ab40d7d
-      internalID: 616642001
+      spriteID: 07702cbace177f04b96ac6e497c8c6cb
+      internalID: -1236506062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_45
+      name: WallTileSet_68
       rect:
         serializedVersion: 2
-        x: 32
+        x: 256
         y: 0
-        width: 32
-        height: 32
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91603bcd7dca41d40be61920180e267d
-      internalID: 1247708179
+      spriteID: ce61bf40e6d98d840b9421d5c91bb449
+      internalID: -981059954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GADIG_TilesetTemplateWALL_46
+      name: WallTileSet_69
       rect:
         serializedVersion: 2
-        x: 64
+        x: 512
         y: 0
-        width: 32
-        height: 32
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c96e96bfacf525649af8bb1abe783f59
-      internalID: 1711560944
+      spriteID: 4fe4bcb8f868e744e813379ba4ce3e04
+      internalID: 304420775
       vertices: []
       indices: 
       edges: []
@@ -1101,53 +1101,83 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GADIG_TilesetTemplateWALL_1: -24296073
-      GADIG_TilesetTemplateWALL_6: 1662834903
-      GADIG_TilesetTemplateWALL_18: -1209771061
-      GADIG_TilesetTemplateWALL_40: 1216447980
-      GADIG_TilesetTemplateWALL_41: 903675414
-      GADIG_TilesetTemplateWALL_9: 1690777990
-      GADIG_TilesetTemplateWALL_46: 1711560944
-      GADIG_TilesetTemplateWALL_21: 1215231349
-      GADIG_TilesetTemplateWALL_20: -2132774693
-      GADIG_TilesetTemplateWALL_37: 1417019628
-      GADIG_TilesetTemplateWALL_35: -939902092
-      GADIG_TilesetTemplateWALL_39: 993816242
-      GADIG_TilesetTemplateWALL_8: -1425312149
-      GADIG_TilesetTemplateWALL_26: -514572615
-      GADIG_TilesetTemplateWALL_44: 616642001
-      GADIG_TilesetTemplateWALL_2: -932648499
-      GADIG_TilesetTemplateWALL_34: -745554044
-      GADIG_TilesetTemplateWALL_28: 136630996
-      GADIG_TilesetTemplateWALL_11: -1002060358
-      GADIG_TilesetTemplateWALL_17: -652763600
-      GADIG_TilesetTemplateWALL_16: -833123012
-      GADIG_TilesetTemplateWALL_3: -1775665769
-      GADIG_TilesetTemplateWALL_25: -946124302
-      GADIG_TilesetTemplateWALL_14: -215158977
-      GADIG_TilesetTemplateWALL_7: 1094119675
-      GADIG_TilesetTemplateWALL_22: 95078398
-      GADIG_TilesetTemplateWALL_19: -1278614160
-      GADIG_TilesetTemplateWALL_13: -211312219
-      GADIG_TilesetTemplateWALL_12: 674405081
-      GADIG_TilesetTemplateWALL_42: -1161991889
-      GADIG_TilesetTemplateWALL_0: 385912323
-      GADIG_TilesetTemplateWALL_32: -984548971
-      GADIG_TilesetTemplateWALL_31: -716443790
-      GADIG_TilesetTemplateWALL_36: 23797453
-      GADIG_TilesetTemplateWALL_4: 1137826650
-      GADIG_TilesetTemplateWALL_27: -1404000098
-      GADIG_TilesetTemplateWALL_10: -352601895
-      GADIG_TilesetTemplateWALL_24: -2074407318
-      GADIG_TilesetTemplateWALL_30: -271901035
-      GADIG_TilesetTemplateWALL_5: -575983062
-      GADIG_TilesetTemplateWALL_45: 1247708179
-      GADIG_TilesetTemplateWALL_23: 150931180
-      GADIG_TilesetTemplateWALL_33: -2136511819
-      GADIG_TilesetTemplateWALL_43: -2094619039
-      GADIG_TilesetTemplateWALL_15: -1978263131
-      GADIG_TilesetTemplateWALL_38: -2031698050
-      GADIG_TilesetTemplateWALL_29: 644170896
+      WallTileSet_55: -1593782875
+      WallTileSet_13: 1364207683
+      WallTileSet_31: -424392421
+      WallTileSet_10: 803366741
+      WallTileSet_18: 1804237196
+      WallTileSet_19: -855978123
+      WallTileSet_68: -981059954
+      WallTileSet_36: -403816815
+      WallTileSet_65: -827750485
+      WallTileSet_37: 872280784
+      WallTileSet_42: -922708848
+      WallTileSet_40: -854451568
+      WallTileSet_46: 1574507965
+      WallTileSet_75: 1182501874
+      WallTileSet_20: -984513061
+      WallTileSet_61: 345984582
+      WallTileSet_1: -1974672191
+      WallTileSet_39: -188595517
+      WallTileSet_50: 1768777353
+      WallTileSet_5: 1780087584
+      WallTileSet_16: 235498865
+      WallTileSet_33: -882204857
+      WallTileSet_52: -1104237723
+      WallTileSet_4: 993510745
+      WallTileSet_35: 361973543
+      WallTileSet_15: -1039533511
+      WallTileSet_76: -297172789
+      WallTileSet_38: 439797400
+      WallTileSet_44: -179313340
+      WallTileSet_72: -832787938
+      WallTileSet_8: 262703042
+      WallTileSet_45: 777606737
+      WallTileSet_7: 783748191
+      WallTileSet_59: -2099088725
+      WallTileSet_30: -1512389973
+      WallTileSet_22: -726219333
+      WallTileSet_53: 1542281579
+      WallTileSet_9: -1535971586
+      WallTileSet_21: -1023238888
+      WallTileSet_34: -540766712
+      WallTileSet_66: -34793910
+      WallTileSet_71: 1046858260
+      WallTileSet_28: -1836194557
+      WallTileSet_57: 1819019586
+      WallTileSet_73: -756953847
+      WallTileSet_47: 1714742678
+      WallTileSet_60: 662171679
+      WallTileSet_6: -1702502711
+      WallTileSet_23: 1062612502
+      WallTileSet_51: -850592799
+      WallTileSet_69: 304420775
+      WallTileSet_2: 334552062
+      WallTileSet_32: -2018816301
+      WallTileSet_62: 59433167
+      WallTileSet_56: 1835042564
+      WallTileSet_63: 1321891037
+      WallTileSet_11: -5180520
+      WallTileSet_12: 1897862956
+      WallTileSet_70: -1150936804
+      WallTileSet_49: 624236173
+      WallTileSet_54: 499471636
+      WallTileSet_64: -109921946
+      WallTileSet_29: 859578200
+      WallTileSet_41: 1391674466
+      WallTileSet_43: 550007684
+      WallTileSet_48: -592436256
+      WallTileSet_3: -686531503
+      WallTileSet_14: -237097432
+      WallTileSet_24: -40004392
+      WallTileSet_58: -48067819
+      WallTileSet_26: 2019029408
+      WallTileSet_25: 1768496506
+      WallTileSet_0: 689399320
+      WallTileSet_74: -1394583171
+      WallTileSet_27: -1223754009
+      WallTileSet_17: 1324810648
+      WallTileSet_67: -1236506062
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
