@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
         //player interact
         if (Input.GetKeyDown(KeyCode.E)) { 
-            if (drillPresent && ManagerScript.gm.getGameState() == GameState.EXPLORE) {
+            if (drillPresent /*&& ManagerScript.gm.getGameState() == GameState.EXPLORE*/) {
                 drillControllable.playerEnter(this.gameObject);
             }
         }
