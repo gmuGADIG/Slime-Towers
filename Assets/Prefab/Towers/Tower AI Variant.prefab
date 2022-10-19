@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 4817269490462249275}
   m_Layer: 0
   m_Name: Tower AI Variant
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,6 +149,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetSize: 3
   TargetedEnemy: {fileID: 0}
+  TargetedEnemyList: []
+  timeToHit: 5
+  hitTimer: 0
+  rotationSpeed: 3
+  hitEnemy: 0
 --- !u!212 &4776954093406427289
 SpriteRenderer:
   m_ObjectHideFlags: 0
