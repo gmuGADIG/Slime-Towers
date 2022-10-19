@@ -2,32 +2,49 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Audio;
+using System.Collections.Generic;
 
 public class MasterVolumeDisplay : MonoBehaviour {
   public Slider sliderUI;
-  private TMP_Text sliderText;
+  public TMP_Text sliderText;
+    public AudioMixerGroup group;
 
-  void Start () {
-    sliderText = GetComponent<TMP_Text>();
+    public void Start() {
+        sliderText = GetComponent<TMP_Text>();
+        float val;
+        group.audioMixer.GetFloat(group.name + "Vol", out val);
+        Debug.Log(val);
+        val = Mathf.Pow(10, (val/20));
+        Debug.Log(val);
+        sliderUI.value = val;
+        
+    }
 
-    ShowSliderValue();
-  }
+    public void SliderChanged(float value)
+    {
+        group.audioMixer.SetFloat(group.name+"Vol", Mathf.Log10(value) * 20);
+        sliderText.text = Mathf.RoundToInt(sliderUI.normalizedValue * 100) + "%";
+    }
 
-  public void ShowSliderValue () {
+    public void ShowMasterSliderValue () {
     string sliderMessage = "Master Volume: " + sliderUI.value;
-    Debug.Log(sliderMessage);
-    sliderText.text = sliderMessage;
-  }
+        //Debug.Log(sliderMessage);
+        //sliderText.text = sliderMessage;
+        SliderChanged(sliderUI.value);
+    }
 
-  public void ShowMusicSliderValue () {
-    string sliderMessage = "Music Volume: " + sliderUI.value;
-    Debug.Log(sliderMessage);
-    sliderText.text = sliderMessage;
-  }
+    public void ShowMusicSliderValue () {
+        string sliderMessage = "Music Volume: " + sliderUI.value;
+        //Debug.Log(sliderMessage);
+        //sliderText.text = sliderMessage;
+        SliderChanged(sliderUI.value);
+    }
 
-  public void ShowSFXSliderValue () {
-    string sliderMessage = "SFX Volume: " + sliderUI.value;
-    Debug.Log(sliderMessage);
-    sliderText.text = sliderMessage;
-  }
+    public void ShowSFXSliderValue() {
+        string sliderMessage = "SFX Volume: " + sliderUI.value;
+        //Debug.Log(sliderMessage);
+        //sliderText.text = sliderMessage;
+        SliderChanged(sliderUI.value);
+    }
 }
