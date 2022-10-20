@@ -8,6 +8,8 @@ public class EnemyManager : MonoBehaviour
     public TowerManager towerManager;
     public GameObject endpoint;
     public GameObject startpoint;
+    public GameObject targetObject;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,10 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown("o"))
+        {
+            GetPath();
+        }
     }
 
     void placeMarkers()
@@ -60,29 +65,73 @@ public class EnemyManager : MonoBehaviour
         return Mathf.Sqrt(Mathf.Pow(a.x - b.x, 2) + Mathf.Pow(a.y - b.y, 2));
     }
 
-    /**
-     * TODO INCOMPLETE
-     */
+    List<Vector2Int> reconstructPath(Dictionary<Vector2Int, Vector2Int> cameFrom, Vector2Int current)
+    {
+        List<Vector2Int> totalPath = new List<Vector2Int>();
+        totalPath.Add(current);
+        while (cameFrom.ContainsKey(current))
+        {
+            current = cameFrom[current];
+            totalPath.Add(current);
+        }
+        totalPath.Reverse();
+        return totalPath;
+    }
     void GetPath()
     {
         Vector2Int startNode = getClosestNode(startpoint.transform.position);
         Vector2Int endNode = getClosestNode(endpoint.transform.position);
-        List<Vector2Int> openSet = new List<Vector2Int>() { startNode };
+        List<Vector2Int> openSet = new List<Vector2Int>();
         Dictionary<Vector2Int, Vector2Int> cameFrom = new Dictionary<Vector2Int, Vector2Int>();
         Dictionary<Vector2Int, float> gScore = new Dictionary<Vector2Int, float>();
-        
+        Dictionary<Vector2Int, float> fScore = new Dictionary<Vector2Int, float>();
+        openSet.Add(startNode);
+
+        gScore.Add(startNode, 0);
+        fScore.Add(startNode, distance(startNode, endNode));
+        List<Vector2Int> path = new List<Vector2Int>();
+        while (openSet.Count > 0)
+        {
+            Vector2Int current = openSet[0];
+            for (int i = 1; i < openSet.Count; i++)
+            {
+                if (fScore[openSet[i]] < fScore[current])
+                {
+                    current = openSet[i];
+                }
+            }
+            if (current == endNode)
+            {
+                path = reconstructPath(cameFrom, current);
+                break;
+            }
+            openSet.Remove(current);
+            foreach (Vector2Int neighbor in getNeighbors(current))
+            {
+                float tentativeGScore = gScore[current] + distance(current, neighbor);
+                if (!gScore.ContainsKey(neighbor) || tentativeGScore < gScore[neighbor])
+                {
+                    cameFrom[neighbor] = current;
+                    gScore[neighbor] = tentativeGScore;
+                    fScore[neighbor] = gScore[neighbor] + distance(neighbor, endNode);
+                    if (!openSet.Contains(neighbor))
+                    {
+                        openSet.Add(neighbor);
+                    }
+                }
+            }
+        }
+        //Add tracking objects at each point in the path
+        foreach (Vector2Int point in path)
+        {
+            GameObject trackingObject = Instantiate(targetObject);
+            trackingObject.transform.position = new Vector3(point.x * TowerManager.DISTANCEBETWEENCELLS + towerManager.gridStart.x, point.y * TowerManager.DISTANCEBETWEENCELLS + towerManager.gridStart.y, 0);
+            trackingObject.transform.parent = transform;
+            trackingObject.tag = "Finish";
+        }
+
     }
 
-    void reconstructPath(Dictionary<Vector2Int, Vector2Int> cameFrom, Vector2Int currentNode)
-    {
-        List<Vector2Int> totalPath = new List<Vector2Int>() { currentNode };
-        while (cameFrom.ContainsKey(currentNode))
-        {
-            currentNode = cameFrom[currentNode];
-            totalPath.Add(currentNode);
-        }
-        totalPath.Reverse();
-    }
 
     List<Vector2Int> getNeighbors(Vector2Int node)
     {
@@ -106,13 +155,6 @@ public class EnemyManager : MonoBehaviour
         return neighbors;
     }
 
-
-
-}
     
-    
-
-
-
 
 }

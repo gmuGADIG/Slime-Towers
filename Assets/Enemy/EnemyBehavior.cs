@@ -11,20 +11,20 @@ public class EnemyBehavior : MonoBehaviour
     Vector3 target;
     Rigidbody2D rigidbody;
     float stunTimer = 0f;
-    public float MinAvoidancDistance = 1f; 
+    public float MinAvoidancDistance = 1f;
+    private TowerManager towerManager;
     // Start is called before the first frame update
     void Start()
     {
         path = new Queue<Vector2>();
         rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
         if (path.Count == 0) Pathfind();
-
+        towerManager = GameObject.Find("TowerManager").GetComponent<TowerManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(GetClosestTower().name);
         if (stunTimer > 0)
         {
             stunTimer -= Time.deltaTime;
@@ -53,6 +53,21 @@ public class EnemyBehavior : MonoBehaviour
 
         Debug.Log(Vector3.Distance(closest.transform.position, this.transform.position));
         return closest;
+    }
+    
+    List<GameObject> GetTowersInRange(float range)
+    {
+        List<GameObject> towersInRange = new List<GameObject>();
+        List<GameObject> towers = towerManager.activeTowers;
+        for (int i = 0; i < towers.Count; i++)
+        {
+            if (Vector3.Distance(towers[i].transform.position, this.transform.position) < range)
+                towersInRange.Add(towers[i]);
+        }
+        return towersInRange;
+
+
+
     }
     void Pathfind()
     {
@@ -101,19 +116,17 @@ public class EnemyBehavior : MonoBehaviour
 
         Vector2 DirectionToTargetVec = target - transform.position;
         DirectionToTargetVec.Normalize();
-        rigidbody.velocity = DirectionToTargetVec * speed;
+        rigidbody.velocity = DirectionToTargetVec;
 
-        GameObject ClosestTower = GetClosestTower();
-        if (ClosestTower != null)
+        List<GameObject> closeTowers = GetTowersInRange(MinAvoidancDistance);
+        for (int i = 0; i < closeTowers.Count; i++)
         {
-            if (Vector3.Distance(this.transform.position, ClosestTower.transform.position) < MinAvoidancDistance)
-            {
-                rigidbody.velocity += GetAvoidanceVector(ClosestTower) * speed / Vector2.Distance(ClosestTower.transform.position, this.transform.position);  
-            }
+            rigidbody.velocity += (Vector2)(this.transform.position - closeTowers[i].transform.position).normalized / Vector2.Distance(transform.position, closeTowers[i].transform.position);
+             
+             
         }
-
         rigidbody.velocity.Normalize();
-        //rigidbody.velocity *= speed;
+        rigidbody.velocity *= speed;
 
     }
 
