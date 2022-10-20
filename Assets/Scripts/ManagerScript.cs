@@ -9,15 +9,14 @@ public class ManagerScript : MonoBehaviour
     private AudioListener audioManager;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
+
         setGameState(GameState.EXPLORE);
         audioManager = FindObjectOfType<AudioListener>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         
     }
 
