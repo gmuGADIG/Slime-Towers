@@ -27,6 +27,11 @@ public class ManagerTestButtons : MonoBehaviour
         gameManager.setGameState(GameState.DIALOGUE);
     }
     public void pausePressed() {
-        gameManager.setGameState(GameState.PAUSE);
+        if (gameManager.isPaused()) {
+            gameManager.unpauseGame();
+        }
+        else {
+            gameManager.pauseGame();
+        }
     }
 }
