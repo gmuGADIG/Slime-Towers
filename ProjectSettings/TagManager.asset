@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - enemy
-  - Drill
-  - Tower
-<<<<<<< HEAD
-  - Wall
-=======
-  - Slime
->>>>>>> f402d82a024949bff051f28b761aca1b6c878a0d
+  tags: []
   layers:
   - Default
   - TransparentFX
