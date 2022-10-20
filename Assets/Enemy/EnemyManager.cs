@@ -91,7 +91,7 @@ public class EnemyManager : MonoBehaviour
         totalPath.Reverse();
         return totalPath;
     }
-    List<Vector2Int> GetPath()
+    public List<Vector2Int> GetPath()
     {
         Vector2Int startNode = getClosestNode(startpoint.transform.position);
         Vector2Int endNode = getClosestNode(endpoint.transform.position);
