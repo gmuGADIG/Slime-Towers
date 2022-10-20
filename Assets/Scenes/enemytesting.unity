@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 182911545}
   - component: {fileID: 182911544}
+  - component: {fileID: 182911546}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
@@ -207,6 +208,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &182911546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182911543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a806b10ed2cd904283a7eaace741535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeTillSpawn: 0
+  EnemyType: {fileID: 645126588893247727, guid: dbf5de57d229ced4b8e8da1cb3bf0146, type: 3}
+  RespawnTime: 5
 --- !u!1001 &476857086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,11 +236,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4472277294801973318, guid: 02d2316e3d1b0de4bb5ff77a1eae3605, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.56
+      value: 9.73
       objectReference: {fileID: 0}
     - target: {fileID: 4472277294801973318, guid: 02d2316e3d1b0de4bb5ff77a1eae3605, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.33
+      value: 4.04
       objectReference: {fileID: 0}
     - target: {fileID: 4472277294801973318, guid: 02d2316e3d1b0de4bb5ff77a1eae3605, type: 3}
       propertyPath: m_LocalPosition.z
@@ -467,7 +483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1339301912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,11 +532,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4472277294801973318, guid: 02d2316e3d1b0de4bb5ff77a1eae3605, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.48
+      value: 6.74
       objectReference: {fileID: 0}
     - target: {fileID: 4472277294801973318, guid: 02d2316e3d1b0de4bb5ff77a1eae3605, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.89
+      value: 4.82
       objectReference: {fileID: 0}
     - target: {fileID: 4472277294801973318, guid: 02d2316e3d1b0de4bb5ff77a1eae3605, type: 3}
       propertyPath: m_LocalPosition.z
@@ -702,6 +718,10 @@ PrefabInstance:
     - target: {fileID: 645126588893247727, guid: dbf5de57d229ced4b8e8da1cb3bf0146, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 645126588893247727, guid: dbf5de57d229ced4b8e8da1cb3bf0146, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbf5de57d229ced4b8e8da1cb3bf0146, type: 3}

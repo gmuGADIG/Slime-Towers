@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 
@@ -9,7 +11,7 @@ public class EnemyManager : MonoBehaviour
     public GameObject endpoint;
     public GameObject startpoint;
     public GameObject targetObject;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,13 +23,23 @@ public class EnemyManager : MonoBehaviour
     {
         if (Input.GetKeyDown("o"))
         {
-            GetPath();
+            placeMarkers(GetPath());
         }
     }
 
-    void placeMarkers()
+    void placeMarkers(List<Vector2Int> path)
     {
+        ClearMarkers();
+        path.Reverse();
+        GameObject prev = null;
+        foreach (Vector2Int pos in path)
+        {
+            GameObject marker = Instantiate(targetObject);
+            marker.transform.position = towerManager.getTower(pos).transform.position;
+            marker.GetComponent<PathfindingNode>().nextNode = prev;
+            prev = marker;
 
+        }
     }
     /**
      * Gets the towerNode from the TowerManager that is closests to pos
@@ -43,7 +55,8 @@ public class EnemyManager : MonoBehaviour
         else if (pos.x > towerManager.gridStart.x + (TowerManager.GRIDSIZE - 1) * TowerManager.DISTANCEBETWEENCELLS)
         {
             x = TowerManager.GRIDSIZE - 1;
-        } else
+        }
+        else
         {
             x = (int)((pos.x - towerManager.gridStart.x) / TowerManager.DISTANCEBETWEENCELLS);
         }
@@ -54,7 +67,8 @@ public class EnemyManager : MonoBehaviour
         else if (pos.y > towerManager.gridStart.y + (TowerManager.GRIDSIZE - 1) * TowerManager.DISTANCEBETWEENCELLS)
         {
             y = TowerManager.GRIDSIZE - 1;
-        } else
+        }
+        else
         {
             y = (int)((pos.y - towerManager.gridStart.y) / TowerManager.DISTANCEBETWEENCELLS);
         }
@@ -77,7 +91,7 @@ public class EnemyManager : MonoBehaviour
         totalPath.Reverse();
         return totalPath;
     }
-    void GetPath()
+    List<Vector2Int> GetPath()
     {
         Vector2Int startNode = getClosestNode(startpoint.transform.position);
         Vector2Int endNode = getClosestNode(endpoint.transform.position);
@@ -106,6 +120,10 @@ public class EnemyManager : MonoBehaviour
                 break;
             }
             openSet.Remove(current);
+            if(towerManager.getTower(current).GetComponent<Tower>().towerName != "Tower")
+            {
+                continue;
+            }
             foreach (Vector2Int neighbor in getNeighbors(current))
             {
                 float tentativeGScore = gScore[current] + distance(current, neighbor);
@@ -121,14 +139,8 @@ public class EnemyManager : MonoBehaviour
                 }
             }
         }
-        //Add tracking objects at each point in the path
-        foreach (Vector2Int point in path)
-        {
-            GameObject trackingObject = Instantiate(targetObject);
-            trackingObject.transform.position = new Vector3(point.x * TowerManager.DISTANCEBETWEENCELLS + towerManager.gridStart.x, point.y * TowerManager.DISTANCEBETWEENCELLS + towerManager.gridStart.y, 0);
-            trackingObject.transform.parent = transform;
-            trackingObject.tag = "Finish";
-        }
+        return path;
+        
 
     }
 
@@ -154,7 +166,14 @@ public class EnemyManager : MonoBehaviour
         }
         return neighbors;
     }
-
     
+    void ClearMarkers()
+    {
 
+        GameObject[] markers = GameObject.FindGameObjectsWithTag("Finish");
+        foreach (GameObject marker in markers)
+        {
+            Destroy(marker);
+        }
+    }
 }
