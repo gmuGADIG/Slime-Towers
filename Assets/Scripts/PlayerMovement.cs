@@ -9,15 +9,15 @@ public class PlayerMovement : MonoBehaviour
     private PolygonCollider2D bodyCollider;
     private CircleCollider2D interact2D;
     private bool drillPresent = false;
-    private bool inDrill = false;
 
     private List<GameObject> items = new List<GameObject>();
     private GameObject mostRecent;
-    private GameObject drillControllable;
+    public DrillHealth drillControllable; //set in unity scene
 
     //mouse/sprite control variables*
 
     //player movement variables
+    public Camera playerCam;
     Vector2 movement;
     float inputX, inputY;
     
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerCam.enabled = true;
     }
 
     void Update() {
@@ -60,23 +60,17 @@ public class PlayerMovement : MonoBehaviour
 
         //player interact
         if (Input.GetKeyDown(KeyCode.E)) { 
-            if (drillPresent && mostRecent.CompareTag("Drill")) {
+            if (drillPresent /*&& ManagerScript.gm.getGameState() == GameState.EXPLORE*/) {
+                drillControllable.playerEnter(this.gameObject);
             }
         }
 
 
         //player sprite rotate
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log("mousePosition: " + worldPosition.ToString());
+        Vector3 worldPosition = playerCam.ScreenToWorldPoint(Input.mousePosition);
+        //Debug.Log("mousePosition: " + worldPosition.ToString());
 
         transform.Translate(velocity);
-    }
-
-    private void drillEnter() {
-        inDrill = true;
-
-        this.gameObject.SetActive(false);
-
     }
 
 
@@ -85,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
             //highlight drill
             Debug.Log("Drill in Range");
             drillPresent = true;
-            drillControllable = collision.gameObject;
+            drillControllable = collision.GetComponent<DrillHealth>();
         }
         else {
             mostRecent = collision.gameObject;  //stores object in script
@@ -99,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Drill out of range");
             drillPresent = false;
 
-            drillControllable = collision.gameObject;
+            drillControllable = null;
 
         }
     }

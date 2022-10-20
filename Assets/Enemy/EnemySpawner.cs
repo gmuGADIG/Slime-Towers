@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    
     public float TimeTillSpawn;
     public GameObject EnemyType;
-    
-    public const float RespawnTime = 5;
+
+    public float RespawnTime = 5;
     // Start is called before the first frame update
     void Start()
     {
