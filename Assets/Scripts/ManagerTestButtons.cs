@@ -34,4 +34,7 @@ public class ManagerTestButtons : MonoBehaviour
             gameManager.pauseGame();
         }
     }
+    public void resetWavePressed() {
+        gameManager.resetWave();
+    }
 }
