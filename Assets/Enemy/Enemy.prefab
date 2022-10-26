@@ -102,7 +102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   speed: 10
-  MinAvoidancDistance: 1
+  nextNode: {fileID: 0}
+  MinAvoidancDistance: 0.5
+  towerManager: {fileID: 0}
 --- !u!50 &645126588893247723
 Rigidbody2D:
   serializedVersion: 4
