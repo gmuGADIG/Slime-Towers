@@ -7,6 +7,8 @@ using MaterialType = SlimeTowers.MaterialType;
 public class InventoryUI : MonoBehaviour
 {
     private Canvas inventoryMenu;
+    [SerializeField]
+    private Transform UIList;
     private SortedSet<MaterialType> activeMaterials;
     private List<GameObject> textBoxes;
     public static InventoryUI inventoryUI;
@@ -30,6 +32,8 @@ public class InventoryUI : MonoBehaviour
     {
         inventoryMenu = GetComponent<Canvas>();
         inventoryMenu.enabled = false;   
+        UIList = new GameObject("UIList").transform;
+        UIList.parent = transform;
     }
 
     // Update is called once per frame
@@ -54,13 +58,17 @@ public class InventoryUI : MonoBehaviour
 
     private void UpdateObjects()
     {
+        Destroy(UIList.gameObject);
+        UIList = new GameObject("UIList").transform;
+        UIList.parent = transform;
+        
         float position = 0;
         
         const float OBJ_OFFSET = 16;
         foreach(MaterialType m in activeMaterials)
         {
             GameObject UItext = new GameObject("Text");
-            UItext.transform.SetParent(transform);
+            UItext.transform.SetParent(UIList);
             RectTransform trans = UItext.AddComponent<RectTransform>();
             trans.pivot = new Vector2(0, 1);
             trans.sizeDelta = new Vector2(200, 100);

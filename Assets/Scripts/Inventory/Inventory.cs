@@ -14,9 +14,12 @@ public class Inventory : MonoBehaviour
 
     private void Awake()
     {
-        if(!inventory) {
+        Debug.Log("I'm Alive");
+        if(inventory == null) {
             inventory = this;
+            Debug.Log("Inventory set");
         } else {
+            Debug.Log("I'm Dead");
             Destroy(gameObject);
         }
     }

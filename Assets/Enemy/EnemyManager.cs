@@ -27,6 +27,10 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    public void resetPathMarkers(){
+        placeMarkers(GetPath());
+    }
+
     void placeMarkers(List<Vector2Int> path)
     {
         ClearMarkers();

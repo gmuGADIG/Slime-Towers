@@ -11,6 +11,7 @@ public class PopupManager : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("I'm Here");
         // Hide my elements
         hide_popup();
     }

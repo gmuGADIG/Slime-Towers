@@ -35,10 +35,13 @@ public class PlayerMovement : MonoBehaviour
     LayerMask groundLayer;
 
 
-
+    void Awake(){
+        Debug.Log("I'm Here, Awake");
+    }
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("I'm Here");
         playerCam.enabled = true;
     }
 
