@@ -153,9 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridStart: {x: 0, y: 0}
-  towerPlaceholder: {fileID: 1837974082}
+  towerPlaceholder: {fileID: 4472277294801973321, guid: 1b705bb74bca1f5499115cf5fd4c00f1, type: 3}
   activeTowers: []
-  towerTypes: []
+  towerTypes:
+  - {fileID: 1837974082}
   selectedTower: 0
   destroyMode: 0
   managing: 0
@@ -436,7 +437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486499039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.87, y: -3.46, z: 0}
+  m_LocalPosition: {x: -6.37, y: -2.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -520,7 +521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584693020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.3, y: 2.67, z: 0}
+  m_LocalPosition: {x: 11.23, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -604,7 +605,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659862977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.76, y: 10.13, z: 0}
+  m_LocalPosition: {x: 5.17, y: 11.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -894,7 +895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 306708871109086375, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
       propertyPath: timeToHit
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 306708871109086375, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
       propertyPath: TargetSize
@@ -902,11 +903,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 306708871109086375, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
       propertyPath: rotationSpeed
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4776954093406427284, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
       propertyPath: m_Name
       value: Tower AI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776954093406427284, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4776954093406427291, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
       propertyPath: m_RootOrder
