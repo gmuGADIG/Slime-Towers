@@ -18,8 +18,8 @@ public class ManagerScript : MonoBehaviour
     public UnityEvent despawnAllEnemies;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
+
         setGameState(GameState.EXPLORE);
         gamePaused = false;
         audioManager = FindObjectOfType<AudioListener>();
@@ -31,8 +31,7 @@ public class ManagerScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         
     }
 
