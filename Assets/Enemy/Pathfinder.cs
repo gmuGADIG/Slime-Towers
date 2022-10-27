@@ -128,7 +128,7 @@ public class Pathfinder : MonoBehaviour
                 break;
             }
             openSet.Remove(current);
-            if (towerManager.getTower(current).GetComponent<Tower>().towerName != "Tower")
+            if (towerManager.getTower(current).GetComponent<Tower>().towerName != "Tower" && towerManager.getTower(current).GetComponent<Tower>().towerName != "RESTRICTED")
             {
                 continue;
             }
