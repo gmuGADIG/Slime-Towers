@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 981601ec29b8b6943a71000743d6d27f
+guid: cfb65d0889e06444f90fdad230945e9a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_0
+      name: TS_CaveGeneralPink_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8937fddddd10c264786181ac1de662b7
-      internalID: -386456257
+      spriteID: 728454e255e90f34f815b8591d545814
+      internalID: 1073225044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_1
+      name: TS_CaveGeneralPink_1
       rect:
         serializedVersion: 2
         x: 256
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43e82863e2d7c8342ab94923751d098b
-      internalID: -2130051209
+      spriteID: 00649936a2318ba4f80dc9e187721716
+      internalID: -1208465103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_2
+      name: TS_CaveGeneralPink_2
       rect:
         serializedVersion: 2
         x: 512
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9df76a24c0c4c2448b6aca48ad075255
-      internalID: 1509607987
+      spriteID: 76d6ecc219575b642aa5ec2328d6254c
+      internalID: -1192981758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_3
+      name: TS_CaveGeneralPink_3
       rect:
         serializedVersion: 2
         x: 768
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dd3b29a5e19b674f92ccf16ea770b86
-      internalID: 1275684558
+      spriteID: 8c5a461c9ccac1246bc6830c46905d86
+      internalID: 2132857211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_5
+      name: TS_CaveGeneralPink_5
       rect:
         serializedVersion: 2
         x: 1280
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4223b9240f5dcce488adacc1363e683b
-      internalID: -1542940465
+      spriteID: f891436669c1cf5419da20ffce8ebccb
+      internalID: 1823932332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_6
+      name: TS_CaveGeneralPink_6
       rect:
         serializedVersion: 2
         x: 0
@@ -223,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e3ef66c702a4c049bfc6268a88378a7
-      internalID: 529285947
+      spriteID: e730f06a9a6913946a64633ebbf01660
+      internalID: -634044070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_7
+      name: TS_CaveGeneralPink_7
       rect:
         serializedVersion: 2
         x: 256
@@ -244,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d396cdff6ff539841b8f6a8ab131e127
-      internalID: 26435953
+      spriteID: 2980e870f844f4d4d9abbf22a17efffb
+      internalID: -1587933802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_8
+      name: TS_CaveGeneralPink_8
       rect:
         serializedVersion: 2
         x: 512
@@ -265,14 +265,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b28704b86dca5c04482154b27545f856
-      internalID: 665433722
+      spriteID: 126728cd3a857cd4180748f32aa54c72
+      internalID: -1167510935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_10
+      name: TS_CaveGeneralPink_10
       rect:
         serializedVersion: 2
         x: 1024
@@ -286,14 +286,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae49729c7ab147840a7ec1cf71d9a566
-      internalID: 86336954
+      spriteID: 32a36c3e0ed91d3479272b1578a9fd58
+      internalID: 232287995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_12
+      name: TS_CaveGeneralPink_12
       rect:
         serializedVersion: 2
         x: 0
@@ -307,14 +307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18a3961776f0a1e46af1dbe5c05983f2
-      internalID: 625370360
+      spriteID: 0269fb7e2c1484e4dba5c2079dcc97c7
+      internalID: 476337602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_13
+      name: TS_CaveGeneralPink_13
       rect:
         serializedVersion: 2
         x: 256
@@ -328,14 +328,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0652e2b65a0175146b4db3f3bf68b54a
-      internalID: -1926097616
+      spriteID: d8f69b3ab622bc7499563769688145a8
+      internalID: -791273119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_14
+      name: TS_CaveGeneralPink_14
       rect:
         serializedVersion: 2
         x: 512
@@ -349,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43469d7305fac484fa11955ec14f08a5
-      internalID: -1997125933
+      spriteID: 1f031048f7176744f856aa4b13f25a34
+      internalID: 1439562720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_15
+      name: TS_CaveGeneralPink_15
       rect:
         serializedVersion: 2
         x: 768
@@ -370,14 +370,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf2580593dbb75e4caff5ad5fa7f2d8b
-      internalID: -1601681985
+      spriteID: 9fc8da3c753c424438918c4b303dde6f
+      internalID: -136941002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_17
+      name: TS_CaveGeneralPink_17
       rect:
         serializedVersion: 2
         x: 1280
@@ -391,14 +391,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d4c5546623bc2345970bc1546c4e086
-      internalID: 513756177
+      spriteID: 5941ccf87625fd040b217b395e7ef5af
+      internalID: 664209939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_18
+      name: TS_CaveGeneralPink_18
       rect:
         serializedVersion: 2
         x: 0
@@ -412,14 +412,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11c1d681dee694142b45ba403506c6f2
-      internalID: -1982340599
+      spriteID: bf13fbe3cee40e94fba910ed66a74a7e
+      internalID: 1767984526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_19
+      name: TS_CaveGeneralPink_19
       rect:
         serializedVersion: 2
         x: 256
@@ -433,14 +433,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9981112ea05e9d4f9d2491316ee4ec8
-      internalID: -1358353206
+      spriteID: ed8082ef1ca058945991f470f9739fb9
+      internalID: -597100823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_20
+      name: TS_CaveGeneralPink_20
       rect:
         serializedVersion: 2
         x: 512
@@ -454,14 +454,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd24b26d4e9973846be0e55fba5e7df3
-      internalID: -1265603490
+      spriteID: ab8bc2763939a5f428d39d4f706577a4
+      internalID: -2099938268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_21
+      name: TS_CaveGeneralPink_21
       rect:
         serializedVersion: 2
         x: 768
@@ -475,14 +475,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b81d9e0046d2bb4aa3844c1a7142328
-      internalID: 567733468
+      spriteID: d5e5ae14d7056ee479572ce1ab061124
+      internalID: -1145414979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_22
+      name: TS_CaveGeneralPink_22
       rect:
         serializedVersion: 2
         x: 1024
@@ -496,14 +496,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 822cc216c4815ac4daafd667f612c92f
-      internalID: 1652451050
+      spriteID: 36e73d55404c57c419fb7b6bb1a4b143
+      internalID: -1105313499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_24
+      name: TS_CaveGeneralPink_24
       rect:
         serializedVersion: 2
         x: 0
@@ -517,14 +517,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2414d8b46700bf84fa5209f1e07c9134
-      internalID: 1531809529
+      spriteID: 5cf2ebe55f5824b4ab42f7b9af481f93
+      internalID: 1399468348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_25
+      name: TS_CaveGeneralPink_25
       rect:
         serializedVersion: 2
         x: 256
@@ -538,14 +538,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7447eaac9d5d1f4086d1d1a2fe6c100
-      internalID: 2111386933
+      spriteID: 57969dfcc164c0940a6db9b2d71ab395
+      internalID: -982410136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_26
+      name: TS_CaveGeneralPink_26
       rect:
         serializedVersion: 2
         x: 512
@@ -559,14 +559,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bc5191ec1992ca42b35187860e5dd17
-      internalID: 603394605
+      spriteID: 3646ba587aa9e08488bc30ba3e9315f0
+      internalID: 1871655147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_27
+      name: TS_CaveGeneralPink_27
       rect:
         serializedVersion: 2
         x: 768
@@ -580,14 +580,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9652b1d7f80e5649a95041e940d46f3
-      internalID: -1830453321
+      spriteID: a9ed90f78d0d5cb4b8574b60e8122232
+      internalID: 1520290427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_28
+      name: TS_CaveGeneralPink_28
       rect:
         serializedVersion: 2
         x: 1024
@@ -601,14 +601,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45fdd378a20aea243a7c970171962dba
-      internalID: 171480870
+      spriteID: 4d4a7d19650ee5443850c066e4a9db9c
+      internalID: 1151631899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_29
+      name: TS_CaveGeneralPink_29
       rect:
         serializedVersion: 2
         x: 1280
@@ -622,14 +622,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c07e8c2b6a5cc14bbfe22718c5b1695
-      internalID: -1742634048
+      spriteID: c4aca4878042d7143aadb2b8d4662c30
+      internalID: 836347638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_30
+      name: TS_CaveGeneralPink_30
       rect:
         serializedVersion: 2
         x: 0
@@ -643,14 +643,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a31355c28feba2488de91043e09a5fe
-      internalID: 439351594
+      spriteID: e4ce15eab9586fd41876dba7f1402833
+      internalID: -1672586249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_31
+      name: TS_CaveGeneralPink_31
       rect:
         serializedVersion: 2
         x: 256
@@ -664,14 +664,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff6c570942db93845977fb599596930e
-      internalID: 698148159
+      spriteID: 41d05af563268d04281dea2dc54fe152
+      internalID: 1550075444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_32
+      name: TS_CaveGeneralPink_32
       rect:
         serializedVersion: 2
         x: 512
@@ -685,14 +685,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d50db563a33f634fb9f828e6fe26696
-      internalID: -389155114
+      spriteID: e4d3d5741a292b548b2aed6534d8d9b0
+      internalID: -676114700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_34
+      name: TS_CaveGeneralPink_34
       rect:
         serializedVersion: 2
         x: 1024
@@ -706,14 +706,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48618a9ddacd2994e8a95814816c98fe
-      internalID: -2096096169
+      spriteID: 910d3143f45ad204fa08e9ccf6760b73
+      internalID: -1023765978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_36
+      name: TS_CaveGeneralPink_36
       rect:
         serializedVersion: 2
         x: 0
@@ -727,14 +727,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fac27ca2b691804a9892d82bf8d69e9
-      internalID: -2084589323
+      spriteID: 520b2ab740bec6b4aa8c0f20d66fab68
+      internalID: 707019106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_37
+      name: TS_CaveGeneralPink_37
       rect:
         serializedVersion: 2
         x: 256
@@ -748,14 +748,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1aca5f87f74b03468fd8ef6b3374f6b
-      internalID: 1888798795
+      spriteID: 97bf0fac051aeb44dab656a387a0948a
+      internalID: -2075704876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_39
+      name: TS_CaveGeneralPink_39
       rect:
         serializedVersion: 2
         x: 768
@@ -769,14 +769,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a7560021e4357e40bf0e9f7e9d1279d
-      internalID: 408978916
+      spriteID: 899bdfc4c0a797347b9a30ce901108c2
+      internalID: 2016912126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_41
+      name: TS_CaveGeneralPink_41
       rect:
         serializedVersion: 2
         x: 1280
@@ -790,14 +790,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c15f482722877d499c2031d97731a20
-      internalID: -512900178
+      spriteID: 5f6c871550b459b4d8dd4aefcd31d21e
+      internalID: 61721993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_42
+      name: TS_CaveGeneralPink_42
       rect:
         serializedVersion: 2
         x: 0
@@ -811,14 +811,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c0df658a25d07c4ab32353b17abf364
-      internalID: 49104721
+      spriteID: 8cbaf77168d887c41bc30faa44385d17
+      internalID: -1178896385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_43
+      name: TS_CaveGeneralPink_43
       rect:
         serializedVersion: 2
         x: 256
@@ -832,14 +832,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b76420b714ad0a04cafa20dcab3b0d83
-      internalID: -899749512
+      spriteID: f31849f678644bd47bce3d9798f4e6d3
+      internalID: -1934225666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_45
+      name: TS_CaveGeneralPink_45
       rect:
         serializedVersion: 2
         x: 768
@@ -853,14 +853,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cbd472ded230ad4187bb92b2f7340d9
-      internalID: 77775401
+      spriteID: 8751e2ecae3cf5b4687aa2f20d88ab4a
+      internalID: -783983476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GeneralCave_Tileset_AlessandraCoogan_47
+      name: TS_CaveGeneralPink_47
       rect:
         serializedVersion: 2
         x: 1280
@@ -874,8 +874,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b1a763d462fcc5408e739ff891de4ea
-      internalID: -940342625
+      spriteID: 4111b9b6069b1d64596ddb45c407852e
+      internalID: 1884125761
       vertices: []
       indices: 
       edges: []
@@ -891,54 +891,54 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GeneralCave_Tileset_AlessandraCoogan_2: 1509607987
-      GeneralCave_Tileset_AlessandraCoogan_29: -1742634048
-      GeneralCave_Tileset_AlessandraCoogan_40: 54142937
-      GeneralCave_Tileset_AlessandraCoogan_34: -2096096169
-      GeneralCave_Tileset_AlessandraCoogan_24: 1531809529
-      GeneralCave_Tileset_AlessandraCoogan_28: 171480870
-      GeneralCave_Tileset_AlessandraCoogan_5: -1542940465
-      GeneralCave_Tileset_AlessandraCoogan_44: -2048960493
-      GeneralCave_Tileset_AlessandraCoogan_15: -1601681985
-      GeneralCave_Tileset_AlessandraCoogan_46: -392623344
-      GeneralCave_Tileset_AlessandraCoogan_45: 77775401
-      GeneralCave_Tileset_AlessandraCoogan_4: 154440789
-      GeneralCave_Tileset_AlessandraCoogan_13: -1926097616
-      GeneralCave_Tileset_AlessandraCoogan_43: -899749512
-      GeneralCave_Tileset_AlessandraCoogan_26: 603394605
-      GeneralCave_Tileset_AlessandraCoogan_10: 86336954
-      GeneralCave_Tileset_AlessandraCoogan_16: -1897368203
-      GeneralCave_Tileset_AlessandraCoogan_18: -1982340599
-      GeneralCave_Tileset_AlessandraCoogan_0: -386456257
-      GeneralCave_Tileset_AlessandraCoogan_35: 1601971402
-      GeneralCave_Tileset_AlessandraCoogan_12: 625370360
-      GeneralCave_Tileset_AlessandraCoogan_41: -512900178
-      GeneralCave_Tileset_AlessandraCoogan_20: -1265603490
-      GeneralCave_Tileset_AlessandraCoogan_23: 140684304
-      GeneralCave_Tileset_AlessandraCoogan_8: 665433722
-      GeneralCave_Tileset_AlessandraCoogan_1: -2130051209
-      GeneralCave_Tileset_AlessandraCoogan_37: 1888798795
-      GeneralCave_Tileset_AlessandraCoogan_9: -644137148
-      GeneralCave_Tileset_AlessandraCoogan_11: -2039656217
-      GeneralCave_Tileset_AlessandraCoogan_27: -1830453321
-      GeneralCave_Tileset_AlessandraCoogan_33: 1702936008
-      GeneralCave_Tileset_AlessandraCoogan_30: 439351594
-      GeneralCave_Tileset_AlessandraCoogan_47: -940342625
-      GeneralCave_Tileset_AlessandraCoogan_6: 529285947
-      GeneralCave_Tileset_AlessandraCoogan_21: 567733468
-      GeneralCave_Tileset_AlessandraCoogan_3: 1275684558
-      GeneralCave_Tileset_AlessandraCoogan_17: 513756177
-      GeneralCave_Tileset_AlessandraCoogan_25: 2111386933
-      GeneralCave_Tileset_AlessandraCoogan_31: 698148159
-      GeneralCave_Tileset_AlessandraCoogan_36: -2084589323
-      GeneralCave_Tileset_AlessandraCoogan_22: 1652451050
-      GeneralCave_Tileset_AlessandraCoogan_32: -389155114
-      GeneralCave_Tileset_AlessandraCoogan_19: -1358353206
-      GeneralCave_Tileset_AlessandraCoogan_7: 26435953
-      GeneralCave_Tileset_AlessandraCoogan_39: 408978916
-      GeneralCave_Tileset_AlessandraCoogan_38: 289803111
-      GeneralCave_Tileset_AlessandraCoogan_14: -1997125933
-      GeneralCave_Tileset_AlessandraCoogan_42: 49104721
+      TS_CaveGeneralPink_1: -1208465103
+      TS_CaveGeneralPink_47: 1884125761
+      TS_CaveGeneralPink_22: -1105313499
+      TS_CaveGeneralPink_39: 2016912126
+      TS_CaveGeneralPink_23: 1449656420
+      TS_CaveGeneralPink_28: 1151631899
+      TS_CaveGeneralPink_13: -791273119
+      TS_CaveGeneralPink_2: -1192981758
+      TS_CaveGeneralPink_15: -136941002
+      TS_CaveGeneralPink_27: 1520290427
+      TS_CaveGeneralPink_10: 232287995
+      TS_CaveGeneralPink_32: -676114700
+      TS_CaveGeneralPink_24: 1399468348
+      TS_CaveGeneralPink_4: 879144460
+      TS_CaveGeneralPink_19: -597100823
+      TS_CaveGeneralPink_12: 476337602
+      TS_CaveGeneralPink_0: 1073225044
+      TS_CaveGeneralPink_20: -2099938268
+      TS_CaveGeneralPink_26: 1871655147
+      TS_CaveGeneralPink_17: 664209939
+      TS_CaveGeneralPink_21: -1145414979
+      TS_CaveGeneralPink_38: 290735046
+      TS_CaveGeneralPink_31: 1550075444
+      TS_CaveGeneralPink_16: -2101879500
+      TS_CaveGeneralPink_41: 61721993
+      TS_CaveGeneralPink_37: -2075704876
+      TS_CaveGeneralPink_29: 836347638
+      TS_CaveGeneralPink_45: -783983476
+      TS_CaveGeneralPink_44: -1745780249
+      TS_CaveGeneralPink_36: 707019106
+      TS_CaveGeneralPink_42: -1178896385
+      TS_CaveGeneralPink_7: -1587933802
+      TS_CaveGeneralPink_6: -634044070
+      TS_CaveGeneralPink_18: 1767984526
+      TS_CaveGeneralPink_46: 1016909317
+      TS_CaveGeneralPink_34: -1023765978
+      TS_CaveGeneralPink_14: 1439562720
+      TS_CaveGeneralPink_40: 2087009279
+      TS_CaveGeneralPink_5: 1823932332
+      TS_CaveGeneralPink_33: 1162816126
+      TS_CaveGeneralPink_9: -1887915292
+      TS_CaveGeneralPink_8: -1167510935
+      TS_CaveGeneralPink_43: -1934225666
+      TS_CaveGeneralPink_35: 2067627240
+      TS_CaveGeneralPink_25: -982410136
+      TS_CaveGeneralPink_11: -212022187
+      TS_CaveGeneralPink_30: -1672586249
+      TS_CaveGeneralPink_3: 2132857211
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
