@@ -36,6 +36,20 @@ public class EnemyManager : MonoBehaviour
             path.resetPathMarkers();
         }
     }
+
+    public bool hasValidPath()
+    {
+        foreach (Pathfinder path in paths
+        )
+        {
+            if (path.GetPath().Count > 0)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     [Obsolete]
     void placeMarkers(List<Vector2Int> path)
     {
