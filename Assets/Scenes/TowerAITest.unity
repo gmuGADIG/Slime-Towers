@@ -736,7 +736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeTillSpawn: 0
   EnemyType: {fileID: 645126588893247727, guid: dbf5de57d229ced4b8e8da1cb3bf0146, type: 3}
-  RespawnTime: 5
+  RespawnTime: 0.5
 --- !u!212 &2141028372
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -812,6 +812,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 306708871109086375, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
+      propertyPath: AOETower
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 306708871109086375, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
       propertyPath: hitTimer
       value: 0
       objectReference: {fileID: 0}
@@ -833,6 +837,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4776954093406427284, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776954093406427290, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
+      propertyPath: slime
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4776954093406427291, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
