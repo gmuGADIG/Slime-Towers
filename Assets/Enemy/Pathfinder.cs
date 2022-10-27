@@ -1,17 +1,18 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+using System.Net;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour
+public class Pathfinder : MonoBehaviour
 {
-    public TowerManager towerManager;
-    public GameObject endpoint;
-    public GameObject startpoint;
-    public GameObject targetObject;
-    public List<Pathfinder> paths;
+
+    private TowerManager towerManager;
+    private EnemyManager enemyManager;
+    public GameObject startPoint;
+    public GameObject endPoint;
+    public GameObject pathfindingNode;
+    public List<GameObject> pathfindingNodes { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,24 +20,20 @@ public class EnemyManager : MonoBehaviour
         {
             towerManager = FindObjectOfType<TowerManager>();
         }
+        if(enemyManager == null)
+        {
+            
+            enemyManager = FindObjectOfType<EnemyManager>();
+            
+        }
+        enemyManager.paths.Add(this);
+        pathfindingNodes = new List<GameObject>();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void resetPathMarkers()
     {
-        if (Input.GetKeyDown("o"))
-        {
-            resetPathMarkers();
-        }
+        placeMarkers(GetPath());
     }
 
-    public void resetPathMarkers(){
-        foreach (Pathfinder path in paths)
-        {
-            path.resetPathMarkers();
-        }
-    }
-    [Obsolete]
     void placeMarkers(List<Vector2Int> path)
     {
         ClearMarkers();
@@ -44,9 +41,10 @@ public class EnemyManager : MonoBehaviour
         GameObject prev = null;
         foreach (Vector2Int pos in path)
         {
-            GameObject marker = Instantiate(targetObject);
+            GameObject marker = Instantiate(pathfindingNode);
             marker.transform.position = towerManager.getTower(pos).transform.position;
             marker.GetComponent<PathfindingNode>().nextNode = prev;
+            pathfindingNodes.Add(marker);
             prev = marker;
 
         }
@@ -88,7 +86,7 @@ public class EnemyManager : MonoBehaviour
     {
         return Mathf.Sqrt(Mathf.Pow(a.x - b.x, 2) + Mathf.Pow(a.y - b.y, 2));
     }
-    [Obsolete]
+
     List<Vector2Int> reconstructPath(Dictionary<Vector2Int, Vector2Int> cameFrom, Vector2Int current)
     {
         List<Vector2Int> totalPath = new List<Vector2Int>();
@@ -101,11 +99,10 @@ public class EnemyManager : MonoBehaviour
         totalPath.Reverse();
         return totalPath;
     }
-    [Obsolete]
     public List<Vector2Int> GetPath()
     {
-        Vector2Int startNode = getClosestNode(startpoint.transform.position);
-        Vector2Int endNode = getClosestNode(endpoint.transform.position);
+        Vector2Int startNode = getClosestNode(startPoint.transform.position);
+        Vector2Int endNode = getClosestNode(endPoint.transform.position);
         List<Vector2Int> openSet = new List<Vector2Int>();
         Dictionary<Vector2Int, Vector2Int> cameFrom = new Dictionary<Vector2Int, Vector2Int>();
         Dictionary<Vector2Int, float> gScore = new Dictionary<Vector2Int, float>();
@@ -131,7 +128,7 @@ public class EnemyManager : MonoBehaviour
                 break;
             }
             openSet.Remove(current);
-            if(towerManager.getTower(current).GetComponent<Tower>().towerName != "Tower")
+            if (towerManager.getTower(current).GetComponent<Tower>().towerName != "Tower")
             {
                 continue;
             }
@@ -151,11 +148,11 @@ public class EnemyManager : MonoBehaviour
             }
         }
         return path;
-        
+
 
     }
 
-    [Obsolete]
+
     List<Vector2Int> getNeighbors(Vector2Int node)
     {
         List<Vector2Int> neighbors = new List<Vector2Int>();
@@ -177,14 +174,14 @@ public class EnemyManager : MonoBehaviour
         }
         return neighbors;
     }
-    [Obsolete]
+
     void ClearMarkers()
     {
 
-        GameObject[] markers = GameObject.FindGameObjectsWithTag("Finish");
-        foreach (GameObject marker in markers)
+        foreach (GameObject marker in pathfindingNodes)
         {
             Destroy(marker);
         }
+        pathfindingNodes.Clear();
     }
 }

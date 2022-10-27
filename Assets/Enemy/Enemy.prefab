@@ -101,10 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83474a6ae7559a4995d77c0800dc9fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 100
   speed: 10
   nextNode: {fileID: 0}
-  MinAvoidancDistance: 0.5
+  MinAvoidancDistance: 0.93
   towerManager: {fileID: 0}
 --- !u!50 &645126588893247723
 Rigidbody2D:
