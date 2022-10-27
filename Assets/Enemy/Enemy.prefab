@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2031563656277826192}
   - component: {fileID: 6745843918834410928}
   - component: {fileID: 4257106276087333898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -102,9 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  speed: 10
+  speed: 5
   nextNode: {fileID: 0}
-  MinAvoidancDistance: 0.93
+  MinAvoidancDistance: 1
   towerManager: {fileID: 0}
 --- !u!50 &645126588893247723
 Rigidbody2D:
