@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class ManagerScript : MonoBehaviour
 {
-    
+    public static ManagerScript gm; //The single ManagerScript that carries over between scenes
     private GameState gameState;
     private bool gamePaused;
     private AudioListener audioManager;
@@ -14,9 +14,16 @@ public class ManagerScript : MonoBehaviour
     private int enemiesAlive; //The number of enemies currently spawned and alive in the scene
     [Tooltip("Keep this checked to prevent resetting scene upon start")]
     public bool debugging;
+    private PlayerMovement playerMoveScript;
 
     public UnityEvent despawnAllEnemies;
 
+    private void Awake() {
+        if (gm == null) {
+            gm = this;
+        }
+        Destroy(gameObject); //We only need the static ManagerScript, the manager object isn't needed
+    }
     // Start is called before the first frame update
     void Start() {
 
@@ -28,6 +35,10 @@ public class ManagerScript : MonoBehaviour
         }
         enemiesSpawned = 0;
         enemiesAlive = 0;
+        if (!debugging) {
+            resetWave();
+        }
+        playerMoveScript = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -53,14 +64,17 @@ public class ManagerScript : MonoBehaviour
             case GameState.EXPLORE:
                 Time.timeScale = 1f;
                 AudioListener.volume = 1f;
+                playerMoveScript.canMove = true;
                 break;
             case GameState.ATTACK:
                 Time.timeScale = 1f;
                 AudioListener.volume = 1f;
+                playerMoveScript.canMove = false;
                 break;
             case GameState.DIALOGUE:
                 Time.timeScale = 1f;
                 AudioListener.volume = 0.5f;
+                playerMoveScript.canMove = false;
                 break;
             default:
                 break;
