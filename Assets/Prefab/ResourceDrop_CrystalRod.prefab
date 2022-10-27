@@ -4825,7 +4825,7 @@ GameObject:
   - component: {fileID: 6184216763223097252}
   - component: {fileID: 6184216763223097253}
   m_Layer: 0
-  m_Name: ResourceDrop
+  m_Name: ResourceDrop_CrystalRod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

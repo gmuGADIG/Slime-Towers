@@ -31,7 +31,7 @@ public class InventoryUI : MonoBehaviour
     void Start()
     {
         inventoryMenu = GetComponent<Canvas>();
-        inventoryMenu.enabled = false;   
+        //inventoryMenu.enabled = false;   
         UIList = new GameObject("UIList").transform;
         UIList.parent = transform;
     }
@@ -39,10 +39,10 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        /*if (Input.GetKeyDown(KeyCode.I))
         {
             inventoryMenu.enabled = !inventoryMenu.enabled;
-        }
+        }*/
 
         //i'm beginning to debooog
         /*if (Input.GetKeyDown(KeyCode.F))
