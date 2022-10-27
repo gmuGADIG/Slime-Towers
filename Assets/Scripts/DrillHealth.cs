@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DrillHealth : MonoBehaviour {
-
-    public ManagerScript manager;
-
     //Script for the drill
     int health = 100;
     bool playerPresent = false;
@@ -46,25 +43,13 @@ public class DrillHealth : MonoBehaviour {
                 //calculate arc* (for now just a straight line)
                 //instantiate cooldown 
             }
-            else if (Input.GetButtonDown("Fire1") && Time.time < attackCooldown) {
+            else{
                 Debug.Log("recharging... Can't fire");
             }
 
             //playerExit
-            if (Input.GetKeyDown(KeyCode.E) && (manager.getGameState() != GameState.ATTACK) ) {
+            if (Input.GetKeyDown(KeyCode.E)) {
                 playerExit();
-            }
-            //player feedback(attack phase still underway)
-            else if (Input.GetKeyDown(KeyCode.E) && (manager.getGameState() == GameState.ATTACK)) {
-                Debug.Log("Sah', not safe to go out sah'");
-            }
-
-
-
-            //*debugger code for game state switch
-            if (Input.GetKeyDown(KeyCode.T)) {
-                manager.setGameState(GameState.EXPLORE);
-                Debug.Log("Switching gamestate to EXPLORE");
             }
         }
         else{
@@ -77,7 +62,6 @@ public class DrillHealth : MonoBehaviour {
         input.SetActive(false);
         playerPresent = true;
         drillCamera.enabled = true;
-        manager.setGameState(GameState.ATTACK);
     }
 
     public void playerExit(){

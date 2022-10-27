@@ -6,6 +6,8 @@ public interface IInteractable
 {
     string popup_text();
     void interact();
+    void check_popup();
+    bool is_showing();
 }
 
 

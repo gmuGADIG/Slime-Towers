@@ -25,8 +25,6 @@ public class TowerManager : MonoBehaviour
     public bool managing = false;
     //Indicator for mode Orange for manage, Green for create, Red for delete
     public GameObject squareSelector;
-    [Tooltip("The Enemy Manager active in the scene")]
-    public EnemyManager enemyManager;
 
     //Makes a shallow copy of the active towers on the grid
     public List<GameObject> getActiveTowers()
@@ -37,11 +35,6 @@ public class TowerManager : MonoBehaviour
     //Puts the placeholder tower to all the grid
     void Start()
     {
-        if(enemyManager == null){
-            enemyManager = FindObjectOfType<EnemyManager>();
-        }else{
-            Debug.LogError("Scene has Tower Manager and no Enemy Manager. This will cause problems");
-        }        
         squareSelector.GetComponent<SpriteRenderer>().color = Color.green;
         for(int i = 0; i < GRIDSIZE; i++)
         {
@@ -54,7 +47,6 @@ public class TowerManager : MonoBehaviour
             }
 
         }
-        enemyManager.resetPathMarkers();
     }
 
     //Sets the tower at a specific position
@@ -69,7 +61,6 @@ public class TowerManager : MonoBehaviour
         {
             activeTowers.Add(towerGrid[i, k]);
         }
-        enemyManager.resetPathMarkers();
     }
     
     //Setting the mode the player is in should eventually be changed to something else
@@ -121,7 +112,7 @@ public class TowerManager : MonoBehaviour
         }
     }
 
-    public GameObject getTower(Vector2Int position)
+    GameObject getTower(Vector2Int position)
     {
         return towerGrid[position.y, position.x];
     }

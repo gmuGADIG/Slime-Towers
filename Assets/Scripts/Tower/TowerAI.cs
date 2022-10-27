@@ -41,28 +41,41 @@ public class TowerAI : MonoBehaviour
 
 
         hitTimer -= Time.deltaTime;
-        if(hitTimer <= 0 && TargetedEnemy != null)
+        if(hitTimer <= 0 )
         {
-            hitTimer = timeToHit;
-            List<RaycastHit2D> hits = new List<RaycastHit2D>();
-            Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), new ContactFilter2D(), hits);
-            foreach(RaycastHit2D hit in hits)
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up);
+
             // Does the ray intersect any objects excluding the player layer
-            if (hit.collider != null && hit.collider.tag == "enemy")
+            if (hit.collider)
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000,  Color.yellow, .5f);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right), Color.yellow, Mathf.Infinity);
                 Debug.Log("Did Hit");
                 hitEnemy = true;
-                hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                hit.collider.gameObject.SetActive(false);
             }
             else
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.red,.1f);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1000, Color.red);
                 Debug.Log("Did not Hit");
                 hitEnemy = false;
-            }            
+            }
+            if (hit.collider.gameObject.tag == "enemy") 
+            {
+                Debug.DrawRay(transform.position, transform.forward, Color.green); print("Hit"); 
+            }
+            hitTimer = timeToHit + 100;
         }
     }
+    
+    /*void OnDrawGizmosSelected()
+    {
+        if (TargetedEnemy != null)
+        {
+            // Draws a blue line from this transform to the target
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(transform.position, TargetedEnemy.transform.position);
+        }
+    }*/
 
     void OnTriggerEnter2D(Collider2D collision)
     {

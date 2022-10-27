@@ -3,11 +3,12 @@ using UnityEngine;
 public class SlimeSelector : MonoBehaviour
 {
 	//The slime type of this selector
+	public string slimeType;
 	public GameObject towerParent;
 
-	public void setSlime(string slime)
+	void OnMouseDown()
 	{
-		towerParent.GetComponent<Tower>().setSlime(slime);
-		Destroy(gameObject);
+		towerParent.GetComponent<Tower>().setSlime(slimeType);
+		Debug.Log(slimeType);
 	}
 }

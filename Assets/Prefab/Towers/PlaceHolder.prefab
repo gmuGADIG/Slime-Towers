@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4472277294801973319}
   - component: {fileID: 4472277294801973316}
   - component: {fileID: 516509602011792627}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: PlaceHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,10 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerName: Tower
-  slime: 0
   spriteRenderer: {fileID: 4472277294801973316}
-  upgradePopup: {fileID: 0}
-  selected: 0
+  slimeSelector: {fileID: 8698331229211694896}
 --- !u!212 &4472277294801973316
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -94,7 +92,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.101960786}
+  m_Color: {r: 0.6249885, g: 0, b: 0.77254903, a: 0.101960786}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -139,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264062587623617736}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: SlimeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}

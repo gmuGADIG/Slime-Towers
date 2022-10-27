@@ -31,17 +31,15 @@ public class PlayerMovement : MonoBehaviour
     bool isSlow = false;
     public Rigidbody2D rigidBody;
 
+
     
     LayerMask groundLayer;
 
 
-    void Awake(){
-        Debug.Log("I'm Here, Awake");
-    }
+
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("I'm Here");
         playerCam.enabled = true;
     }
 
@@ -54,15 +52,17 @@ public class PlayerMovement : MonoBehaviour
         inputY = Input.GetAxis("Vertical");
             //sprint
         if (Input.GetKey("left shift")){
-            rigidBody.velocity = new Vector2(inputX, inputY) * (speed + sprintSpeed);
+            velocity = new Vector2(inputX, inputY) * Time.deltaTime * (speed + sprintSpeed);
         }
         else {
-            rigidBody.velocity = new Vector2(inputX, inputY) * speed;
+            velocity = new Vector2(inputX, inputY) * Time.deltaTime * speed;
         }
 
         //player interact
-        if (Input.GetKeyDown(KeyCode.E)) { 
-            if (drillPresent /*&& ManagerScript.gm.getGameState() == GameState.EXPLORE*/) {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (drillPresent /*&& ManagerScript.gm.getGameState() == GameState.EXPLORE*/)
+            {
                 drillControllable.playerEnter(this.gameObject);
             }
         }
@@ -99,5 +99,4 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
-
 }

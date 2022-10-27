@@ -27,14 +27,6 @@ public class ManagerTestButtons : MonoBehaviour
         gameManager.setGameState(GameState.DIALOGUE);
     }
     public void pausePressed() {
-        if (gameManager.isPaused()) {
-            gameManager.unpauseGame();
-        }
-        else {
-            gameManager.pauseGame();
-        }
-    }
-    public void resetWavePressed() {
-        gameManager.resetWave();
+        gameManager.setGameState(GameState.PAUSE);
     }
 }
