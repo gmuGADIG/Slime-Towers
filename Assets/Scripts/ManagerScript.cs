@@ -12,33 +12,37 @@ public class ManagerScript : MonoBehaviour
     private int enemyCap; //The max number of enemies to spawn during a wave
     private int enemiesSpawned; //The number of times any spawner has spawned an enemy this wave
     private int enemiesAlive; //The number of enemies currently spawned and alive in the scene
-    [Tooltip("Keep this checked to prevent resetting scene upon start")]
-    public bool debugging;
+    
     private PlayerMovement playerMoveScript;
 
     public UnityEvent despawnAllEnemies;
 
-    private void Awake() {
+    void Awake() {
         if (gm == null) {
             gm = this;
         }
-        Destroy(gameObject); //We only need the static ManagerScript, the manager object isn't needed
-    }
-    // Start is called before the first frame update
-    void Start() {
-
-        setGameState(GameState.EXPLORE);
-        gamePaused = false;
-        audioManager = FindObjectOfType<AudioListener>();
+        else {
+            if (gm.gameObject == this.gameObject) {
+                Destroy(this);
+            }
+            else {
+                Destroy(this.gameObject);
+            }
+        }
         if (despawnAllEnemies == null) {
             despawnAllEnemies = new UnityEvent();
         }
         enemiesSpawned = 0;
         enemiesAlive = 0;
-        if (!debugging) {
-            resetWave();
-        }
+        gamePaused = false;
         playerMoveScript = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        audioManager = FindObjectOfType<AudioListener>();
+        setGameState(GameState.EXPLORE);
+    }
+
+    // Start is called before the first frame update
+    void Start() {
+
     }
 
     // Update is called once per frame
