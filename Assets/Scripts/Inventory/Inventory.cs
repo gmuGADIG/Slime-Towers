@@ -52,21 +52,19 @@ public class Inventory : MonoBehaviour
     /// </summary>
     /// <param name="material"></param>
     /// <returns>bool -> whether or not there are enough materials</returns>
-    public int RemoveType(MaterialType materialType, int count)
+    public bool RemoveType(MaterialType materialType, int count)
     {
         // check if the current material type exists
         int curMatCount = -1;
         if(materials.TryGetValue(materialType, out curMatCount)) {
             // get the current amoooont of the material
             if (curMatCount - count >= 0) {
-                materials[materialType]--;
-                return materials[materialType];
-            } else {
-                return curMatCount;
+                materials[materialType]-=count;
+                InventoryUI.inventoryUI.UpdateSet(materialType, materials[materialType]);
+                return true;
             }
         }
-
-        return -1;
+        return false;
     }
 
     public int AddItem(MaterialType materialType, int count)
@@ -76,7 +74,7 @@ public class Inventory : MonoBehaviour
         } else {
             materials.Add(materialType, count);
         }
-
+        InventoryUI.inventoryUI.UpdateSet(materialType, materials[materialType]);
         return materials[materialType];
     }
 

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 
@@ -51,7 +53,17 @@ public class EnemyManager : MonoBehaviour
     [Obsolete]
     void placeMarkers(List<Vector2Int> path)
     {
+        ClearMarkers();
+        path.Reverse();
+        GameObject prev = null;
+        foreach (Vector2Int pos in path)
+        {
+            GameObject marker = Instantiate(targetObject);
+            marker.transform.position = towerManager.getTower(pos).transform.position;
+            marker.GetComponent<PathfindingNode>().nextNode = prev;
+            prev = marker;
 
+        }
     }
     /**
      * Gets the towerNode from the TowerManager that is closests to pos
@@ -67,7 +79,8 @@ public class EnemyManager : MonoBehaviour
         else if (pos.x > towerManager.gridStart.x + (TowerManager.GRIDSIZE - 1) * TowerManager.DISTANCEBETWEENCELLS)
         {
             x = TowerManager.GRIDSIZE - 1;
-        } else
+        }
+        else
         {
             x = (int)((pos.x - towerManager.gridStart.x) / TowerManager.DISTANCEBETWEENCELLS);
         }
@@ -78,7 +91,8 @@ public class EnemyManager : MonoBehaviour
         else if (pos.y > towerManager.gridStart.y + (TowerManager.GRIDSIZE - 1) * TowerManager.DISTANCEBETWEENCELLS)
         {
             y = TowerManager.GRIDSIZE - 1;
-        } else
+        }
+        else
         {
             y = (int)((pos.y - towerManager.gridStart.y) / TowerManager.DISTANCEBETWEENCELLS);
         }
@@ -106,21 +120,53 @@ public class EnemyManager : MonoBehaviour
     {
         Vector2Int startNode = getClosestNode(startpoint.transform.position);
         Vector2Int endNode = getClosestNode(endpoint.transform.position);
-        List<Vector2Int> openSet = new List<Vector2Int>() { startNode };
+        List<Vector2Int> openSet = new List<Vector2Int>();
         Dictionary<Vector2Int, Vector2Int> cameFrom = new Dictionary<Vector2Int, Vector2Int>();
         Dictionary<Vector2Int, float> gScore = new Dictionary<Vector2Int, float>();
-        
-    }
+        Dictionary<Vector2Int, float> fScore = new Dictionary<Vector2Int, float>();
+        openSet.Add(startNode);
 
-    void reconstructPath(Dictionary<Vector2Int, Vector2Int> cameFrom, Vector2Int currentNode)
-    {
-        List<Vector2Int> totalPath = new List<Vector2Int>() { currentNode };
-        while (cameFrom.ContainsKey(currentNode))
+        gScore.Add(startNode, 0);
+        fScore.Add(startNode, distance(startNode, endNode));
+        List<Vector2Int> path = new List<Vector2Int>();
+        while (openSet.Count > 0)
         {
-            currentNode = cameFrom[currentNode];
-            totalPath.Add(currentNode);
+            Vector2Int current = openSet[0];
+            for (int i = 1; i < openSet.Count; i++)
+            {
+                if (fScore[openSet[i]] < fScore[current])
+                {
+                    current = openSet[i];
+                }
+            }
+            if (current == endNode)
+            {
+                path = reconstructPath(cameFrom, current);
+                break;
+            }
+            openSet.Remove(current);
+            if(towerManager.getTower(current).GetComponent<Tower>().towerName != "Tower")
+            {
+                continue;
+            }
+            foreach (Vector2Int neighbor in getNeighbors(current))
+            {
+                float tentativeGScore = gScore[current] + distance(current, neighbor);
+                if (!gScore.ContainsKey(neighbor) || tentativeGScore < gScore[neighbor])
+                {
+                    cameFrom[neighbor] = current;
+                    gScore[neighbor] = tentativeGScore;
+                    fScore[neighbor] = gScore[neighbor] + distance(neighbor, endNode);
+                    if (!openSet.Contains(neighbor))
+                    {
+                        openSet.Add(neighbor);
+                    }
+                }
+            }
         }
-        totalPath.Reverse();
+        return path;
+        
+
     }
 
     [Obsolete]

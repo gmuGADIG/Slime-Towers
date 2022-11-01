@@ -133,8 +133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca706b055236b04e9dbbabd795fa4d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerName: Tower
+  towerName: TowerAI
+  slime: 0
   spriteRenderer: {fileID: 4776954093406427289}
+  upgradePopup: {fileID: 0}
+  selected: 0
 --- !u!114 &306708871109086375
 MonoBehaviour:
   m_ObjectHideFlags: 0

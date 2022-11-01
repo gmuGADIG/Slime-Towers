@@ -117,7 +117,6 @@ public class EnemyBehavior : MonoBehaviour
 
             Debug.DrawLine(this.transform.position, closeTowers[i].transform.position, Color.green, 0.1f);
         }
-
         rigidbody.velocity.Normalize();
         rigidbody.velocity *= speed;
 
