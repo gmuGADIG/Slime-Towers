@@ -31,15 +31,17 @@ public class PlayerMovement : MonoBehaviour
     bool isSlow = false;
     public Rigidbody2D rigidBody;
 
-
     
     LayerMask groundLayer;
 
 
-
+    void Awake(){
+        Debug.Log("I'm Here, Awake");
+    }
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("I'm Here");
         playerCam.enabled = true;
     }
 
@@ -52,10 +54,10 @@ public class PlayerMovement : MonoBehaviour
         inputY = Input.GetAxis("Vertical");
             //sprint
         if (Input.GetKey("left shift")){
-            velocity = new Vector2(inputX, inputY) * Time.deltaTime * (speed + sprintSpeed);
+            rigidBody.velocity = new Vector2(inputX, inputY) * (speed + sprintSpeed);
         }
         else {
-            velocity = new Vector2(inputX, inputY) * Time.deltaTime * speed;
+            rigidBody.velocity = new Vector2(inputX, inputY) * speed;
         }
 
         //player interact

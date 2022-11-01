@@ -35,16 +35,14 @@ public class Tower : MonoBehaviour
     //The position in the grid for the tower
     protected Vector2Int position = new Vector2Int(0, 0);
 
-    public GameObject slimeSelector;
+    public GameObject upgradePopup;
+
+    protected GameObject currentUpgradePopup;
 
     public bool selected = false;
 
     public void Awake()
     {
-        if (slimeSelector != null)
-        {
-            slimeSelector.SetActive(false);
-        }
     }
 
     public Vector2Int getPosition()
@@ -68,7 +66,7 @@ public class Tower : MonoBehaviour
         if (!mode)
         {
             selected = false;
-            slimeSelector.SetActive(false);
+            Destroy(currentUpgradePopup);
         }
     }
 
@@ -101,42 +99,51 @@ public class Tower : MonoBehaviour
         return towerName;
     }
 
-    private void OnMouseEnter()
-    {
-        //spriteRenderer.color = Color.red;
-    }
-
-    private void OnMouseExit()
-    {
-        //spriteRenderer.color = Color.green;
-    }
-
     private void OnMouseDown()
     {
-        if (!manageMode)
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            if (towerName.Equals("Tower"))
+            if (!manageMode)
             {
-                if (!destroyMode)
+                if (towerName.Equals("Tower"))
                 {
-                    GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position, destroyMode);
-                    Destroy(gameObject);
+                    if (!destroyMode)
+                    {
+                        GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position, destroyMode);
+                        Destroy(gameObject);
+                    }
+                }
+                else
+                {
+                    if (destroyMode)
+                    {
+                        GameObject towerManager = GameObject.Find("TowerManager");
+                        towerManager.GetComponent<TowerManager>().setTower(position, destroyMode);
+                        towerManager.GetComponent<TowerManager>().getActiveTowers().Remove(gameObject);
+                        Destroy(gameObject);
+                    }
                 }
             }
             else
             {
-                if (destroyMode)
+                if (towerName.Equals("Tower"))
                 {
-                    GameObject towerManager = GameObject.Find("TowerManager");
-                    towerManager.GetComponent<TowerManager>().setTower(position, destroyMode);
-                    towerManager.GetComponent<TowerManager>().getActiveTowers().Remove(gameObject);
-                    Destroy(gameObject);
+                    //This should be empty
+                }
+                else
+                {
+                    if (selected = !selected)
+                    {
+                        currentUpgradePopup = Instantiate(upgradePopup, GameObject.Find("TowerCanvas").transform);
+                        currentUpgradePopup.GetComponent<SlimeSelector>().towerParent = gameObject;
+                        currentUpgradePopup.transform.position = new Vector3(transform.position.x, transform.position.y);
+                    }
+                    else
+                    {
+                        Destroy(currentUpgradePopup);
+                    }
                 }
             }
-        }
-        else
-        {
-            slimeSelector.SetActive(selected = !selected);
         }
     }
 

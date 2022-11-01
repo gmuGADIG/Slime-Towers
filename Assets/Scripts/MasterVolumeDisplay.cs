@@ -15,36 +15,33 @@ public class MasterVolumeDisplay : MonoBehaviour {
         float val;
         group.audioMixer.GetFloat(group.name + "Vol", out val);
         Debug.Log(val);
-        val = Mathf.Pow(10, (val/20));
+        val = Mathf.Pow(10, (val)/40);
         Debug.Log(val);
         sliderUI.value = val;
         
     }
 
-    public void SliderChanged(float value)
+    public void SliderChanged(float value, string sliderName)
     {
-        group.audioMixer.SetFloat(group.name+"Vol", Mathf.Log10(value) * 20);
-        sliderText.text = Mathf.RoundToInt(sliderUI.normalizedValue * 100) + "%";
+        group.audioMixer.SetFloat(group.name+"Vol", Mathf.Log10(value)*40);
+        sliderText.text = sliderName + Mathf.RoundToInt(sliderUI.normalizedValue * 100) + "%";
     }
 
     public void ShowMasterSliderValue () {
-    string sliderMessage = "Master Volume: " + sliderUI.value;
         //Debug.Log(sliderMessage);
         //sliderText.text = sliderMessage;
-        SliderChanged(sliderUI.value);
+        SliderChanged(sliderUI.value, "Master Volume: ");
     }
 
     public void ShowMusicSliderValue () {
-        string sliderMessage = "Music Volume: " + sliderUI.value;
         //Debug.Log(sliderMessage);
         //sliderText.text = sliderMessage;
-        SliderChanged(sliderUI.value);
+        SliderChanged(sliderUI.value, "Music Volume: ");
     }
 
     public void ShowSFXSliderValue() {
-        string sliderMessage = "SFX Volume: " + sliderUI.value;
         //Debug.Log(sliderMessage);
         //sliderText.text = sliderMessage;
-        SliderChanged(sliderUI.value);
+        SliderChanged(sliderUI.value, "SFX Volume: ");
     }
 }
