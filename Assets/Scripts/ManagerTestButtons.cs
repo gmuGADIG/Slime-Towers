@@ -8,7 +8,7 @@ public class ManagerTestButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("Manager").GetComponent<ManagerScript>();
+        gameManager = ManagerScript.gm;
     }
 
     // Update is called once per frame
