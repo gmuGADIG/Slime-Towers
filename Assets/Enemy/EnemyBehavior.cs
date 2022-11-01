@@ -7,24 +7,27 @@ public class EnemyBehavior : MonoBehaviour
 
     public int health;
     public int speed = 2;
-    public Queue<Vector2> path;
-    Vector3 target;
+    //public Queue<Vector2> path;
+    public GameObject nextNode;
     Rigidbody2D rigidbody;
     float stunTimer = 0f;
-    public float MinAvoidancDistance = 1f; 
+    public float MinAvoidancDistance = 1f;
+    public TowerManager towerManager;
     // Start is called before the first frame update
     void Start()
     {
-        path = new Queue<Vector2>();
         rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
-        if (path.Count == 0) Pathfind();
-
+        Pathfind();
+        towerManager = GameObject.Find("TowerManager").GetComponent<TowerManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(GetClosestTower().name);
+        if (nextNode == null)
+        {
+            Pathfind();
+        }
         if (stunTimer > 0)
         {
             stunTimer -= Time.deltaTime;
@@ -54,66 +57,71 @@ public class EnemyBehavior : MonoBehaviour
         Debug.Log(Vector3.Distance(closest.transform.position, this.transform.position));
         return closest;
     }
+    
+    List<GameObject> GetTowersInRange(float range)
+    {
+        List<GameObject> towersInRange = new List<GameObject>();
+        List<GameObject> towers = towerManager.activeTowers;
+        for (int i = 0; i < towers.Count; i++)
+        {
+            if (Vector3.Distance(towers[i].transform.position, this.transform.position) < range)
+                towersInRange.Add(towers[i]);
+        }
+        return towersInRange;
+
+
+
+    }
     void Pathfind()
     {
         GameObject[] pathNodes = GameObject.FindGameObjectsWithTag("Finish");
-        Vector3 lastQueued = this.transform.position;
-        for(int i = 0; i < pathNodes.Length; i++)
+        if (pathNodes.Length == 0) return;
+        GameObject closest = pathNodes[0];
+        //Iterate through the list of towers to find the closest one
+        for (int i = 1; i < pathNodes.Length; i++)
         {
-
-            int closesti = 0;
-            for(int j = 0; j < pathNodes.Length; j++)
+            if (Vector3.Distance(pathNodes[i].transform.position, this.transform.position) < Vector3.Distance(closest.transform.position, this.transform.position))
             {
-                if(pathNodes[j] != null)
-                {
-                    if (pathNodes[closesti] == null) {
-                        closesti = j;
-                    } else if (
-                        Vector3.Distance(lastQueued, pathNodes[j].transform.position) < Vector3.Distance(lastQueued, pathNodes[closesti].transform.position)
-                        )
-                    {
-                        closesti = j;
-                    }
-                }
+                closest = pathNodes[i];
             }
-            path.Enqueue(pathNodes[closesti].transform.position);
-            lastQueued = pathNodes[closesti].transform.position;
-            pathNodes[closesti] = null;
         }
-        target = path.Dequeue();
+        nextNode = closest;
     }
     void Move()
     {
         
         //Debug.Log(Vector2.Distance(target, this.transform.position));
-        if(Vector2.Distance(target, this.transform.position) < 1)
+        if(Vector2.Distance(nextNode.transform.position, this.transform.position) < 1)
         {
-            if (path.Count == 0)
+            if (nextNode.GetComponent<PathfindingNode>().endPoint)
             {
                 Die();
             }
             else
             {
-                target = path.Dequeue();
+                nextNode = nextNode.GetComponent<PathfindingNode>().nextNode;
             }
-            
+
         }
 
-        Vector2 DirectionToTargetVec = target - transform.position;
-        DirectionToTargetVec.Normalize();
-        rigidbody.velocity = DirectionToTargetVec * speed;
-
-        GameObject ClosestTower = GetClosestTower();
-        if (ClosestTower != null)
+        Vector2 DirectionToTargetVec = nextNode.transform.position - transform.position;
+        //DirectionToTargetVec.Normalize();
+        rigidbody.velocity = DirectionToTargetVec.normalized;
+        //Debug.DrawRay(this.transform.position, DirectionToTargetVec, Color.red);
+        List<GameObject> closeTowers = GetTowersInRange(MinAvoidancDistance);
+        for (int i = 0; i < closeTowers.Count; i++)
         {
-            if (Vector3.Distance(this.transform.position, ClosestTower.transform.position) < MinAvoidancDistance)
-            {
-                rigidbody.velocity += GetAvoidanceVector(ClosestTower) * speed / Vector2.Distance(ClosestTower.transform.position, this.transform.position);  
-            }
+
+            Vector2 direction = (this.transform.position - closeTowers[i].transform.position);
+            rigidbody.velocity += direction.normalized * (direction.sqrMagnitude * (1 / MinAvoidancDistance));
+
+            Debug.DrawLine(this.transform.position, closeTowers[i].transform.position, Color.green, 0.1f);
         }
 
         rigidbody.velocity.Normalize();
-        //rigidbody.velocity *= speed;
+        rigidbody.velocity *= speed;
+
+        
 
     }
 
