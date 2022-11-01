@@ -8,4 +8,5 @@ public enum GameState {
     ATTACK, //Enemies spawn and attack drill
     DIALOGUE, //Player/enemy movement restricted, but not complete pause.
                 //Animations and sounds still play
+    PAUSE //Complete pause, animations and sounds stop
 }

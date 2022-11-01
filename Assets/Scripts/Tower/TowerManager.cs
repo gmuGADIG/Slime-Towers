@@ -26,8 +26,6 @@ public class TowerManager : MonoBehaviour
     public bool destroyMode = false;
     //Indicator for mode Orange for manage, Green for create, Red for delete
     public GameObject squareSelector;
-    [Tooltip("The Enemy Manager active in the scene")]
-    public EnemyManager enemyManager;
 
     //Makes a shallow copy of the active towers on the grid
     public List<GameObject> getActiveTowers()
@@ -142,7 +140,7 @@ public class TowerManager : MonoBehaviour
         }
     }
 
-    public GameObject getTower(Vector2Int position)
+    GameObject getTower(Vector2Int position)
     {
         return towerGrid[position.y, position.x];
     }
