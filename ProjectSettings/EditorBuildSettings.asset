@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Movement and Drill Scene.unity
     guid: 76e480e382b13921e8bd567c41105651
   - enabled: 1
-    path: Assets/Scenes/TowerAITest.unity
+    path: Assets/Scenes/Tower-Enemy Tests.unity
     guid: b0262b5c2c0c57a469f5baa545f0f99a
   - enabled: 1
     path: Assets/Scenes/Options.unity
