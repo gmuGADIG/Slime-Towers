@@ -41,7 +41,8 @@ public class TowerManager : MonoBehaviour
         towerGrid = new GameObject[GRIDSIZE, GRIDSIZE];
         if (enemyManager == null) {
             enemyManager = FindObjectOfType<EnemyManager>();
-        } else {
+        }
+        if (enemyManager == null) {
             Debug.LogError("Scene has Tower Manager and no Enemy Manager. This will cause problems");
         }
         squareSelector.GetComponent<SpriteRenderer>().color = Color.green;

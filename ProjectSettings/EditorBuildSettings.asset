@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/enemytesting.unity
     guid: 902da7fb16a8d5e4596e0a5566869f26
+  - enabled: 1
+    path: Assets/Design Team Go HERE/John Scene.unity
+    guid: f9485d8d869688c4cb2d0dce5139c46d
+  - enabled: 1
+    path: Assets/Design Team Go HERE/Hub.unity
+    guid: eeeb548b5b7d63a44a882399b4db47b3
   m_configObjects: {}

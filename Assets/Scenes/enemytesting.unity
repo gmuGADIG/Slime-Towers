@@ -295,9 +295,17 @@ PrefabInstance:
       value: TowerManager
       objectReference: {fileID: 0}
     - target: {fileID: 9173562484201843743, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 620200206}
+    - target: {fileID: 9173562484201843743, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
       propertyPath: squareSelector
       value: 
       objectReference: {fileID: 1061936876}
+    - target: {fileID: 9173562484201843743, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: RESTRICTEDDISTANCE
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9173562484201843743, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
       propertyPath: towerTypes.Array.data[0]
       value: 
@@ -694,7 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb56f62e9d10a2141bb5acccbdf7eef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerManager: {fileID: 1332970148}
+  towerManager: {fileID: 1615647182}
   endpoint: {fileID: 1158540352}
   startpoint: {fileID: 182911543}
   targetObject: {fileID: 8753956327343901109, guid: eb5a4378c915d2344b0816a63836d749, type: 3}
@@ -959,7 +967,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227424428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.78, y: -3.2, z: 0}
+  m_LocalPosition: {x: 5.66, y: -2.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1068,6 +1076,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1615647182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9173562484201843743, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+  m_PrefabInstance: {fileID: 96257755}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35539df046bf4a142912ca474c96cde7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1652660638
 PrefabInstance:
   m_ObjectHideFlags: 0
