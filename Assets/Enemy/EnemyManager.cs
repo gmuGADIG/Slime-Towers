@@ -39,15 +39,14 @@ public class EnemyManager : MonoBehaviour
 
     public bool hasValidPath()
     {
-        foreach (Pathfinder path in paths
-        )
+        foreach (Pathfinder path in paths)
         {
-            if (path.GetPath().Count > 0)
+            if (path.GetPath().Count == 0)
             {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     [Obsolete]
