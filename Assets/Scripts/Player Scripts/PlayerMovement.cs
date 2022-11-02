@@ -35,15 +35,16 @@ public class PlayerMovement : MonoBehaviour
     
     LayerMask groundLayer;
 
+    PopupManager popupManager;
+
 
     void Awake(){
-        //Debug.Log("I'm Here, Awake");
     }
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("I'm Here");
         playerCam.enabled = true;
+        popupManager = PopupManager.instance;
     }
 
     void Update() {
@@ -80,9 +81,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag.Equals("Drill")){
             //highlight drill
-            Debug.Log("Drill in Range");
             drillPresent = true;
             drillControllable = collision.GetComponent<DrillHealth>();
+        }
+        else if ( collision.tag.Equals("Interactable") ) {
+            popupManager.objectShowing = collision.GetComponent<IInteractable>();
+            popupManager.show_popup( popupManager.objectShowing );
         }
         else {
             mostRecent = collision.gameObject;  //stores object in script
@@ -93,7 +97,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision){
         if (collision.tag.Equals("Drill")){
             //unhighlight drill
-            Debug.Log("Drill out of range");
             drillPresent = false;
 
             drillControllable = null;

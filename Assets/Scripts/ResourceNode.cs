@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using MaterialType = SlimeTowers.MaterialType;
 
 public class ResourceNode : MonoBehaviour, IInteractable
 {
     public GameObject materialType;
+    [SerializeField]
+    private MaterialType material;
 
     public void interact() {
        GameObject itemDrop = Instantiate(materialType);

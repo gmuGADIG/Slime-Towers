@@ -1,0 +1,1090 @@
+fileFormatVersion: 2
+guid: 0c74153ce3cfa694090e6901a3f99a1b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TS_CrystalCave_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb637f5ab45f8f1458d43fbd14631c19
+      internalID: 1264716088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6387e5e17c544d143a6251d0cd6b3139
+      internalID: 2089411218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8953f8b4efc3e4495b290a2b2ace50
+      internalID: 949200690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14a303db80fda44d93f32d17c0df6ce
+      internalID: -2096338689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edce2b8d9e9eba43bb6573cb8f5c5a4
+      internalID: -1939177498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a17f80f7b611df48a67298f1ecd9556
+      internalID: -805009269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_6
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1535
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc7a86464fbaf146b10bab8f356205a
+      internalID: -1230754033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02ac6464fe34074ba751a099dcbfc82
+      internalID: -692492956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5c975fd030a1f46a316b25962b59c6
+      internalID: 637847612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d66ca3fb5f89b54b9478e4482c990ed
+      internalID: -1594031687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe17459d8224ae40b5915e0145e8a75
+      internalID: 311248236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c12c7f983f99b408cc04151f21e8ea
+      internalID: 1495391955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687c1f24759472749a24de4b2e75999a
+      internalID: 1136671774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d322b0e9ae612a47a32af5186324afd
+      internalID: -735364687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2417fd6809563e46901c98cc6435aca
+      internalID: 1234695923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_15
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323e66966233b1145ba6c99ce05c01aa
+      internalID: -1792280074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128ea8508d715964fb4afb25bfe3aa90
+      internalID: -1336831731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_17
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcfb2dfd847def048b6339c0d30122f5
+      internalID: -2005286598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3afa6d35f8e6045b5016bbb6e9baf9
+      internalID: 854374659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3a71db47afd964a90f258e45436483
+      internalID: -1961535442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_21
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93dc9ddf45d52d41a677eb2059168a1
+      internalID: 1380318334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_22
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a69e77ddf93dc4eaaecdb6e31232e8
+      internalID: 836183666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_23
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9213d73d255e764449e504d06c3bd60a
+      internalID: -1229397627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_24
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f8ad8c4216e7248b8c5b69808d86e6
+      internalID: 484582855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_25
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafe872d3a230254a806e343ee878e86
+      internalID: -988999471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f81c9e01811d0459cff5ad492c8383
+      internalID: -689366387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_27
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388da1d74a6738641b89286daa974cb1
+      internalID: 1782252852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: af19cb2c5aad3a947b04f2bbb753947f
+      internalID: 1316047127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_30
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f03227cb0f0304e87277874e38ae8e
+      internalID: -1439707993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c3e3dc871e8b448852f011a730090b
+      internalID: -1385076014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_33
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ac35039b3048a4982fb098eab5f22b
+      internalID: -1789615418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_35
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fddffc131861b4c96b69b21da4230b
+      internalID: 1895001522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_37
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e38093385457b42ab73845ad398ec2
+      internalID: -1418766675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4885bcf8d2c0fe7488e7806397992a89
+      internalID: 52835728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_39
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef0e27d32cb7a348b560937917e71f4
+      internalID: 1468784714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_41
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c22990f550230a429c32eda523786a9
+      internalID: 400074161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CrystalCave_42
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12b0149bed6b9844ac927f24f43fb0c
+      internalID: -1365668163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TS_CrystalCave_8: 637847612
+      TS_CrystalCave_19: -1874596469
+      TS_CrystalCave_1: 2089411218
+      TS_CrystalCave_32: -1385076014
+      TS_CrystalCave_23: -1229397627
+      TS_CrystalCave_2: 949200690
+      TS_CrystalCave_34: -49952578
+      TS_CrystalCave_5: -805009269
+      TS_CrystalCave_12: 1136671774
+      TS_CrystalCave_13: -735364687
+      TS_CrystalCave_41: 400074161
+      TS_CrystalCave_26: -689366387
+      TS_CrystalCave_18: 854374659
+      TS_CrystalCave_30: -1439707993
+      TS_CrystalCave_21: 1380318334
+      TS_CrystalCave_9: -1594031687
+      TS_CrystalCave_25: -988999471
+      TS_CrystalCave_15: -1792280074
+      TS_CrystalCave_11: 1495391955
+      TS_CrystalCave_39: 1468784714
+      TS_CrystalCave_36: 35784075
+      TS_CrystalCave_24: 484582855
+      TS_CrystalCave_6: -1230754033
+      TS_CrystalCave_7: -692492956
+      TS_CrystalCave_14: 1234695923
+      TS_CrystalCave_10: 311248236
+      TS_CrystalCave_0: 1264716088
+      TS_CrystalCave_35: 1895001522
+      TS_CrystalCave_40: 1866267654
+      TS_CrystalCave_29: 583755471
+      TS_CrystalCave_38: 52835728
+      TS_CrystalCave_27: 1782252852
+      TS_CrystalCave_37: -1418766675
+      TS_CrystalCave_16: -1336831731
+      TS_CrystalCave_20: -1961535442
+      TS_CrystalCave_17: -2005286598
+      TS_CrystalCave_42: -1365668163
+      TS_CrystalCave_31: 1479767968
+      TS_CrystalCave_22: 836183666
+      TS_CrystalCave_33: -1789615418
+      TS_CrystalCave_3: -2096338689
+      TS_CrystalCave_4: -1939177498
+      TS_CrystalCave_28: 1316047127
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
