@@ -8,10 +8,8 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public TowerManager towerManager;
-    public GameObject endpoint;
-    public GameObject startpoint;
-    public GameObject targetObject;
     public List<Pathfinder> paths;
+
     // Start is called before the first frame update
     void Start()
     {
