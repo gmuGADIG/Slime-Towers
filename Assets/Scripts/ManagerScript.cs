@@ -5,29 +5,44 @@ using UnityEngine.Events;
 
 public class ManagerScript : MonoBehaviour
 {
-    
+    public static ManagerScript gm; //The single ManagerScript that carries over between scenes
     private GameState gameState;
     private bool gamePaused;
     private AudioListener audioManager;
     private int enemyCap; //The max number of enemies to spawn during a wave
     private int enemiesSpawned; //The number of times any spawner has spawned an enemy this wave
     private int enemiesAlive; //The number of enemies currently spawned and alive in the scene
-    [Tooltip("Keep this checked to prevent resetting scene upon start")]
-    public bool debugging;
+    
+    private PlayerMovement playerMoveScript;
 
     public UnityEvent despawnAllEnemies;
 
-    // Start is called before the first frame update
-    void Start() {
-
-        setGameState(GameState.EXPLORE);
-        gamePaused = false;
-        audioManager = FindObjectOfType<AudioListener>();
+    void Awake() {
+        if (gm == null) {
+            gm = this;
+        }
+        else {
+            if (gm.gameObject == this.gameObject) {
+                Destroy(this);
+            }
+            else {
+                Destroy(this.gameObject);
+            }
+        }
         if (despawnAllEnemies == null) {
             despawnAllEnemies = new UnityEvent();
         }
         enemiesSpawned = 0;
         enemiesAlive = 0;
+        gamePaused = false;
+        playerMoveScript = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        audioManager = FindObjectOfType<AudioListener>();
+        setGameState(GameState.EXPLORE);
+    }
+
+    // Start is called before the first frame update
+    void Start() {
+
     }
 
     // Update is called once per frame
@@ -53,14 +68,17 @@ public class ManagerScript : MonoBehaviour
             case GameState.EXPLORE:
                 Time.timeScale = 1f;
                 AudioListener.volume = 1f;
+                playerMoveScript.canMove = true;
                 break;
             case GameState.ATTACK:
                 Time.timeScale = 1f;
                 AudioListener.volume = 1f;
+                playerMoveScript.canMove = false;
                 break;
             case GameState.DIALOGUE:
                 Time.timeScale = 1f;
                 AudioListener.volume = 0.5f;
+                playerMoveScript.canMove = false;
                 break;
             default:
                 break;
