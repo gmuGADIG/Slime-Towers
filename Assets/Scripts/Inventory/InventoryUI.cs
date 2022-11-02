@@ -6,13 +6,15 @@ using UnityEngine.UI;
 using MaterialType = SlimeTowers.MaterialType;
 public class InventoryUI : MonoBehaviour
 {
-    private Canvas inventoryMenu;
-    [SerializeField]
-    private Transform UIList;
+    // Hannah's To-Do: Change how script uses Canvas and creates a UIList from it.
+    //public Canvas inventoryMenu;
+    //private Transform UIList;
     private SortedSet<MaterialType> activeMaterials;
-    private List<GameObject> textBoxes;
+    //private List<GameObject> textBoxes;
     public static InventoryUI inventoryUI;
     // Start is called before the first frame update
+
+    public Text inventoryText;
 
     private void Awake()
     {
@@ -25,24 +27,27 @@ public class InventoryUI : MonoBehaviour
             Destroy(gameObject);
         }
         activeMaterials = new SortedSet<MaterialType>();
-        textBoxes = new List<GameObject>();
+        //textBoxes = new List<GameObject>();
     }
 
     void Start()
     {
-        inventoryMenu = GetComponent<Canvas>();
-        inventoryMenu.enabled = false;   
+        /*
+        inventoryMenu.enabled = true;   
         UIList = new GameObject("UIList").transform;
         UIList.parent = transform;
+        */
+        inventoryText.enabled = true;
+        inventoryText.text = "\0";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.I))
+        /*if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.I))
         {
             inventoryMenu.enabled = !inventoryMenu.enabled;
-        }
+        }*/
     }
 
     public void UpdateSet(MaterialType m, int count)
@@ -58,6 +63,7 @@ public class InventoryUI : MonoBehaviour
 
     private void UpdateObjects()
     {
+        /*
         Destroy(UIList.gameObject);
         UIList = new GameObject("UIList").transform;
         UIList.parent = transform;
@@ -78,6 +84,12 @@ public class InventoryUI : MonoBehaviour
             t.text = m.ToString() + ": " + Inventory.materials[m];
             t.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
             position++;
+        }
+        */
+
+        inventoryText.text = "\0";
+        foreach(MaterialType m in activeMaterials) {
+            inventoryText.text = m.ToString() + ": " + Inventory.materials[m] + "\n";
         }
     } 
 }
