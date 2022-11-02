@@ -136,7 +136,7 @@ MonoBehaviour:
   towerName: TowerAI
   slime: 0
   spriteRenderer: {fileID: 4776954093406427289}
-  upgradePopup: {fileID: 0}
+  upgradePopup: {fileID: 5222672149269210214, guid: c7ad9729202c97849a524e05f56a2311, type: 3}
   selected: 0
 --- !u!114 &306708871109086375
 MonoBehaviour:
@@ -150,13 +150,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0adc403ae483c541939ecf3e57084d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetSize: 3
+  TowerScrtipt: {fileID: 0}
+  TargetSize: 10
   TargetedEnemy: {fileID: 0}
   TargetedEnemyList: []
-  timeToHit: 5
-  hitTimer: 0
-  rotationSpeed: 3
   hitEnemy: 0
+  timeToHit: 0.5
+  hitTimer: 0
+  rotationSpeed: 20
+  STTimeToHit: 5
+  STHitTimer: 0
+  STRotationSpeed: 3
+  AOETTimeToHit: 5
+  AOETHitTimer: 0
+  AOETRotationSpeed: 3
+  defaultTower: 1
+  sniperTower: 0
+  AOETower: 0
+  wallTower: 0
 --- !u!212 &4776954093406427289
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -219,7 +230,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -250,4 +261,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.91
+  m_Radius: 3

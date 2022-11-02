@@ -146,15 +146,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35539df046bf4a142912ca474c96cde7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridStart: {x: 0, y: 0}
+  RESTRICTEDDISTANCE: 2
+  gridStart: {x: -5, y: -5}
   towerPlaceholder: {fileID: 4472277294801973321, guid: 1b705bb74bca1f5499115cf5fd4c00f1, type: 3}
+  restricted: {fileID: 4472277294801973321, guid: 1353f757414e33f4dbe29470806c2019, type: 3}
   activeTowers: []
   towerTypes:
-  - {fileID: 4472277294801973321, guid: 92dc95261abc43c488bba98a122c9196, type: 3}
-  - {fileID: 4472277294801973321, guid: 02d2316e3d1b0de4bb5ff77a1eae3605, type: 3}
-  selectedTower: 1
+  - {fileID: 0}
+  selectedTower: 0
   destroyMode: 0
-  managing: 0
   squareSelector: {fileID: 0}
   enemyManager: {fileID: 0}
 --- !u!1001 &3978264927436431153
@@ -211,6 +211,10 @@ PrefabInstance:
     - target: {fileID: 5222672149269210214, guid: c7ad9729202c97849a524e05f56a2311, type: 3}
       propertyPath: m_Name
       value: TowerUpgradePopup
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222672149269210214, guid: c7ad9729202c97849a524e05f56a2311, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7ad9729202c97849a524e05f56a2311, type: 3}

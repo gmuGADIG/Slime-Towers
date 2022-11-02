@@ -239,6 +239,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &96257755
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9173562484201843740, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843740, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843740, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843740, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843740, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843740, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843740, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843740, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843740, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843740, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843740, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843742, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: m_Name
+      value: TowerManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843743, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: squareSelector
+      value: 
+      objectReference: {fileID: 1061936876}
+    - target: {fileID: 9173562484201843743, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: towerTypes.Array.data[0]
+      value: 
+      objectReference: {fileID: 4776954093406427284, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
 --- !u!1 &109187667
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,12 +977,12 @@ GameObject:
   - component: {fileID: 1332970149}
   - component: {fileID: 1332970148}
   m_Layer: 0
-  m_Name: TowerManager
+  m_Name: TowerManager 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1332970148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,14 +995,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35539df046bf4a142912ca474c96cde7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RESTRICTEDDISTANCE: 1
   gridStart: {x: -6.51, y: -3.96}
   towerPlaceholder: {fileID: 4472277294801973321, guid: 1b705bb74bca1f5499115cf5fd4c00f1, type: 3}
+  restricted: {fileID: 4472277294801973321, guid: 1353f757414e33f4dbe29470806c2019, type: 3}
   activeTowers: []
   towerTypes:
   - {fileID: 4472277294801973321, guid: 92dc95261abc43c488bba98a122c9196, type: 3}
   selectedTower: 0
   destroyMode: 1
-  managing: 0
   squareSelector: {fileID: 1061936876}
   enemyManager: {fileID: 0}
 --- !u!4 &1332970149

@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UITest.unity
     guid: f0ceb6a3a1dc058409f3ce630b74d361
+  - enabled: 1
+    path: Assets/Scenes/enemytesting.unity
+    guid: 902da7fb16a8d5e4596e0a5566869f26
   m_configObjects: {}

@@ -1788,6 +1788,67 @@ Transform:
   m_Father: {fileID: 1179126721}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1133180941
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8041001428103283900, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: materialType
+      value: 
+      objectReference: {fileID: 8661027126779901820, guid: cbd58935ea5d8c54987deca4de9c2a6e, type: 3}
+    - target: {fileID: 8041001428103283901, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_Name
+      value: ResourceNode (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041001428103283902, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041001428103283902, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041001428103283902, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041001428103283902, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041001428103283902, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041001428103283902, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041001428103283902, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041001428103283902, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041001428103283902, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041001428103283902, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041001428103283902, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
 --- !u!1 &1179126720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,6 +1950,23 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_TargetDisplay: 0
+--- !u!1 &1180777328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5342813522490874531, guid: 365b682f133a8a84087eec5a98ea66c5, type: 3}
+  m_PrefabInstance: {fileID: 1589221666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1180777331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180777328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a572897eaf13f1409420be80edfd9b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1328354272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2492,7 @@ PrefabInstance:
     - target: {fileID: 8041001428103283900, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
       propertyPath: materialType
       value: 
-      objectReference: {fileID: 310388604}
+      objectReference: {fileID: 6184216763223097254, guid: 64e1d6294d643bd4b82b06cb671236d2, type: 3}
     - target: {fileID: 8041001428103283901, guid: 7b0013a0f85f32c47b30c87a55ae2026, type: 3}
       propertyPath: m_Name
       value: ResourceNode
