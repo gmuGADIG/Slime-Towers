@@ -1,7 +1,8 @@
+using SlimeTowers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class TowerManager : MonoBehaviour
 {
     //Constants for the grid specifically the size of the grid and the distance between the cells
@@ -24,10 +25,27 @@ public class TowerManager : MonoBehaviour
     public int selectedTower = 0;
     //Whether to destroy the towers or create new ones
     public bool destroyMode = false;
+    //Stops things from being placed
+    public bool waveStart = false;
     //Indicator for mode Orange for manage, Green for create, Red for delete
     public GameObject squareSelector;
     [Tooltip("The Enemy Manager active in the scene")]
     public EnemyManager enemyManager;
+    //A dictionary to hold all the recipes for the towers
+    [Serializable]
+    public struct MaterialAmount
+    {
+        public MaterialType material;
+        public int amount;
+    }
+    [Serializable]
+    public struct Recipe
+    {
+        public Tower_Type towerType;
+        public MaterialAmount[] materials;
+    }
+    [Tooltip("When adding materials make sure the matrial and the amount are at the same index")]
+    public Recipe[] recipes;
 
     //Makes a shallow copy of the active towers on the grid
     public List<GameObject> getActiveTowers()
@@ -41,7 +59,8 @@ public class TowerManager : MonoBehaviour
         towerGrid = new GameObject[GRIDSIZE, GRIDSIZE];
         if (enemyManager == null) {
             enemyManager = FindObjectOfType<EnemyManager>();
-        } else {
+        }
+        if (enemyManager == null) {
             Debug.LogError("Scene has Tower Manager and no Enemy Manager. This will cause problems");
         }
         squareSelector.GetComponent<SpriteRenderer>().color = Color.green;
@@ -59,13 +78,18 @@ public class TowerManager : MonoBehaviour
         enemyManager.resetPathMarkers();
 
         List<Pathfinder> pathfinders = enemyManager.paths;
-        int count = 1;
         foreach (Pathfinder pathfinder in pathfinders)
         {
             setRestricted(getClosestNode(pathfinder.startPoint.transform.position));
             setRestricted(getClosestNode(pathfinder.endPoint.transform.position));
         }
         enemyManager.resetPathMarkers();
+    }
+    //Giving true will stop the ability to place towers and false gives the ability again
+    public void stopBuilding(bool buildMode)
+    {
+        waveStart = buildMode;
+        changeBuildMode(waveStart);
     }
 
     void setRestricted(Vector2Int position)
@@ -86,10 +110,49 @@ public class TowerManager : MonoBehaviour
         }
     }
 
+
+
     //Sets the tower at a specific position
-    public void setTower(Vector2Int position, bool destroy)
+    public void setTower(Vector2Int position, bool destroy, Tower_Type tower)
     {
         int i = position.y, k = position.x;
+        bool hasMaterials = false;
+        //This needs more time should you want to show off towers I recommend commenting out
+        if (tower.Equals(Tower_Type.None))
+        {
+            hasMaterials = true;
+        }
+        for(int j = 0; j < recipes.Length; j++)
+        {
+            if (tower.Equals(recipes[j].towerType))
+            {
+                hasMaterials = true;
+                MaterialAmount tempRecipe = new MaterialAmount();
+                for (int z = 0; z < recipes[j].materials.Length; z++)
+                {
+                    tempRecipe.material = recipes[j].materials[z].material;
+                    tempRecipe.amount = recipes[j].materials[z].amount;
+                    bool hasMatInve = Inventory.materials.TryGetValue(tempRecipe.material, out int invAmount);
+                    Debug.Log(invAmount);
+                    if (!hasMatInve)
+                    {
+                        towerGrid[i, k] = Instantiate(towerPlaceholder, new Vector3(k * DISTANCEBETWEENCELLS + gridStart.x, i * DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
+                        return;
+                    }
+                    if (invAmount < tempRecipe.amount)
+                    {
+                        hasMaterials = false;
+                    }
+                }
+
+            }
+        }
+        if (!hasMaterials)
+        {
+            towerGrid[i, k] = Instantiate(towerPlaceholder, new Vector3(k * DISTANCEBETWEENCELLS + gridStart.x, i * DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
+            return;
+        }
+        //To here
         towerGrid[i, k] = Instantiate(destroy ? towerPlaceholder : towerTypes[selectedTower], new Vector3(k * DISTANCEBETWEENCELLS + gridStart.x, i * DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
         towerGrid[i, k].GetComponent<Tower>().setPosition(k, i);
         towerGrid[i, k].transform.SetParent(transform);
@@ -108,7 +171,27 @@ public class TowerManager : MonoBehaviour
             towerGrid[i, k].transform.SetParent(transform);
             towerGrid[i, k].GetComponent<Tower>().setDestroyMode(destroy);
             enemyManager.resetPathMarkers();
+            return;
         }
+        //And here
+        for (int j = 0; j < recipes.Length; j++)
+        {
+            if (tower.Equals(recipes[j].towerType))
+            {
+                MaterialAmount tempRecipe = new MaterialAmount();
+                for (int z = 0; z < recipes[j].materials.Length; z++)
+                {
+                    tempRecipe.material = recipes[j].materials[z].material;
+                    tempRecipe.amount = recipes[j].materials[z].amount;
+                    int invAmount = 0;
+                    Inventory.materials.Remove(tempRecipe.material, out invAmount);
+                    invAmount -= tempRecipe.amount;
+                    Inventory.materials.Add(tempRecipe.material, invAmount);
+                }
+
+            }
+        }
+        //To here
     }
     
     //Setting the mode the player is in should eventually be changed to something else
@@ -127,6 +210,14 @@ public class TowerManager : MonoBehaviour
                 squareSelector.GetComponent <SpriteRenderer>().color = Color.green;
             }
         }
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            stopBuilding(true);
+        }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            stopBuilding(false);
+        }
     }
 
 
@@ -138,6 +229,17 @@ public class TowerManager : MonoBehaviour
             for(int k = 0; k < GRIDSIZE; k++)
             {
                 towerGrid[i, k].GetComponent<Tower>().setDestroyMode(mode);
+            }
+        }
+    }
+
+    void changeBuildMode(bool mode)
+    {
+        for (int i = 0; i < GRIDSIZE; i++)
+        {
+            for (int k = 0; k < GRIDSIZE; k++)
+            {
+                towerGrid[i, k].GetComponent<Tower>().setBuildMode(mode);
             }
         }
     }

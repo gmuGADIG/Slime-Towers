@@ -105,18 +105,22 @@ public class EnemyBehavior : MonoBehaviour
         }
 
         Vector2 DirectionToTargetVec = nextNode.transform.position - transform.position;
-        DirectionToTargetVec.Normalize();
-        rigidbody.velocity = DirectionToTargetVec;
-
+        //DirectionToTargetVec.Normalize();
+        rigidbody.velocity = DirectionToTargetVec.normalized;
+        //Debug.DrawRay(this.transform.position, DirectionToTargetVec, Color.red);
         List<GameObject> closeTowers = GetTowersInRange(MinAvoidancDistance);
         for (int i = 0; i < closeTowers.Count; i++)
         {
-            rigidbody.velocity += (Vector2)(this.transform.position - closeTowers[i].transform.position).normalized / Vector2.Distance(transform.position, closeTowers[i].transform.position);
-             
-             
+
+            Vector2 direction = (this.transform.position - closeTowers[i].transform.position);
+            rigidbody.velocity += direction.normalized * (direction.sqrMagnitude * (1 / MinAvoidancDistance));
+
+            Debug.DrawLine(this.transform.position, closeTowers[i].transform.position, Color.green, 0.1f);
         }
         rigidbody.velocity.Normalize();
         rigidbody.velocity *= speed;
+
+        
 
     }
 

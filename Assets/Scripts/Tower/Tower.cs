@@ -11,13 +11,24 @@ public enum Slime_Type
 	Ice,
 	Zap
 }
+public enum Tower_Type
+{
+	None,
+	Default,
+	Sniper,
+	AOE,
+	Wall,
+	RESTRICTED
+}
 
 public class Tower : MonoBehaviour
 {
 	//HP of tower
 	protected int HP = -1;
 	//Name of the tower
-	public string towerName = "Tower";
+	public string towerName;
+	//Type of the tower
+	public Tower_Type towerType;
 	//Amount of damage this tower does
 	protected int damage = -1;
 	//Type of slime in the tower
@@ -32,6 +43,8 @@ public class Tower : MonoBehaviour
 	protected bool destroyMode;
 	//The position in the grid for the tower
 	protected Vector2Int position = new Vector2Int(0, 0);
+	//This bool is reversed so true means placing isn't allowed, and false means you can
+	protected bool buildMode = false;
 
 	public GameObject upgradePopup;
 
@@ -58,7 +71,12 @@ public class Tower : MonoBehaviour
 		destroyMode = mode;
 	}
 
-	public void setSlime(string slimeType)
+    public void setBuildMode(bool mode)
+    {
+        buildMode = mode;
+    }
+
+    public void setSlime(string slimeType)
 	{
 		if (slimeType.Equals("Default"))
 		{
@@ -82,6 +100,11 @@ public class Tower : MonoBehaviour
 		}
 	}
 
+	public Tower_Type getType()
+	{
+		return towerType;
+	}
+
 	public string getTitle()
 	{
 		return towerName;
@@ -89,37 +112,40 @@ public class Tower : MonoBehaviour
 
 	private void OnMouseDown()
 	{
-		if (!EventSystem.current.IsPointerOverGameObject())
+		if (!buildMode)
 		{
-			if (towerName.Equals("RESTRICTED")) ;
-			else if (towerName.Equals("Tower"))
+			if (!EventSystem.current.IsPointerOverGameObject())
 			{
-				if (!destroyMode)
+				if (towerType.Equals(Tower_Type.RESTRICTED)) { }
+				else if (towerType.Equals(Tower_Type.None))
 				{
-					GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position, destroyMode);
-					Destroy(gameObject);
-				}
-			}
-			else
-			{
-				if (destroyMode)
-				{
-					GameObject towerManager = GameObject.Find("TowerManager");
-					towerManager.GetComponent<TowerManager>().setTower(position, destroyMode);
-					towerManager.GetComponent<TowerManager>().getActiveTowers().Remove(gameObject);
-					Destroy(gameObject);
+					if (!destroyMode)
+					{
+						GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position, destroyMode, Tower_Type.Default);
+						Destroy(gameObject);
+					}
 				}
 				else
 				{
-					if (selected = !selected)
+					if (destroyMode)
 					{
-						currentUpgradePopup = Instantiate(upgradePopup, GameObject.Find("TowerCanvas").transform);
-						currentUpgradePopup.GetComponent<SlimeSelector>().towerParent = gameObject;
-						currentUpgradePopup.transform.position = new Vector3(transform.position.x, transform.position.y+0.5f);
+						GameObject towerManager = GameObject.Find("TowerManager");
+						towerManager.GetComponent<TowerManager>().setTower(position, destroyMode, Tower_Type.None);
+						towerManager.GetComponent<TowerManager>().getActiveTowers().Remove(gameObject);
+						Destroy(gameObject);
 					}
 					else
 					{
-						Destroy(currentUpgradePopup);
+						if (selected = !selected)
+						{
+							currentUpgradePopup = Instantiate(upgradePopup, GameObject.Find("TowerCanvas").transform);
+							currentUpgradePopup.GetComponent<SlimeSelector>().towerParent = gameObject;
+							currentUpgradePopup.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f);
+						}
+						else
+						{
+							Destroy(currentUpgradePopup);
+						}
 					}
 				}
 			}
