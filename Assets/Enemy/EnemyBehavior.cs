@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyBehavior : MonoBehaviour
 {
@@ -10,15 +11,22 @@ public class EnemyBehavior : MonoBehaviour
     //public Queue<Vector2> path;
     public GameObject nextNode;
     Rigidbody2D rigidbody;
-    float stunTimer = 0f;
+    public float stunTimer = 0f;
+    public float fireTimer = 0f;
+    public int fireDamage = 1;
     public float MinAvoidancDistance = 1f;
     public TowerManager towerManager;
+    public UnityEvent<GameObject> onDeath;
     // Start is called before the first frame update
     void Start()
     {
+        towerManager = GameObject.Find("TowerManager").GetComponent<TowerManager>();
+        if (onDeath == null)
+        {
+            onDeath = new UnityEvent<GameObject>();
+        }
         rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
         Pathfind();
-        towerManager = GameObject.Find("TowerManager").GetComponent<TowerManager>();
     }
 
     // Update is called once per frame
@@ -34,6 +42,11 @@ public class EnemyBehavior : MonoBehaviour
         } else
         {
             Move();
+        }
+        if (fireTimer > 0)
+        {
+            fireTimer -= Time.deltaTime;
+            TakeDamage(fireDamage);
         }
         if (health <= 0) {
             Die();
@@ -131,13 +144,14 @@ public class EnemyBehavior : MonoBehaviour
         return avoidancedirection;
     }
 
-    void TakeDamage(int DamageTaken)
+    public void TakeDamage(int DamageTaken)
     {
         health -= DamageTaken;
     }
 
     void Die()
     {
+        onDeath.Invoke(gameObject);
         Destroy(this.gameObject);
     }
 }
