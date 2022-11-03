@@ -7,9 +7,11 @@ using UnityEngine.Events;
 public class Wave : MonoBehaviour
 {
     public HashSet<GameObject> enemies;
-    public UnityEvent waveComplete;
+    public UnityEvent onWaveComplete;
+    public UnityEvent onWaveStart;
     public float totalWaveTime;
     public float remainingTimeInWave;
+
     public bool active;
     
     public List<EnemySpawner> spawners;
@@ -24,18 +26,22 @@ public class Wave : MonoBehaviour
         }
         remainingTimeInWave = totalWaveTime;
 
-        setActive(true);
+        StartWave();
     }
     
     private void Update()
     {
-        if(remainingTimeInWave > 0)
+        if (active)
         {
-            remainingTimeInWave -= Time.deltaTime;
-        } else
-        {
-            setActive(false);
+            if (remainingTimeInWave > 0)
+            {
+                remainingTimeInWave -= Time.deltaTime;
+            }
+            else
+            {
+                setActive(false);
 
+            }
         }
 
     }
@@ -52,7 +58,7 @@ public class Wave : MonoBehaviour
         enemies.Remove(enemy);
         if (enemies.Count == 0)
         {
-            waveComplete.Invoke();
+            onWaveComplete.Invoke();
             Debug.Log("Wave Complete");
         }
     }
@@ -63,6 +69,16 @@ public class Wave : MonoBehaviour
         foreach(EnemySpawner i in spawners)
         {
             i.active = value;
+        }
+    }
+
+    void StartWave()
+    {
+        if(active == false)
+        {
+            setActive(true);
+            remainingTimeInWave = totalWaveTime;
+            onWaveStart.Invoke();
         }
     }
 }

@@ -9,14 +9,17 @@ public class EnemyManager : MonoBehaviour
 {
     public TowerManager towerManager;
     public List<Pathfinder> paths;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         if (towerManager == null)
         {
             towerManager = FindObjectOfType<TowerManager>();
         }
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
