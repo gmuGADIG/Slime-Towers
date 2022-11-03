@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2513297149638270798}
   optionsMenu: {fileID: 1720560829793588805, guid: 091fd35bb5140ad42b19dbbe478a7263, type: 3}
+  beastiary: {fileID: 2137349261317952398, guid: ba5b0757204e94923a4976eeb9b01d67, type: 3}
 --- !u!1001 &5454913051612359312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -329,7 +330,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -338,22 +339,22 @@ PrefabInstance:
     - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5789958933968750891}
     - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HandleButton
+      value: beastiaryButtonPressed
       objectReference: {fileID: 0}
     - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: InstructionsButton, Assembly-CSharp
+      value: PauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Instruction Menu
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 193528293445637942, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
