@@ -6,24 +6,131 @@ using static UnityEngine.EventSystems.EventTrigger;
 
 public class TowerAI : MonoBehaviour
 {
+    public Tower TowerScrtipt;
     public float TargetSize;
     //change to element 0 of the targeted enemy list
     public GameObject TargetedEnemy;
     public List<GameObject> TargetedEnemyList;
+    public bool hitEnemy = false;
+
+    [Header("Basic Tower  Settings")]
     public float timeToHit = 5f;
     public float hitTimer;
     public float rotationSpeed = 3.0f;
-    public bool hitEnemy = false;
+    
+    [Header("Sniper Tower  Settings")]
+    public float STTimeToHit = 5f;
+    public float STHitTimer;
+    public float STRotationSpeed = 3.0f;
+    
+    [Header("Aoe Tower  Settings")]
+    public float AOETTimeToHit = 5f;
+    public float AOETHitTimer;
+    public float AOETRotationSpeed = 3.0f;
+
+    public bool defaultTower;
+    public bool sniperTower;
+    public bool AOETower;
+    public bool wallTower;
 
     // Start is called before the first frame update
     void Start()
     {
+        TowerScrtipt = FindObjectOfType<Tower>();
         hitTimer = timeToHit;
         GetComponent<CircleCollider2D>().radius = TargetSize;
     }
 
-    // Update is called once per frame
-    void Update()
+    // Update is called every frame, if the MonoBehaviour is enabled
+    private void Update()
+    {
+        if (defaultTower && TowerScrtipt.slime != Slime_Type.None && TargetedEnemy != null)
+        {
+            Tbasic();
+        }
+        else if (sniperTower && TowerScrtipt.slime != Slime_Type.None && TargetedEnemy != null)
+        {
+            TSnipe();
+        }
+        else if (AOETower && TowerScrtipt.slime != Slime_Type.None && TargetedEnemy != null)
+        {
+            TAOE();
+        }
+        else
+        {
+        }
+    }
+
+    void TAOE()
+    {
+        if (TargetedEnemy != null)
+        {
+            Vector3 targ = TargetedEnemy.transform.position;
+            targ.z = 0f;
+
+            Vector3 objectPos = transform.position;
+            targ.x = targ.x - objectPos.x;
+            targ.y = targ.y - objectPos.y;
+
+            float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg;
+            Quaternion target = Quaternion.Euler(new Vector3(0, 0, angle));
+            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * AOETRotationSpeed);
+        }
+
+
+        AOETHitTimer -= Time.deltaTime;
+        if (AOETHitTimer <= 0 && TargetedEnemy != null)
+        {
+            AOETHitTimer = AOETTimeToHit;
+            foreach (GameObject enemy in TargetedEnemyList)
+            {
+                enemy.GetComponent<SpriteRenderer>().color = Color.red;
+            }
+        }
+    }
+
+    void TSnipe()
+    {
+        if (TargetedEnemy != null)
+        {
+            Vector3 targ = TargetedEnemy.transform.position;
+            targ.z = 0f;
+
+            Vector3 objectPos = transform.position;
+            targ.x = targ.x - objectPos.x;
+            targ.y = targ.y - objectPos.y;
+
+            float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg;
+            Quaternion target = Quaternion.Euler(new Vector3(0, 0, angle));
+            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * STRotationSpeed);
+        }
+
+
+        STHitTimer -= Time.deltaTime;
+        if (STHitTimer <= 0 && TargetedEnemy != null)
+        {
+            STHitTimer = STTimeToHit;
+            List<RaycastHit2D> hits = new List<RaycastHit2D>();
+            Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), new ContactFilter2D(), hits);
+            foreach (RaycastHit2D hit in hits)
+                // Does the ray intersect any objects excluding the player layer
+                if (hit.collider != null && hit.collider.tag == "enemy")
+                {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.yellow, .5f);
+                    Debug.Log("Did Hit");
+                    hitEnemy = true;
+                    hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                }
+                else
+                {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.red, .1f);
+                    Debug.Log("Did not Hit");
+                    hitEnemy = false;
+                }
+        }
+    }
+
+    void Tbasic()
     {
         if (TargetedEnemy != null)
         {
@@ -41,41 +148,28 @@ public class TowerAI : MonoBehaviour
 
 
         hitTimer -= Time.deltaTime;
-        if(hitTimer <= 0 )
+        if(hitTimer <= 0 && TargetedEnemy != null)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up);
-
+            hitTimer = timeToHit;
+            List<RaycastHit2D> hits = new List<RaycastHit2D>();
+            Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), new ContactFilter2D(), hits);
+            foreach(RaycastHit2D hit in hits)
             // Does the ray intersect any objects excluding the player layer
-            if (hit.collider)
+            if (hit.collider != null && hit.collider.tag == "enemy")
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right), Color.yellow, Mathf.Infinity);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000,  Color.yellow, .5f);
                 Debug.Log("Did Hit");
                 hitEnemy = true;
-                hit.collider.gameObject.SetActive(false);
+                hit.collider.GetComponent<EnemyBehavior>().health -= 5;
             }
             else
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1000, Color.red);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.red,.1f);
                 Debug.Log("Did not Hit");
                 hitEnemy = false;
-            }
-            if (hit.collider.gameObject.tag == "enemy") 
-            {
-                Debug.DrawRay(transform.position, transform.forward, Color.green); print("Hit"); 
-            }
-            hitTimer = timeToHit + 100;
+            }            
         }
     }
-    
-    /*void OnDrawGizmosSelected()
-    {
-        if (TargetedEnemy != null)
-        {
-            // Draws a blue line from this transform to the target
-            Gizmos.color = Color.blue;
-            Gizmos.DrawLine(transform.position, TargetedEnemy.transform.position);
-        }
-    }*/
 
     void OnTriggerEnter2D(Collider2D collision)
     {

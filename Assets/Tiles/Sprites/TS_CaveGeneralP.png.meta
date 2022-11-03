@@ -1,0 +1,1095 @@
+fileFormatVersion: 2
+guid: cfb65d0889e06444f90fdad230945e9a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728454e255e90f34f815b8591d545814
+      internalID: 1073225044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00649936a2318ba4f80dc9e187721716
+      internalID: -1208465103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d6ecc219575b642aa5ec2328d6254c
+      internalID: -1192981758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5a461c9ccac1246bc6830c46905d86
+      internalID: 2132857211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f891436669c1cf5419da20ffce8ebccb
+      internalID: 1823932332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e730f06a9a6913946a64633ebbf01660
+      internalID: -634044070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2980e870f844f4d4d9abbf22a17efffb
+      internalID: -1587933802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126728cd3a857cd4180748f32aa54c72
+      internalID: -1167510935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a36c3e0ed91d3479272b1578a9fd58
+      internalID: 232287995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0269fb7e2c1484e4dba5c2079dcc97c7
+      internalID: 476337602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f69b3ab622bc7499563769688145a8
+      internalID: -791273119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f031048f7176744f856aa4b13f25a34
+      internalID: 1439562720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_15
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc8da3c753c424438918c4b303dde6f
+      internalID: -136941002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_17
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5941ccf87625fd040b217b395e7ef5af
+      internalID: 664209939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf13fbe3cee40e94fba910ed66a74a7e
+      internalID: 1767984526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8082ef1ca058945991f470f9739fb9
+      internalID: -597100823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8bc2763939a5f428d39d4f706577a4
+      internalID: -2099938268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_21
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e5ae14d7056ee479572ce1ab061124
+      internalID: -1145414979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e73d55404c57c419fb7b6bb1a4b143
+      internalID: -1105313499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf2ebe55f5824b4ab42f7b9af481f93
+      internalID: 1399468348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57969dfcc164c0940a6db9b2d71ab395
+      internalID: -982410136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3646ba587aa9e08488bc30ba3e9315f0
+      internalID: 1871655147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ed90f78d0d5cb4b8574b60e8122232
+      internalID: 1520290427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4a7d19650ee5443850c066e4a9db9c
+      internalID: 1151631899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_29
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4aca4878042d7143aadb2b8d4662c30
+      internalID: 836347638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ce15eab9586fd41876dba7f1402833
+      internalID: -1672586249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_31
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d05af563268d04281dea2dc54fe152
+      internalID: 1550075444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_32
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d3d5741a292b548b2aed6534d8d9b0
+      internalID: -676114700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_34
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910d3143f45ad204fa08e9ccf6760b73
+      internalID: -1023765978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520b2ab740bec6b4aa8c0f20d66fab68
+      internalID: 707019106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_37
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bf0fac051aeb44dab656a387a0948a
+      internalID: -2075704876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_39
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899bdfc4c0a797347b9a30ce901108c2
+      internalID: 2016912126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_41
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6c871550b459b4d8dd4aefcd31d21e
+      internalID: 61721993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbaf77168d887c41bc30faa44385d17
+      internalID: -1178896385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31849f678644bd47bce3d9798f4e6d3
+      internalID: -1934225666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_45
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8751e2ecae3cf5b4687aa2f20d88ab4a
+      internalID: -783983476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_CaveGeneralPink_47
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4111b9b6069b1d64596ddb45c407852e
+      internalID: 1884125761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TS_CaveGeneralPink_1: -1208465103
+      TS_CaveGeneralPink_47: 1884125761
+      TS_CaveGeneralPink_22: -1105313499
+      TS_CaveGeneralPink_39: 2016912126
+      TS_CaveGeneralPink_23: 1449656420
+      TS_CaveGeneralPink_28: 1151631899
+      TS_CaveGeneralPink_13: -791273119
+      TS_CaveGeneralPink_2: -1192981758
+      TS_CaveGeneralPink_15: -136941002
+      TS_CaveGeneralPink_27: 1520290427
+      TS_CaveGeneralPink_10: 232287995
+      TS_CaveGeneralPink_32: -676114700
+      TS_CaveGeneralPink_24: 1399468348
+      TS_CaveGeneralPink_4: 879144460
+      TS_CaveGeneralPink_19: -597100823
+      TS_CaveGeneralPink_12: 476337602
+      TS_CaveGeneralPink_0: 1073225044
+      TS_CaveGeneralPink_20: -2099938268
+      TS_CaveGeneralPink_26: 1871655147
+      TS_CaveGeneralPink_21: -1145414979
+      TS_CaveGeneralPink_17: 664209939
+      TS_CaveGeneralPink_38: 290735046
+      TS_CaveGeneralPink_31: 1550075444
+      TS_CaveGeneralPink_16: -2101879500
+      TS_CaveGeneralPink_41: 61721993
+      TS_CaveGeneralPink_37: -2075704876
+      TS_CaveGeneralPink_29: 836347638
+      TS_CaveGeneralPink_45: -783983476
+      TS_CaveGeneralPink_44: -1745780249
+      TS_CaveGeneralPink_36: 707019106
+      TS_CaveGeneralPink_42: -1178896385
+      TS_CaveGeneralPink_7: -1587933802
+      TS_CaveGeneralPink_6: -634044070
+      TS_CaveGeneralPink_18: 1767984526
+      TS_CaveGeneralPink_46: 1016909317
+      TS_CaveGeneralPink_34: -1023765978
+      TS_CaveGeneralPink_14: 1439562720
+      TS_CaveGeneralPink_40: 2087009279
+      TS_CaveGeneralPink_5: 1823932332
+      TS_CaveGeneralPink_33: 1162816126
+      TS_CaveGeneralPink_9: -1887915292
+      TS_CaveGeneralPink_8: -1167510935
+      TS_CaveGeneralPink_43: -1934225666
+      TS_CaveGeneralPink_35: 2067627240
+      TS_CaveGeneralPink_25: -982410136
+      TS_CaveGeneralPink_11: -212022187
+      TS_CaveGeneralPink_30: -1672586249
+      TS_CaveGeneralPink_3: 2132857211
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

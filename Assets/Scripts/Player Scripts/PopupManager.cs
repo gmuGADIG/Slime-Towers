@@ -7,7 +7,19 @@ public class PopupManager : MonoBehaviour
 {
     public Text popupText;
     public Image popupPanel;
-    private IInteractable objectShowing;
+    public IInteractable objectShowing;
+
+    public static PopupManager instance;
+
+
+    private void Awake() {
+        if ( instance == null ) {
+            instance = this;
+        }
+        else {
+            Debug.Log( "Error: Two PopupManagers instantiated at once." );
+        }
+    }
 
     void Start()
     {
@@ -32,8 +44,9 @@ public class PopupManager : MonoBehaviour
      *  Given an interactable object, display the UI and text.
      *  Will implement popups with sprites (ex: NPC profiles) as an overloaded function.
      */
-    void show_popup( IInteractable obj )
+    public void show_popup( IInteractable obj )
     {
+        Debug.Log(obj.popup_text());
         objectShowing = obj;
         popupText.text = obj.popup_text();
 
@@ -43,7 +56,7 @@ public class PopupManager : MonoBehaviour
     /*
      *  Hide the elements of the Popup UI.
      */
-    void hide_popup()
+    public void hide_popup()
     {
         popupText.text = " ";
         popupPanel.enabled = false;

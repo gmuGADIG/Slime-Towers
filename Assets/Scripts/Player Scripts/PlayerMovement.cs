@@ -25,37 +25,42 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     public float sprintSpeed = 7.5f;
     public float accel = 2f;
+    public bool canMove = true;
 
     public Vector2 velocity;
 
     bool isSlow = false;
     public Rigidbody2D rigidBody;
 
-
     
     LayerMask groundLayer;
 
+    PopupManager popupManager;
 
 
+    void Awake(){
+    }
     // Start is called before the first frame update
     void Start()
     {
         playerCam.enabled = true;
+        popupManager = PopupManager.instance;
     }
 
     void Update() {
         //player facing
         
-
-        //player movement
-        inputX = Input.GetAxis("Horizontal");
-        inputY = Input.GetAxis("Vertical");
-            //sprint
-        if (Input.GetKey("left shift")){
-            velocity = new Vector2(inputX, inputY) * Time.deltaTime * (speed + sprintSpeed);
-        }
-        else {
-            velocity = new Vector2(inputX, inputY) * Time.deltaTime * speed;
+        if (canMove) {
+            //player movement
+            inputX = Input.GetAxis("Horizontal");
+            inputY = Input.GetAxis("Vertical");
+                //sprint
+            if (Input.GetKey("left shift")){
+                rigidBody.velocity = new Vector2(inputX, inputY) * (speed + sprintSpeed);
+            }
+            else {
+                rigidBody.velocity = new Vector2(inputX, inputY) * speed;
+            }
         }
 
         //player interact
@@ -64,7 +69,6 @@ public class PlayerMovement : MonoBehaviour
                 drillControllable.playerEnter(this.gameObject);
             }
         }
-
 
         //player sprite rotate
         Vector3 worldPosition = playerCam.ScreenToWorldPoint(Input.mousePosition);
@@ -77,9 +81,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag.Equals("Drill")){
             //highlight drill
-            Debug.Log("Drill in Range");
             drillPresent = true;
             drillControllable = collision.GetComponent<DrillHealth>();
+        }
+        else if ( collision.tag.Equals("Interactable") ) {
+            popupManager.objectShowing = collision.GetComponent<IInteractable>();
+            popupManager.show_popup( popupManager.objectShowing );
         }
         else {
             mostRecent = collision.gameObject;  //stores object in script
@@ -90,7 +97,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision){
         if (collision.tag.Equals("Drill")){
             //unhighlight drill
-            Debug.Log("Drill out of range");
             drillPresent = false;
 
             drillControllable = null;

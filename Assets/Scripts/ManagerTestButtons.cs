@@ -8,7 +8,7 @@ public class ManagerTestButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("Manager").GetComponent<ManagerScript>();
+        gameManager = ManagerScript.gm;
     }
 
     // Update is called once per frame
@@ -27,6 +27,14 @@ public class ManagerTestButtons : MonoBehaviour
         gameManager.setGameState(GameState.DIALOGUE);
     }
     public void pausePressed() {
-        gameManager.setGameState(GameState.PAUSE);
+        if (gameManager.isPaused()) {
+            gameManager.unpauseGame();
+        }
+        else {
+            gameManager.pauseGame();
+        }
+    }
+    public void resetWavePressed() {
+        gameManager.resetWave();
     }
 }

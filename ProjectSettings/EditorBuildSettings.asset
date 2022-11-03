@@ -12,27 +12,30 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/enemytesting.unity
-    guid: 902da7fb16a8d5e4596e0a5566869f26
-  - enabled: 1
-    path: Assets/Scenes/playerTesting.unity
-    guid: b708d1bc119b6384f889605a2fbe08c8
-  - enabled: 1
     path: Assets/Scenes/InventoryTestScene.unity
     guid: d1372316bb291cc4494b1a4b1ae446e1
   - enabled: 1
     path: Assets/Scenes/Instruction Menu.unity
     guid: 1312021a595eaafed8c683a638bfb209
   - enabled: 1
-    path: Assets/Scenes/PuzzleTesting.unity
-    guid: ca8e6a0c3b1fed1439473bc34db68332
-  - enabled: 1
-    path: Assets/Scenes/SharpScene.unity
+    path: Assets/Scenes/Movement and Drill Scene.unity
     guid: 76e480e382b13921e8bd567c41105651
   - enabled: 1
-    path: Assets/Scenes/TowerAITest.unity
+    path: Assets/Scenes/Tower-Enemy Tests.unity
     guid: b0262b5c2c0c57a469f5baa545f0f99a
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: a1fb2bc4e6be549658073126e02c95c7
+  - enabled: 1
+    path: Assets/Scenes/UITest.unity
+    guid: f0ceb6a3a1dc058409f3ce630b74d361
+  - enabled: 1
+    path: Assets/Scenes/enemytesting.unity
+    guid: 902da7fb16a8d5e4596e0a5566869f26
+  - enabled: 1
+    path: Assets/Design Team Go HERE/John Scene.unity
+    guid: f9485d8d869688c4cb2d0dce5139c46d
+  - enabled: 1
+    path: Assets/Design Team Go HERE/Hub.unity
+    guid: eeeb548b5b7d63a44a882399b4db47b3
   m_configObjects: {}

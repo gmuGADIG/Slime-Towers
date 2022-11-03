@@ -5,14 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interactable
+  - Drill
+  - Tower
+  - enemy
+  - Slime
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Placeholder
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
