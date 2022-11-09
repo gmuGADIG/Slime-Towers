@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &463506314
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1103549716310496990, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103549716310496990, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103549716310496990, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103549716310496990, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103549716310496990, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103549716310496990, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103549716310496990, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103549716310496990, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103549716310496990, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103549716310496990, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103549716310496990, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575222415680261850, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
+      propertyPath: m_Name
+      value: Inventory Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59cd8e114e7395a439e3597c499a1797, type: 3}
 --- !u!1001 &790529526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,6 +235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9173562484201843743, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 1668496584}
     - target: {fileID: 9173562484201843743, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
       propertyPath: squareSelector
       value: 
@@ -282,6 +343,10 @@ PrefabInstance:
     - target: {fileID: 5342813522490874531, guid: 365b682f133a8a84087eec5a98ea66c5, type: 3}
       propertyPath: m_Name
       value: Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342813522490874531, guid: 365b682f133a8a84087eec5a98ea66c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7215558440964437396, guid: 365b682f133a8a84087eec5a98ea66c5, type: 3}
       propertyPath: m_RootOrder
@@ -853,6 +918,10 @@ PrefabInstance:
     - target: {fileID: 4776954093406427284, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
       propertyPath: m_Name
       value: Tower AI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776954093406427290, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
+      propertyPath: towerType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4776954093406427291, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
       propertyPath: m_RootOrder
