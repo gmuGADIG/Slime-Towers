@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class BeastiaryManager : MonoBehaviour
 {
     public Dropdown slimeDropdown;
-    public Dropdown enemyDropdown;
     public Dropdown resourcesDropdown;
 
     // Start is called before the first frame update
@@ -21,9 +20,13 @@ public class BeastiaryManager : MonoBehaviour
         
     }
 
-    public void onSlimeChanged(int newSlime){
+    public void onSlimeChanged(){
+        // dropdown index
+        //slimeDropdown.value
         Debug.Log("slime changed");
-        enemyDropdown.value = 0;
         resourcesDropdown.value = 0;
+        // change text of text boxes
+        // change image of image box
+
     }
 }
