@@ -18,14 +18,15 @@ public class EnemyBehavior : MonoBehaviour
     public TowerManager towerManager;
     public UnityEvent<GameObject> onDeath;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         towerManager = GameObject.Find("TowerManager").GetComponent<TowerManager>();
-        if (onDeath == null)
-        {
-            onDeath = new UnityEvent<GameObject>();
-        }
         rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
+        
         Pathfind();
     }
 
