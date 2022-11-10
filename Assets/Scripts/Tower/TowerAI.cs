@@ -14,23 +14,31 @@ public class TowerAI : MonoBehaviour
     public List<GameObject> TargetedEnemyList;
     public bool hitEnemy = false;
 
+    [Header("Art Sprites")]
+    public Sprite SlimeDefault;
+    public Sprite SlimeFire;
+    public Sprite SlimeIce;
+    public Sprite SlimeZap;
+    public SpriteRenderer SlimeBaseRenderer;
+
     [Header("Basic Tower  Settings")]
     public bool defaultTower;
-    public Sprite Default, Fire, Ice, Zap;
+    public Sprite DefaultBase;
     public float timeToHit = 5f;
     public float hitTimer;
     public float rotationSpeed = 3.0f;
     
     [Header("Sniper Tower  Settings")]
     public bool sniperTower;
-    public Sprite STDefault, STFire, STIce, STZap;
+    public Sprite STBase;
     public float STTimeToHit = 5f;
     public float STHitTimer;
     public float STRotationSpeed = 3.0f;
     
     [Header("Aoe Tower  Settings")]
     public bool AOETower;
-    public Sprite AOEDefault, AOEFire, AOEIce, AOEZap;
+    public Sprite AOEBase;
+    public Sprite AOESlimeefault, AOESlimeFire, AOESlimeIce, AOESlimeZap;
     public float AOETTimeToHit = 5f;
     public float AOETHitTimer;
     public float AOETRotationSpeed = 3.0f;
@@ -69,9 +77,10 @@ public class TowerAI : MonoBehaviour
 
     void slimeDefault()
     {
+        SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = SlimeDefault;
         if (AOETower)
         {
-            GetComponent<SpriteRenderer>().sprite = AOEDefault;
+            GetComponent<SpriteRenderer>().sprite = AOEBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
@@ -100,7 +109,7 @@ public class TowerAI : MonoBehaviour
 
         if (sniperTower)
         {
-            GetComponent<SpriteRenderer>().sprite = STDefault;
+            GetComponent<SpriteRenderer>().sprite = STBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
@@ -142,7 +151,7 @@ public class TowerAI : MonoBehaviour
 
         if (defaultTower)
         {
-            GetComponent<SpriteRenderer>().sprite = Default;
+            GetComponent<SpriteRenderer>().sprite = DefaultBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
@@ -185,9 +194,10 @@ public class TowerAI : MonoBehaviour
 
     void slimeFire() 
     {
+        SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = SlimeFire;
         if (AOETower)
         {
-            GetComponent<SpriteRenderer>().sprite = AOEFire;
+            GetComponent<SpriteRenderer>().sprite = AOEBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
@@ -216,7 +226,7 @@ public class TowerAI : MonoBehaviour
 
         else if (sniperTower)
         {
-            GetComponent<SpriteRenderer>().sprite = STFire;
+            GetComponent<SpriteRenderer>().sprite = STBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
@@ -258,7 +268,7 @@ public class TowerAI : MonoBehaviour
 
         else if (defaultTower)
         {
-            GetComponent<SpriteRenderer>().sprite = Fire;
+            GetComponent<SpriteRenderer>().sprite = DefaultBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
@@ -301,9 +311,10 @@ public class TowerAI : MonoBehaviour
 
     void slimeIce()
     {
+        SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = SlimeIce;
         if (AOETower)
         {
-            GetComponent<SpriteRenderer>().sprite = AOEIce;
+            GetComponent<SpriteRenderer>().sprite = AOEBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
@@ -332,7 +343,7 @@ public class TowerAI : MonoBehaviour
 
         else if (sniperTower)
         {
-            GetComponent<SpriteRenderer>().sprite = STIce;
+            GetComponent<SpriteRenderer>().sprite = STBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
@@ -374,7 +385,7 @@ public class TowerAI : MonoBehaviour
 
         else if (defaultTower)
         {
-            GetComponent<SpriteRenderer>().sprite = Ice;
+            GetComponent<SpriteRenderer>().sprite = DefaultBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
@@ -417,9 +428,10 @@ public class TowerAI : MonoBehaviour
 
     void slimeZap()
     {
+        SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = SlimeZap;
         if (AOETower)
         {
-            GetComponent<SpriteRenderer>().sprite = AOEZap;
+            GetComponent<SpriteRenderer>().sprite = AOEBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
@@ -448,7 +460,7 @@ public class TowerAI : MonoBehaviour
 
         else if (sniperTower)
         {
-            GetComponent<SpriteRenderer>().sprite = STZap;
+            GetComponent<SpriteRenderer>().sprite = STBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
@@ -490,7 +502,7 @@ public class TowerAI : MonoBehaviour
 
         else if (defaultTower)
         {
-            GetComponent<SpriteRenderer>().sprite = Zap;
+            GetComponent<SpriteRenderer>().sprite = DefaultBase;
             if (TargetedEnemy != null)
             {
                 Vector3 targ = TargetedEnemy.transform.position;
