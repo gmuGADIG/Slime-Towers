@@ -183,10 +183,11 @@ public class TowerManager : MonoBehaviour
                 {
                     tempRecipe.material = recipes[j].materials[z].material;
                     tempRecipe.amount = recipes[j].materials[z].amount;
-                    int invAmount = 0;
+                    /*int invAmount = 0;
                     Inventory.materials.Remove(tempRecipe.material, out invAmount);
                     invAmount -= tempRecipe.amount;
-                    Inventory.materials.Add(tempRecipe.material, invAmount);
+                    Inventory.materials.Add(tempRecipe.material, invAmount);*/
+                    Inventory.inventory.RemoveType(tempRecipe.material, tempRecipe.amount);
                 }
 
             }

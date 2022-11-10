@@ -26,7 +26,8 @@ public class Wave : MonoBehaviour
         }
         remainingTimeInWave = totalWaveTime;
 
-        StartWave();
+        //StartWave();
+        ManagerScript.StartAttack.AddListener(StartWave);
     }
     
     private void Update()
@@ -59,6 +60,7 @@ public class Wave : MonoBehaviour
         if (enemies.Count == 0)
         {
             onWaveComplete.Invoke();
+            ManagerScript.gm.setGameState(GameState.EXPLORE);
             Debug.Log("Wave Complete");
         }
     }

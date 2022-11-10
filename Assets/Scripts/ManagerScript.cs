@@ -16,6 +16,8 @@ public class ManagerScript : MonoBehaviour
     private PlayerMovement playerMoveScript;
 
     public UnityEvent despawnAllEnemies;
+    public static UnityEvent StartExplore;
+    public static UnityEvent StartAttack;
 
     void Awake() {
         if (gm == null) {
@@ -31,6 +33,12 @@ public class ManagerScript : MonoBehaviour
         }
         if (despawnAllEnemies == null) {
             despawnAllEnemies = new UnityEvent();
+        }
+        if(StartExplore == null){
+            StartExplore = new UnityEvent();
+        }
+        if(StartAttack == null){
+            StartAttack = new UnityEvent();
         }
         enemiesSpawned = 0;
         enemiesAlive = 0;
@@ -69,11 +77,13 @@ public class ManagerScript : MonoBehaviour
                 Time.timeScale = 1f;
                 AudioListener.volume = 1f;
                 playerMoveScript.canMove = true;
+                StartExplore.Invoke();
                 break;
             case GameState.ATTACK:
                 Time.timeScale = 1f;
                 AudioListener.volume = 1f;
                 playerMoveScript.canMove = false;
+                StartAttack.Invoke();
                 break;
             case GameState.DIALOGUE:
                 Time.timeScale = 1f;
