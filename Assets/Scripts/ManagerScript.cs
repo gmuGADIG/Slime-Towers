@@ -12,6 +12,7 @@ public class ManagerScript : MonoBehaviour
     private int enemyCap; //The max number of enemies to spawn during a wave
     private int enemiesSpawned; //The number of times any spawner has spawned an enemy this wave
     private int enemiesAlive; //The number of enemies currently spawned and alive in the scene
+    private Camera playerCam;
     
     private PlayerMovement playerMoveScript;
 
@@ -50,7 +51,7 @@ public class ManagerScript : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-
+        playerCam = GameObject.Find("Player").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -70,20 +71,26 @@ public class ManagerScript : MonoBehaviour
     /// Sets the current game state to the passed in GameState (Use GameState.STATE)
     /// </summary>
     /// <param name="state">GameState to set the game's state</param>
-    public void setGameState(GameState state) {
+    /// <param name="sendSignals">Set to false to not invoke signals, which may be preferred when
+    /// the state isn't truly changing but needs to be reset (unpausing) </param>
+    public void setGameState(GameState state, bool sendSignals = true) {
         this.gameState = state;
         switch (this.gameState) {
             case GameState.EXPLORE:
                 Time.timeScale = 1f;
                 AudioListener.volume = 1f;
                 playerMoveScript.canMove = true;
-                StartExplore.Invoke();
+                if (sendSignals) {
+                    StartExplore.Invoke();
+                }
                 break;
             case GameState.ATTACK:
                 Time.timeScale = 1f;
                 AudioListener.volume = 1f;
                 playerMoveScript.canMove = false;
-                StartAttack.Invoke();
+                if (sendSignals) {
+                    StartAttack.Invoke();
+                }
                 break;
             case GameState.DIALOGUE:
                 Time.timeScale = 1f;
@@ -114,7 +121,7 @@ public class ManagerScript : MonoBehaviour
         if (gamePaused == true) {
             gamePaused = false;
             //AudioListener.pause = false;
-            setGameState(gameState);
+            setGameState(gameState, false);
         }
     }
 
