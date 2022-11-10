@@ -438,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 9173562484201843743, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
       propertyPath: towerTypes.Array.data[0]
       value: 
-      objectReference: {fileID: 4776954093406427284, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
+      objectReference: {fileID: 4785848389424379859, guid: c61922842e9db39409586a76d5efb71f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
 --- !u!1 &109187667

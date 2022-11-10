@@ -79,6 +79,7 @@ public class Tower : MonoBehaviour
     public void setSlime(Slime_Type slimeType)
 	{
 		slime = slimeType;
+		GetComponent<TowerAI>().slimeSpriteUpdate();
 	}
 
 	public Slime_Type getSlime()
