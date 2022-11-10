@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class laserscript : MonoBehaviour
+public class Laserscript : MonoBehaviour
 {
 
     public GameObject laserObject;
@@ -21,7 +21,15 @@ public class laserscript : MonoBehaviour
 
     void generateLaser()
     {
-        RaycastHit2D chekc = Physics2D.Raycast(transform.position, Vector2.right);
+        RaycastHit2D Laser = Physics2D.Raycast(transform.position, Vector2.right);
+
+        if (Laser.collider != null)
+                {
+                
+                
+                }
+
+        // if chekc hits a crystal then fire another raycast
     }
 
 
