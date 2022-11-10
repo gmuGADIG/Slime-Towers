@@ -38,6 +38,7 @@ public class ManagerScript : MonoBehaviour
         playerMoveScript = GameObject.Find("Player").GetComponent<PlayerMovement>();
         audioManager = FindObjectOfType<AudioListener>();
         setGameState(GameState.EXPLORE);
+        
     }
 
     // Start is called before the first frame update
