@@ -17,7 +17,7 @@ public class EnemyBehavior : MonoBehaviour
     public float MinAvoidancDistance = 1f;
     public TowerManager towerManager;
     public UnityEvent<GameObject> onDeath;
-    // Start is called before the first frame update
+   // Start is called before the first frame update
     private void Awake()
     {
         towerManager = GameObject.Find("TowerManager").GetComponent<TowerManager>();
@@ -28,6 +28,8 @@ public class EnemyBehavior : MonoBehaviour
     {
         
         Pathfind();
+        GetComponent<Animation>().Play();
+
     }
 
     // Update is called once per frame
