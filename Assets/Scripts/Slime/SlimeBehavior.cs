@@ -39,21 +39,25 @@ public class SlimeBehavior : MonoBehaviour
         if (transform.position.x > (startingPosition.x + xLimit))
         {
             transform.position = new Vector2((startingPosition.x + xLimit), transform.position.y);
+            direction = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2));
         }
 
         if (transform.position.x < (startingPosition.x - xLimit))
         {
             transform.position = new Vector2((startingPosition.x - xLimit), transform.position.y);
+            direction = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2));
         }
 
         if (transform.position.y > (startingPosition.y + yLimit))
         {
             transform.position = new Vector2(transform.position.x, (startingPosition.y + yLimit));
+            direction = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2));
         }
 
         if (transform.position.y < (startingPosition.y - yLimit))
         {
             transform.position = new Vector2(transform.position.x, (startingPosition.y - yLimit));
+            direction = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2));
         }
     }
 
@@ -66,6 +70,17 @@ public class SlimeBehavior : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(lowerTimeLimit, upperTimeLimit));
             direction = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2));
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Slime"))
+        {
+            if (speed >= (collision.gameObject.GetComponent<SlimeBehavior>().speed))
+            {
+                direction = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2));
+            }
         }
     }
 }
