@@ -519,9 +519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerManager: {fileID: 1588598938}
-  endpoint: {fileID: 886872864}
-  startpoint: {fileID: 2141028370}
-  targetObject: {fileID: 8753956327343901109, guid: eb5a4378c915d2344b0816a63836d749, type: 3}
   paths: []
 --- !u!4 &1668496585
 Transform:
@@ -825,7 +822,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeTillSpawn: 0
   EnemyType: {fileID: 645126588893247727, guid: dbf5de57d229ced4b8e8da1cb3bf0146, type: 3}
+  onSpawn:
+    m_PersistentCalls:
+      m_Calls: []
   RespawnTime: 5
+  active: 0
 --- !u!212 &2141028372
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -918,10 +919,6 @@ PrefabInstance:
     - target: {fileID: 4776954093406427284, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
       propertyPath: m_Name
       value: Tower AI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776954093406427290, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
-      propertyPath: towerType
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4776954093406427291, guid: ae865ff9503a3004aae95eaf726c229c, type: 3}
       propertyPath: m_RootOrder
