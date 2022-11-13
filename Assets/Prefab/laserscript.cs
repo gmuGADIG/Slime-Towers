@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Laserscript : MonoBehaviour
+public class laserscript : MonoBehaviour
 {
 
     public GameObject laserObject;
