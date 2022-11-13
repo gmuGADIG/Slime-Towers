@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4829544962606039296}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2917103049701258826}
+        m_TargetAssemblyTypeName: BeastiaryMenu, Assembly-CSharp
+        m_MethodName: backButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &720432909832833957
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +759,7 @@ GameObject:
   - component: {fileID: 4777377811891863033}
   - component: {fileID: 7082645924614067121}
   - component: {fileID: 4695277934098042318}
-  - component: {fileID: 6389841379856545248}
+  - component: {fileID: 5848597819658150545}
   m_Layer: 0
   m_Name: Slimes
   m_TagString: Untagged
@@ -775,7 +787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000063181, y: 54.2}
+  m_AnchoredPosition: {x: -50, y: 50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4777377811891863033
@@ -877,10 +889,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6389841379856545248}
-        m_TargetAssemblyTypeName: BeastiaryManager, Assembly-CSharp
-        m_MethodName: onSlimeChanged
-        m_Mode: 3
+      - m_Target: {fileID: 5848597819658150545}
+        m_TargetAssemblyTypeName: SlimeDropdown, Assembly-CSharp
+        m_MethodName: slimeValueChanged
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -890,7 +902,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_AlphaFadeSpeed: 0.15
---- !u!114 &6389841379856545248
+--- !u!114 &5848597819658150545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -899,11 +911,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1062071457809510956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf609da389e046dca26487029762c21, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cd4e46e90f6419429097b6d1915deb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slimeDropdown: {fileID: 0}
-  resourcesDropdown: {fileID: 0}
+  image: {fileID: 9071098384629801703}
+  name: {fileID: 4649050567686482380}
+  Description: {fileID: 7757532342479721455}
 --- !u!1 &1084850519692826221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,8 +1031,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 90.53662, y: 0}
-  m_SizeDelta: {x: -181.0732, y: 0}
+  m_AnchoredPosition: {x: 90, y: 0}
+  m_SizeDelta: {x: -180, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4677185510999591736
 CanvasRenderer:
@@ -1094,7 +1107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.9744, y: -10.228}
+  m_AnchoredPosition: {x: -50, y: -5}
   m_SizeDelta: {x: 76.9992, y: 20.456}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6406024690397639352
@@ -1357,6 +1370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3055660030918997283}
+  - component: {fileID: 2917103049701258826}
   m_Layer: 0
   m_Name: Beastiary
   m_TagString: Untagged
@@ -1380,6 +1394,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2917103049701258826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137349261317952398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474e9bacb4e02e94e8c923a3f8a86a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 2513297149638270798, guid: 25f34668ed73bee4aa7626bde330714d, type: 3}
+  beastiary: {fileID: 2137349261317952398}
 --- !u!1 &2538161602452497000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,7 +1918,7 @@ GameObject:
   - component: {fileID: 3786257462461496270}
   - component: {fileID: 2993891569066180}
   m_Layer: 0
-  m_Name: BeastName
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1913,7 +1941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 81.9, y: 73.184}
+  m_AnchoredPosition: {x: 20, y: 80}
   m_SizeDelta: {x: 163.8, y: 23.5711}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3786257462461496270
@@ -2113,7 +2141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2241,7 +2269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -57.998688, y: -0.9998779}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 125.7962, y: 32.5538}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6162479412104249979
@@ -2734,7 +2762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -237.82005, y: 0.2167139}
+  m_AnchoredPosition: {x: -237.82005, y: 0.21672058}
   m_SizeDelta: {x: -475.6401, y: -0.4334278}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6659972500396550959
@@ -3027,7 +3055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -30.6}
+  m_AnchoredPosition: {x: -50, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1329882745583968929
@@ -3292,7 +3320,7 @@ GameObject:
   - component: {fileID: 5891537934840858549}
   - component: {fileID: 7053945408043295559}
   m_Layer: 0
-  m_Name: BeastDescription
+  m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3315,7 +3343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.4384, y: -50.6158}
+  m_AnchoredPosition: {x: -50, y: -50}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5891537934840858549
@@ -3632,7 +3660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 74.74199}
+  m_AnchoredPosition: {x: -50, y: 75}
   m_SizeDelta: {x: 67.0504, y: 20.4555}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2659008232853475299
@@ -4005,7 +4033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110, y: 30}
+  m_AnchoredPosition: {x: -155, y: 40}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2258898298342202526
