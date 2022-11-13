@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class laserscript : MonoBehaviour
+public class Laserscript : MonoBehaviour
 {
 
     public GameObject laserObject;
@@ -10,7 +10,7 @@ public class laserscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(laserObject, transform.position, new Quaternion());
+        Instantiate(laserObject, transform.position, transform.rotation);
     }
 
     // Update is called once per frame
@@ -18,4 +18,19 @@ public class laserscript : MonoBehaviour
     {
         
     }
+
+    void generateLaser()
+    {
+        RaycastHit2D Laser = Physics2D.Raycast(transform.position, Vector2.right);
+
+        if (Laser.collider != null)
+                {
+                
+                
+                }
+
+        // if chekc hits a crystal then fire another raycast
+    }
+
+
 }
