@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeTillSpawn: 0
-  EnemyType: {fileID: 645126588893247727, guid: dbf5de57d229ced4b8e8da1cb3bf0146, type: 3}
+  EnemyType: {fileID: 645126588893247727, guid: be9dc13c3345beb4786424e488f72e66, type: 3}
   onSpawn:
     m_PersistentCalls:
       m_Calls: []
@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeTillSpawn: 0
-  EnemyType: {fileID: 645126588893247727, guid: dbf5de57d229ced4b8e8da1cb3bf0146, type: 3}
+  EnemyType: {fileID: 645126588893247727, guid: be9dc13c3345beb4786424e488f72e66, type: 3}
   onSpawn:
     m_PersistentCalls:
       m_Calls: []
@@ -982,7 +982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeTillSpawn: 0
-  EnemyType: {fileID: 645126588893247727, guid: dbf5de57d229ced4b8e8da1cb3bf0146, type: 3}
+  EnemyType: {fileID: 645126588893247727, guid: be9dc13c3345beb4786424e488f72e66, type: 3}
   onSpawn:
     m_PersistentCalls:
       m_Calls: []
