@@ -34,8 +34,8 @@ public class PlayerCameraScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate() {
         Vector3 targetPos = new Vector3(pTransform.position.x, pTransform.position.y, -10);
-        targetPos.x += 1.5f * playerRB.velocity.x;
-        targetPos.y += 1.5f * playerRB.velocity.y;
+        //targetPos.x += 1.5f * playerRB.velocity.x;
+        //targetPos.y += 1.5f * playerRB.velocity.y;
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref camVelocity, smoothing);
         camComponent.orthographicSize = Mathf.SmoothDamp(camComponent.orthographicSize, zoomTarget, ref zoomVelocity, smoothing);
     }

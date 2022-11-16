@@ -137,9 +137,10 @@ public class EnemyBehavior : MonoBehaviour
         }
         rigidbody.velocity.Normalize();
         rigidbody.velocity *= speed;
-        if(Mathf.Abs(transform.rotation.eulerAngles.z - (Mathf.Atan2(rigidbody.velocity.y, rigidbody.velocity.x) - 90)) > 45)
+        float lookAngle = transform.rotation.eulerAngles.z - ((Mathf.Rad2Deg * Mathf.Atan2(rigidbody.velocity.y, rigidbody.velocity.x) - 90));
+        if(Mathf.Abs(lookAngle) > 5)
 		{
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.MoveTowardsAngle(transform.rotation.eulerAngles.z, Mathf.Rad2Deg * Mathf.Atan2(rigidbody.velocity.y, rigidbody.velocity.x) - 90, .5f)));
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.MoveTowardsAngle(transform.rotation.eulerAngles.z,(Mathf.Rad2Deg * Mathf.Atan2(rigidbody.velocity.y, rigidbody.velocity.x) - 90), 360 *Time.deltaTime)));
         }
         
         
