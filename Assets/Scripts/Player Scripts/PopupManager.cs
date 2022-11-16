@@ -62,20 +62,23 @@ public class PopupManager : MonoBehaviour
         popupPanel.enabled = false;
     }
 
+    
     /*
      *  Checks if player runs close enough to an interactable to display the popup.
      *  Might want to change to being based on which is closer, rather than who it "bumps into" most recently.
      */
+     /*
     private void OnTriggerEnter2D(Collider2D collision) {
         if ( collision.tag.Equals( "Interactable" ) ) {
             objectShowing = collision.GetComponent<IInteractable>();
             show_popup( objectShowing );
         }
-    }
+    }*/
 
     /*
      *  If running out of range of an interactable, check if it's the currently displayed popup. If it is, hide the popup.
      */
+     /*
     private void OnTriggerExit2D(Collider2D collision) {
         if ( collision.tag.Equals( "Interactable" ) ) {
             if ( collision.GetComponent<IInteractable>().Equals( objectShowing) ) {
@@ -83,6 +86,6 @@ public class PopupManager : MonoBehaviour
                 objectShowing = null;
             }
         }
-    }
+    }*/
 
 }
