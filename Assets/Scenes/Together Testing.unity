@@ -925,6 +925,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4590949720037569720, guid: b29b0831c18b6e449985217e39240aeb, type: 3}
+      propertyPath: smoothing
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590949720037569720, guid: b29b0831c18b6e449985217e39240aeb, type: 3}
       propertyPath: zoomTarget
       value: 7.5
       objectReference: {fileID: 0}
