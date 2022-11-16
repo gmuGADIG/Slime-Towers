@@ -19,6 +19,5 @@ public class PauseListener : MonoBehaviour
             Instantiate(pauseMenu, new Vector3(2.0f, 0, 0), Quaternion.identity);
             ManagerScript.gm.pauseGame();
         }
-        //Debug.Log(Time.timeScale);
     }
 }

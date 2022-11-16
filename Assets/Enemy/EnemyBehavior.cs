@@ -17,17 +17,21 @@ public class EnemyBehavior : MonoBehaviour
     public float MinAvoidancDistance = 1f;
     public TowerManager towerManager;
     public UnityEvent<GameObject> onDeath;
-    // Start is called before the first frame update
+    public SpriteRenderer rend;
+   // Start is called before the first frame update
     private void Awake()
     {
         towerManager = GameObject.Find("TowerManager").GetComponent<TowerManager>();
         rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
+        rend = GetComponent<SpriteRenderer>();
     }
 
     void Start()
     {
         
         Pathfind();
+        //GetComponent<Animation>().Play();
+
     }
 
     // Update is called once per frame
@@ -133,7 +137,11 @@ public class EnemyBehavior : MonoBehaviour
         }
         rigidbody.velocity.Normalize();
         rigidbody.velocity *= speed;
-
+        if(Mathf.Abs(transform.rotation.eulerAngles.z - (Mathf.Atan2(rigidbody.velocity.y, rigidbody.velocity.x) - 90)) > 45)
+		{
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.MoveTowardsAngle(transform.rotation.eulerAngles.z, Mathf.Rad2Deg * Mathf.Atan2(rigidbody.velocity.y, rigidbody.velocity.x) - 90, .5f)));
+        }
+        
         
 
     }

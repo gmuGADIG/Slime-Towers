@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectEffect: {fileID: 8544830064933356159}
   collectSound: {fileID: 0}
-  material: 5
+  material: 8
 --- !u!114 &524423878449900598
 MonoBehaviour:
   m_ObjectHideFlags: 0

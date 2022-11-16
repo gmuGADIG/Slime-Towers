@@ -74,10 +74,12 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions: []
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.5
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -91,8 +93,8 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.39031765
-        value: 0.9124997
+        time: 0.36006045
+        value: 0.9196428
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -100,8 +102,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.6172465
-        value: 1
+        time: 0.5529459
+        value: 0.9196363
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -160,3 +162,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d93d6309f673449adb5a72a5cb6d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPoint: {fileID: 0}
+  endPoint: {fileID: 0}

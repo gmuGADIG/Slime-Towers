@@ -5,42 +5,35 @@ using UnityEngine;
 public class laser : MonoBehaviour
 {
 
-    LineRenderer lineRenderer;
+    public Transform startPoint;
+    public Transform endPoint;
+
+    LineRenderer laserLine;
     // Start is called before the first frame update
     void Start()
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        laserLine = GetComponent<LineRenderer>();
+        laserLine.SetPosition(0, transform.position);
     }
 
-
-    
-    /*
-    
-
-    RaycastHit2D hit = Physics2D.Raycast(transform.position, direction);
-
-    if (hit.collider != null)
-        {
-        
-        }
-
-
-
-
-    send out a raycast
-
-    if the raycast hits:
-        set a new point at the raycast's result
-    if it's a crystal:
-        then redirect, send out a new raycast in a direction
-    elif not:
-        don't do that lol
-    do that same thing again
-     */
 
     // Update is called once per frame
     void Update()
     {
+
+        RaycastHit2D shootDaLaser = Physics2D.Raycast(transform.position, Vector2.right);
+
+
+        if (shootDaLaser)
+        {
+            laserLine.SetPosition(1, shootDaLaser.point);
+        }
+
+        else
+        {
+            laserLine.SetPosition(1, transform.position + Vector3.right * 100);
+        }
+
         
     }
 }

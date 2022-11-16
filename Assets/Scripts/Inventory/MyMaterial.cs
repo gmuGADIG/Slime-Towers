@@ -7,8 +7,11 @@ namespace SlimeTowers
         SLIME,
         FIRE_SLIME,
         ICE_SLIME,
-        ZAP_SLIME,
-        SUPER_SLIME
+        SLUDGE_SLIME,
+        SUPER_SLIME,
+        VINE_SLIME,
+        ZAP_SLIME
+        
     }
 
     public struct MyMaterial {
