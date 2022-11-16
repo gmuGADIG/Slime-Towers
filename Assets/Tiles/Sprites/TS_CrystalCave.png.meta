@@ -257,8 +257,8 @@ TextureImporter:
       name: TS_CrystalCave_6
       rect:
         serializedVersion: 2
-        x: 255
-        y: 1535
+        x: 256
+        y: 1536
         width: 256
         height: 256
       alignment: 0

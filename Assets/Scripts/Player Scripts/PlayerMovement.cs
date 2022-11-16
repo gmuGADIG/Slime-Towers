@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
             drillPresent = true;
             drillControllable = collision.GetComponent<DrillHealth>();
         }
-        else if ( collision.tag.Equals("Interactable") ) {
+        else if ( collision.tag.Equals("Interactable") || collision.tag.Equals("Slime" ) ) {
             popupManager.objectShowing = collision.GetComponent<IInteractable>();
             popupManager.show_popup( popupManager.objectShowing );
         }
@@ -101,6 +101,12 @@ public class PlayerMovement : MonoBehaviour
 
             drillControllable = null;
 
+        }
+        else if ( collision.tag.Equals("Interactable") || collision.tag.Equals("Slime" ) ) {
+            if ( collision.GetComponent<IInteractable>().Equals( popupManager.objectShowing ) ) {
+                popupManager.hide_popup();
+                popupManager.objectShowing = null;
+            }
         }
     }
 
