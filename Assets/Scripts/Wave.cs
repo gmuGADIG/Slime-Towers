@@ -65,7 +65,7 @@ public class Wave : MonoBehaviour
         }
     }
 
-    void setActive(bool value)
+    public void setActive(bool value)
     {
         active = value;
         foreach(EnemySpawner i in spawners)
@@ -74,7 +74,7 @@ public class Wave : MonoBehaviour
         }
     }
 
-    void StartWave()
+    public void StartWave()
     {
         if(active == false)
         {
