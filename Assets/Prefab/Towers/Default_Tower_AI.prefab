@@ -10,6 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7005094135638506443}
   - component: {fileID: 4026569770925597157}
+  - component: {fileID: 3181030369359827296}
+  - component: {fileID: 2048344716305016846}
+  - component: {fileID: 1523295804043021687}
+  - component: {fileID: 1710075900225255786}
   m_Layer: 0
   m_Name: Default_Tower_AI
   m_TagString: Untagged
@@ -85,6 +89,109 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3181030369359827296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785848389424379859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca706b055236b04e9dbbabd795fa4d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerName: TowerAI
+  towerType: 4
+  slime: 1
+  spriteRenderer: {fileID: 8956847429530233407}
+  upgradePopup: {fileID: 5222672149269210214, guid: c7ad9729202c97849a524e05f56a2311, type: 3}
+  selected: 0
+--- !u!114 &2048344716305016846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785848389424379859}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0adc403ae483c541939ecf3e57084d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerScrtipt: {fileID: 0}
+  TargetSize: 10
+  TargetedEnemy: {fileID: 0}
+  TargetedEnemyList: []
+  hitEnemy: 0
+  SlimeDefault: {fileID: 21300000, guid: 92046c2dc711d554aa6fe6a860506a4c, type: 3}
+  SlimeFire: {fileID: 21300000, guid: 3ec21ea34732371448ce74834a76d7cb, type: 3}
+  SlimeIce: {fileID: 21300000, guid: a5d5dd15e4f787d4c9270909c5ee1743, type: 3}
+  SlimeZap: {fileID: 21300000, guid: fdc70fd2dba192b4ca586f65966d4950, type: 3}
+  SlimeBaseRenderer: {fileID: 4785848389424379859}
+  defaultTower: 0
+  DefaultBase: {fileID: 21300000, guid: ae07665e9cb160c4c8f48427ec39aa58, type: 3}
+  timeToHit: 0.5
+  hitTimer: 0
+  rotationSpeed: 20
+  sniperTower: 1
+  STBase: {fileID: 21300000, guid: 8296086150a6e4744bc3ae7dc0a308b4, type: 3}
+  STTimeToHit: 4.5
+  STHitTimer: 0
+  STRotationSpeed: 3
+  AOETower: 0
+  AOEBase: {fileID: 0}
+  AOESlimedefault: {fileID: 0}
+  AOESlimeFire: {fileID: 0}
+  AOESlimeIce: {fileID: 0}
+  AOESlimeZap: {fileID: 0}
+  AOETTimeToHit: 5
+  AOETHitTimer: 0
+  AOETRotationSpeed: 3
+  wallTower: 0
+  wallBase: {fileID: 0}
+--- !u!58 &1523295804043021687
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785848389424379859}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!61 &1710075900225255786
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785848389424379859}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &8956847429530233394
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +201,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8956847429530233405}
-  - component: {fileID: 8956847429530233404}
   - component: {fileID: 4199498005867970049}
   - component: {fileID: 8956847429530233407}
   - component: {fileID: 5005372161449238152}
@@ -121,24 +227,6 @@ Transform:
   m_Father: {fileID: 7005094135638506443}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8956847429530233404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8956847429530233394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ca706b055236b04e9dbbabd795fa4d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerName: TowerAI
-  towerType: 1
-  slime: 1
-  spriteRenderer: {fileID: 4776954093406427289}
-  upgradePopup: {fileID: 5222672149269210214, guid: c7ad9729202c97849a524e05f56a2311, type: 3}
-  selected: 0
 --- !u!114 &4199498005867970049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +248,7 @@ MonoBehaviour:
   SlimeFire: {fileID: 21300000, guid: 3ec21ea34732371448ce74834a76d7cb, type: 3}
   SlimeIce: {fileID: 21300000, guid: a5d5dd15e4f787d4c9270909c5ee1743, type: 3}
   SlimeZap: {fileID: 21300000, guid: fdc70fd2dba192b4ca586f65966d4950, type: 3}
-  SlimeBaseRenderer: {fileID: 4026569770925597157}
+  SlimeBaseRenderer: {fileID: 4785848389424379859}
   defaultTower: 1
   DefaultBase: {fileID: 21300000, guid: ae07665e9cb160c4c8f48427ec39aa58, type: 3}
   timeToHit: 0.5
@@ -173,7 +261,7 @@ MonoBehaviour:
   STRotationSpeed: 3
   AOETower: 0
   AOEBase: {fileID: 0}
-  AOESlimeefault: {fileID: 0}
+  AOESlimedefault: {fileID: 0}
   AOESlimeFire: {fileID: 0}
   AOESlimeIce: {fileID: 0}
   AOESlimeZap: {fileID: 0}
@@ -181,10 +269,7 @@ MonoBehaviour:
   AOETHitTimer: 0
   AOETRotationSpeed: 3
   wallTower: 0
-  wallDefault: {fileID: 7482667652216324306, guid: 2dcca27a244cd154083fc2cf1b78b08c, type: 3}
-  wallFire: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  wallIce: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  wallZap: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  wallBase: {fileID: 0}
 --- !u!212 &8956847429530233407
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -225,9 +310,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.07585193, g: 0.7735849, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -244,7 +329,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8956847429530233394}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
