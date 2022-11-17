@@ -63,6 +63,10 @@ public class TowerAI : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().sprite = STBase;
         }
+        else if (AOETower)
+        {
+            GetComponent<SpriteRenderer>().sprite = AOEBase;
+        }
         else if (wallTower)
         {
             GetComponent<SpriteRenderer>().sprite = wallBase;
@@ -95,6 +99,10 @@ public class TowerAI : MonoBehaviour
     {
         if (TowerScrtipt.slime == Slime_Type.Default)
         {
+            if (AOETower)
+            {
+                SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = SlimeDefault;
+            }
             SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = SlimeDefault;
         }
         else if (TowerScrtipt.slime == Slime_Type.Fire)

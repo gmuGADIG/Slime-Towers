@@ -261,10 +261,10 @@ MonoBehaviour:
   STRotationSpeed: 3
   AOETower: 0
   AOEBase: {fileID: 0}
-  AOESlimedefault: {fileID: 0}
-  AOESlimeFire: {fileID: 0}
-  AOESlimeIce: {fileID: 0}
-  AOESlimeZap: {fileID: 0}
+  AOESlimedefault: {fileID: 21300000, guid: de395e6e5bb1f084d97363414eaa15aa, type: 3}
+  AOESlimeFire: {fileID: 21300000, guid: 81de78911642e204b83a142dcc77034b, type: 3}
+  AOESlimeIce: {fileID: 21300000, guid: 17469a74c65af9640b76255ac23108e6, type: 3}
+  AOESlimeZap: {fileID: 21300000, guid: a88eac9d4c750e4448d16a226cf3dada, type: 3}
   AOETTimeToHit: 5
   AOETHitTimer: 0
   AOETRotationSpeed: 3
