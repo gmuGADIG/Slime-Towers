@@ -23,6 +23,8 @@ public class WaveManager : MonoBehaviour
         {
             currentWave.StartWave();
             currentWave.onWaveComplete.AddListener(NextWave);
+
+            
         }
     }
 
