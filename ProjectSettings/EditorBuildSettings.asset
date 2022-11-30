@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Design Team Go HERE/Andy Scenes/Crystal Caves.unity
     guid: 6c72db461039f494189058af07bbc1a3
+  - enabled: 1
+    path: Assets/Design Team Go HERE/Omar Scene.unity
+    guid: 89f0ca0de696089419ab5276816f18f9
   m_configObjects: {}
