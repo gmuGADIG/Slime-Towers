@@ -37,12 +37,16 @@ public class Wave : MonoBehaviour
             if (remainingTimeInWave > 0)
             {
                 remainingTimeInWave -= Time.deltaTime;
-            }
+            } 
             else
             {
                 setActive(false);
-
+                if(enemies.Count == 0)
+                {
+                    EndWave();
+                }
             }
+            
         }
 
     }
@@ -57,11 +61,9 @@ public class Wave : MonoBehaviour
     void RemoveEnemy(GameObject enemy)
     {
         enemies.Remove(enemy);
-        if (enemies.Count == 0)
+        if (remainingTimeInWave < 0 && enemies.Count == 0)
         {
-            onWaveComplete.Invoke();
-            ManagerScript.gm.setGameState(GameState.EXPLORE);
-            Debug.Log("Wave Complete");
+            EndWave();
         }
     }
 
@@ -82,5 +84,13 @@ public class Wave : MonoBehaviour
             remainingTimeInWave = totalWaveTime;
             onWaveStart.Invoke();
         }
+    }
+
+    public void EndWave()
+    {
+        onWaveComplete.Invoke();
+        setActive(false);
+        ManagerScript.gm.setGameState(GameState.EXPLORE);
+        Debug.Log("Wave Complete");
     }
 }

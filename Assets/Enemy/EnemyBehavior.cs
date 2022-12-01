@@ -18,6 +18,7 @@ public class EnemyBehavior : MonoBehaviour
     public TowerManager towerManager;
     public UnityEvent<GameObject> onDeath;
     public SpriteRenderer rend;
+    private bool markedForDeath = false;
    // Start is called before the first frame update
     private void Awake()
     {
@@ -161,7 +162,13 @@ public class EnemyBehavior : MonoBehaviour
 
     void Die()
     {
-        onDeath.Invoke(gameObject);
-        Destroy(this.gameObject);
+        if (!markedForDeath)
+        {
+            onDeath.Invoke(gameObject);
+            markedForDeath = true;
+
+            //onDeath.RemoveAllListeners();
+            Destroy(this.gameObject);
+        }
     }
 }
