@@ -13,13 +13,14 @@ public class EnemyBehavior : MonoBehaviour
     Rigidbody2D rigidbody;
     public float stunTimer = 0f;
     public float fireTimer = 0f;
+    public float fireTickRate = 0.5f;
+    private float fireTickTimer = 0f;
     public int fireDamage = 1;
     public float MinAvoidancDistance = 1f;
     public TowerManager towerManager;
     public UnityEvent<GameObject> onDeath;
     public SpriteRenderer rend;
-    private bool markedForDeath = false;
-   // Start is called before the first frame update
+    // Start is called before the first frame update
     private void Awake()
     {
         towerManager = GameObject.Find("TowerManager").GetComponent<TowerManager>();
@@ -29,7 +30,7 @@ public class EnemyBehavior : MonoBehaviour
 
     void Start()
     {
-        
+
         Pathfind();
         //GetComponent<Animation>().Play();
 
@@ -45,16 +46,27 @@ public class EnemyBehavior : MonoBehaviour
         if (stunTimer > 0)
         {
             stunTimer -= Time.deltaTime;
-        } else
+        }
+        else
         {
             Move();
         }
         if (fireTimer > 0)
         {
             fireTimer -= Time.deltaTime;
-            TakeDamage(fireDamage);
+            if (fireTickTimer > 0)
+            {
+                fireTickTimer -= Time.deltaTime;
+            }
+            else
+            {
+                fireTickTimer = fireTickRate;
+                TakeDamage(fireDamage);
+            }
+
         }
-        if (health <= 0) {
+        if (health <= 0)
+        {
             Die();
         }
     }
@@ -65,7 +77,7 @@ public class EnemyBehavior : MonoBehaviour
         if (towers.Length == 0) return null;
         GameObject closest = towers[0];
         //Iterate through the list of towers to find the closest one
-        for(int i = 1; i < towers.Length; i++)
+        for (int i = 1; i < towers.Length; i++)
         {
             if (Vector3.Distance(towers[i].transform.position, this.transform.position) < Vector3.Distance(closest.transform.position, this.transform.position))
             {
@@ -76,7 +88,7 @@ public class EnemyBehavior : MonoBehaviour
         Debug.Log(Vector3.Distance(closest.transform.position, this.transform.position));
         return closest;
     }
-    
+
     List<GameObject> GetTowersInRange(float range)
     {
         List<GameObject> towersInRange = new List<GameObject>();
@@ -108,9 +120,9 @@ public class EnemyBehavior : MonoBehaviour
     }
     void Move()
     {
-        
+
         //Debug.Log(Vector2.Distance(target, this.transform.position));
-        if(Vector2.Distance(nextNode.transform.position, this.transform.position) < 1)
+        if (Vector2.Distance(nextNode.transform.position, this.transform.position) < 1)
         {
             if (nextNode.GetComponent<PathfindingNode>().endPoint)
             {
@@ -139,12 +151,12 @@ public class EnemyBehavior : MonoBehaviour
         rigidbody.velocity.Normalize();
         rigidbody.velocity *= speed;
         float lookAngle = transform.rotation.eulerAngles.z - ((Mathf.Rad2Deg * Mathf.Atan2(rigidbody.velocity.y, rigidbody.velocity.x) - 90));
-        if(Mathf.Abs(lookAngle) > 5)
-		{
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.MoveTowardsAngle(transform.rotation.eulerAngles.z,(Mathf.Rad2Deg * Mathf.Atan2(rigidbody.velocity.y, rigidbody.velocity.x) - 90), 360 *Time.deltaTime)));
+        if (Mathf.Abs(lookAngle) > 5)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.MoveTowardsAngle(transform.rotation.eulerAngles.z, (Mathf.Rad2Deg * Mathf.Atan2(rigidbody.velocity.y, rigidbody.velocity.x) - 90), 360 * Time.deltaTime)));
         }
-        
-        
+
+
 
     }
 
@@ -159,16 +171,20 @@ public class EnemyBehavior : MonoBehaviour
     {
         health -= DamageTaken;
     }
+    public void Burn(int FireDamage, int FireDuration, int FireTickRate)
+    {
+        fireDamage = FireDamage;
+        fireTimer = FireDuration;
+        fireTickRate = FireTickRate;
+    }
 
+    public void Stun(float StunDuration)
+    {
+        stunTimer = StunDuration;
+    }
     void Die()
     {
-        if (!markedForDeath)
-        {
-            onDeath.Invoke(gameObject);
-            markedForDeath = true;
-
-            //onDeath.RemoveAllListeners();
-            Destroy(this.gameObject);
-        }
+        onDeath.Invoke(gameObject);
+        Destroy(this.gameObject);
     }
 }
