@@ -76,30 +76,17 @@ public class Tower : MonoBehaviour
         buildMode = mode;
     }
 
-    public void setSlime(string slimeType)
+    public void setSlime(Slime_Type slimeType)
 	{
-		if (slimeType.Equals("Default"))
-		{
-			slime = Slime_Type.Default;
-		}
-		else if (slimeType.Equals("Zap"))
-		{
-			slime = Slime_Type.Zap;
-		}
-		else if (slimeType.Equals("Fire"))
-		{
-			slime = Slime_Type.Fire;
-		}
-		else if (slimeType.Equals("Ice"))
-		{
-			slime = Slime_Type.Ice;
-		}
-		else if (slimeType.Equals("Remove"))
-		{
-			slime = Slime_Type.None;
-		}
+		slime = slimeType;
+		GetComponent<TowerAI>().slimeSpriteUpdate();
 	}
 
+	public Slime_Type getSlime()
+	{
+		return slime;
+	}
+	
 	public Tower_Type getType()
 	{
 		return towerType;
@@ -132,6 +119,10 @@ public class Tower : MonoBehaviour
 						GameObject towerManager = GameObject.Find("TowerManager");
 						towerManager.GetComponent<TowerManager>().setTower(position, destroyMode, Tower_Type.None);
 						towerManager.GetComponent<TowerManager>().getActiveTowers().Remove(gameObject);
+						if(currentUpgradePopup != null)
+						{
+                            Destroy(currentUpgradePopup);
+                        }
 						Destroy(gameObject);
 					}
 					else
