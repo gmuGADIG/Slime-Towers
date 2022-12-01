@@ -2333,6 +2333,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothing: 1
+  lookAhead: 0
+  zoomTarget: 6
 --- !u!1 &1890557099 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8477915029739128750, guid: f1c92d7a18592d64a8725f7d7b71543d, type: 3}
