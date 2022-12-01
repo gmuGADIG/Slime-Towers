@@ -11,7 +11,11 @@ public class WaveManager : MonoBehaviour
     {
         get
         {
-            return waves[0]?.active ?? false;
+            if (waves.Count > 0)
+            {
+                return waves[0].active;
+            }
+            return false;
         }
     }
 
@@ -30,6 +34,9 @@ public class WaveManager : MonoBehaviour
 
     public void NextWave()
     {
-        waves.RemoveAt(0);
+        if (waves.Count > 0)
+        {
+            waves.RemoveAt(0);
+        }
     }
 }
