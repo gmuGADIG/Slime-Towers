@@ -15,7 +15,10 @@ public class BeastiaryMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            backButtonPressed();
+        }
     }
 
     public void backButtonPressed()

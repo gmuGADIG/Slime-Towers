@@ -878,14 +878,14 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
+    - m_Text: Blue Slime
+      m_Image: {fileID: -1220741362, guid: c367258f8df059040920e0b7b13ccab6, type: 3}
     - m_Text: Ice Slime
       m_Image: {fileID: 17373166, guid: 38faa8d220c3d4337a92557a4925a1bb, type: 3}
     - m_Text: Fire Slime
-      m_Image: {fileID: 0}
+      m_Image: {fileID: 1228302054, guid: c367258f8df059040920e0b7b13ccab6, type: 3}
     - m_Text: Zap Slime
-      m_Image: {fileID: 0}
-    - m_Text: Poison Slime
-      m_Image: {fileID: 0}
+      m_Image: {fileID: -739715318, guid: 0de93149246fc96419b8a0bef2ef531a, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -914,9 +914,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd4e46e90f6419429097b6d1915deb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 9071098384629801703}
+  picture: {fileID: 9071098384629801703}
   name: {fileID: 4649050567686482380}
-  Description: {fileID: 7757532342479721455}
+  description: {fileID: 7757532342479721455}
+  BlueSlime: {fileID: -1220741362, guid: c367258f8df059040920e0b7b13ccab6, type: 3}
+  IceSlime: {fileID: 17373166, guid: 38faa8d220c3d4337a92557a4925a1bb, type: 3}
+  FireSlime: {fileID: 1228302054, guid: c367258f8df059040920e0b7b13ccab6, type: 3}
+  ZapSlime: {fileID: -82791569, guid: 0de93149246fc96419b8a0bef2ef531a, type: 3}
 --- !u!1 &1084850519692826221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,7 +1059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1232,7 +1236,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395089048119925520}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1244,8 +1248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00033569336, y: -23.526703}
-  m_SizeDelta: {x: -58.347, y: -118.5743}
+  m_AnchoredPosition: {x: 0.00030517578, y: -23.526672}
+  m_SizeDelta: {x: -58.346985, y: -118.57431}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2871391754717861158
 CanvasRenderer:
@@ -1710,7 +1714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ice Slime
+  m_text: Blue Slime
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1972,7 +1976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ice Slime
+  m_text: Blue Slime
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1981,8 +1985,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2786,7 +2790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3343,8 +3347,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: -50}
-  m_SizeDelta: {x: 320, y: 60}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5891537934840858549
 CanvasRenderer:
@@ -3374,7 +3378,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The ice slime is icy.
+  m_text: The Blue Slime is the most common slime variant. They are found in most
+    areas.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3383,8 +3388,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4064,7 +4069,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 17373166, guid: 38faa8d220c3d4337a92557a4925a1bb, type: 3}
+  m_Sprite: {fileID: -1220741362, guid: c367258f8df059040920e0b7b13ccab6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
