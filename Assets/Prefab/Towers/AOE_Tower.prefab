@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TowerScrtipt: {fileID: 0}
-  TargetSize: 10
+  TargetSize: 4
   TargetedEnemy: {fileID: 0}
   TargetedEnemyList: []
   hitEnemy: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   AOESlimeFire: {fileID: 21300000, guid: 81de78911642e204b83a142dcc77034b, type: 3}
   AOESlimeIce: {fileID: 21300000, guid: 17469a74c65af9640b76255ac23108e6, type: 3}
   AOESlimeZap: {fileID: 21300000, guid: a88eac9d4c750e4448d16a226cf3dada, type: 3}
-  AOETTimeToHit: 5
+  AOETTimeToHit: 7
   AOETHitTimer: 0
   AOETRotationSpeed: 3
   wallTower: 0
@@ -294,4 +294,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 4

@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TowerScrtipt: {fileID: 0}
-  TargetSize: 10
+  TargetSize: 20
   TargetedEnemy: {fileID: 0}
   TargetedEnemyList: []
   hitEnemy: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   SlimeBaseRenderer: {fileID: 89054771649452953}
   defaultTower: 1
   DefaultBase: {fileID: 21300000, guid: ae07665e9cb160c4c8f48427ec39aa58, type: 3}
-  timeToHit: 0.5
+  timeToHit: 3
   hitTimer: 0
   rotationSpeed: 20
   sniperTower: 0
@@ -294,4 +294,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 6

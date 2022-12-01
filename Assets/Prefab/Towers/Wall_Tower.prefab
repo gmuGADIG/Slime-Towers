@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TowerScrtipt: {fileID: 0}
-  TargetSize: 10
+  TargetSize: 0
   TargetedEnemy: {fileID: 0}
   TargetedEnemyList: []
   hitEnemy: 0
@@ -294,4 +294,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 0.0001
