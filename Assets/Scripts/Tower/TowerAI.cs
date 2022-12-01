@@ -101,20 +101,32 @@ public class TowerAI : MonoBehaviour
         {
             if (AOETower)
             {
-                SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = SlimeDefault;
+                SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = AOESlimedefault;
             }
             SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = SlimeDefault;
         }
         else if (TowerScrtipt.slime == Slime_Type.Fire)
         {
+            if (AOETower)
+            {
+                SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = AOESlimeFire;
+            }
             SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = SlimeFire;
         }
         else if (TowerScrtipt.slime == Slime_Type.Ice)
         {
+            if (AOETower)
+            {
+                SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = AOESlimeIce;
+            }
             SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = SlimeIce;
         }
         else if (TowerScrtipt.slime == Slime_Type.Zap)
         {
+            if (AOETower)
+            {
+                SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = AOESlimeZap;
+            }
             SlimeBaseRenderer.GetComponent<SpriteRenderer>().sprite = SlimeZap;
         }
     }
