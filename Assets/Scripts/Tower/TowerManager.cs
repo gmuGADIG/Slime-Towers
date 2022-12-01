@@ -31,6 +31,10 @@ public class TowerManager : MonoBehaviour
     public GameObject squareSelector;
     [Tooltip("The Enemy Manager active in the scene")]
     public EnemyManager enemyManager;
+    //This is a flag that tells if the GUI for this object is open
+    public bool GUIOpen = false;
+    //The GUI object
+    public GameObject towerSelector;
     //A dictionary to hold all the recipes for the towers
     [Serializable]
     public struct MaterialAmount
@@ -51,6 +55,16 @@ public class TowerManager : MonoBehaviour
     public List<GameObject> getActiveTowers()
     {
         return activeTowers;
+    }
+
+    public void setSelectedTower(int selected)
+    {
+        selectedTower = selected;
+    }
+
+    public Tower_Type getSelectedType()
+    {
+        return towerTypes[selectedTower].GetComponent<Tower>().getType();
     }
 
     //Puts the placeholder tower to all the grid
@@ -88,6 +102,8 @@ public class TowerManager : MonoBehaviour
     //Giving true will stop the ability to place towers and false gives the ability again
     public void stopBuilding(bool buildMode)
     {
+        GUIOpen = !buildMode;
+        towerSelector.SetActive(GUIOpen);
         waveStart = buildMode;
         changeBuildMode(waveStart);
     }

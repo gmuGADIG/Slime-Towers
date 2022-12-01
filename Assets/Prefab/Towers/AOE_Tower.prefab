@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerName: TowerAI
-  towerType: 1
-  slime: 1
+  towerType: 3
+  slime: 0
   spriteRenderer: {fileID: 0}
   upgradePopup: {fileID: 5222672149269210214, guid: c7ad9729202c97849a524e05f56a2311, type: 3}
   selected: 0

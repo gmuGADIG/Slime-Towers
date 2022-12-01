@@ -108,7 +108,8 @@ public class Tower : MonoBehaviour
 				{
 					if (!destroyMode)
 					{
-						GameObject.Find("TowerManager").GetComponent<TowerManager>().setTower(position, destroyMode, Tower_Type.Default);
+						TowerManager TowerMan = GameObject.Find("TowerManager").GetComponent<TowerManager>();
+                        TowerMan.setTower(position, destroyMode, TowerMan.getSelectedType());
 						Destroy(gameObject);
 					}
 				}
@@ -127,7 +128,11 @@ public class Tower : MonoBehaviour
 					}
 					else
 					{
-						if (selected = !selected)
+						if (towerType.Equals(Tower_Type.Wall))
+						{
+
+						}
+						else if (selected = !selected)
 						{
 							currentUpgradePopup = Instantiate(upgradePopup, GameObject.Find("TowerCanvas").transform);
 							currentUpgradePopup.GetComponent<SlimeSelector>().towerParent = gameObject;
