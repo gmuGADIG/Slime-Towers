@@ -6,34 +6,38 @@ public class laserscript : MonoBehaviour
 {
 
     public GameObject laserObject;
+    private GameObject laser;
 
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(laserObject, transform.position, transform.rotation);
+        laser = Instantiate(laserObject, transform.position, transform.rotation);
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         generateLaser();
     }
 
-    void generateLaser()
+    public void generateLaser()
     {
-        RaycastHit2D Laser = Physics2D.Raycast(transform.position, Vector2.right);
-        Debug.Log(Laser.distance);
-
-        if (Laser.collider != null)
-                {
-
-            laserextenderscript other = Laser.collider.GetComponent<laserextenderscript>();
-            
-            
+        RaycastHit2D cast = Physics2D.Raycast(transform.position, transform.rotation * Vector2.right);
+        if (cast.collider != null)
+        {
+            if(cast.collider.GetComponent<ILaserTarget>() != null)
+            {
                 
-                }
+                cast.collider.GetComponent<ILaserTarget>().OnLaserHit();
+                
+            }
+            laser.GetComponent<laser>().SetLaser(transform.position, cast.point);
+        } else
+        {
+            laser.GetComponent<laser>().SetLaser(transform.position, transform.rotation * (Vector2.right * 1000));
+        }
 
-        // if chekc hits a crystal then fire another raycast
+
     }
 
 
