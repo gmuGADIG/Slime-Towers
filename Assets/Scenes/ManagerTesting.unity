@@ -1167,9 +1167,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2969809641760004491, guid: b29b0831c18b6e449985217e39240aeb, type: 3}
+      propertyPath: orthographic size
+      value: 7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590949720037569720, guid: b29b0831c18b6e449985217e39240aeb, type: 3}
+      propertyPath: lookAhead
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590949720037569720, guid: b29b0831c18b6e449985217e39240aeb, type: 3}
+      propertyPath: smoothing
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220585841378492711, guid: b29b0831c18b6e449985217e39240aeb, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9220585841378492711, guid: b29b0831c18b6e449985217e39240aeb, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220585841378492711, guid: b29b0831c18b6e449985217e39240aeb, type: 3}
+      propertyPath: sprintSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b29b0831c18b6e449985217e39240aeb, type: 3}

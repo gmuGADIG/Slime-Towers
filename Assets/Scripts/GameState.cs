@@ -6,6 +6,6 @@ using UnityEngine;
 public enum GameState {
     EXPLORE, //Player explores cave, build towers
     ATTACK, //Enemies spawn and attack drill
-    DIALOGUE, //Player/enemy movement restricted, but not complete pause.
+    DIALOGUE //Player/enemy movement restricted, but not complete pause.
                 //Animations and sounds still play
 }

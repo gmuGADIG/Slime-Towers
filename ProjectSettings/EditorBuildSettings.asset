@@ -42,6 +42,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Together Testing.unity
     guid: 97dc84f46670a4b42b11ce2f34673f1e
   - enabled: 1
-    path: Assets/Design Team Go HERE/Andy Scene.unity
+    path: Assets/Design Team Go HERE/Andy Scenes/Crystal Caves.unity
     guid: 6c72db461039f494189058af07bbc1a3
+  - enabled: 1
+    path: Assets/Design Team Go HERE/Omar Scene.unity
+    guid: 89f0ca0de696089419ab5276816f18f9
   m_configObjects: {}

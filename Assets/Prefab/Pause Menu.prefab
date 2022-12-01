@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2513297149638270798}
   optionsMenu: {fileID: 1720560829793588805, guid: 091fd35bb5140ad42b19dbbe478a7263, type: 3}
-  beastiary: {fileID: 2137349261317952398, guid: ba5b0757204e94923a4976eeb9b01d67, type: 3}
+  beastiary: {fileID: 2137349261317952398, guid: bd027ed9c962c425aa69a2eed7e72bac, type: 3}
 --- !u!1001 &5454913051612359312
 PrefabInstance:
   m_ObjectHideFlags: 0
