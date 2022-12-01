@@ -16,6 +16,10 @@ public class EnemyBehavior : MonoBehaviour
     public float fireTickRate = 0.5f;
     private float fireTickTimer = 0f;
     public int fireDamage = 1;
+
+    public float attackCooldown = 1f;
+    private float attackTimer = 0f;
+
     public float MinAvoidancDistance = 1f;
     public TowerManager towerManager;
     public UnityEvent<GameObject> onDeath;
@@ -126,7 +130,8 @@ public class EnemyBehavior : MonoBehaviour
         {
             if (nextNode.GetComponent<PathfindingNode>().endPoint)
             {
-                Die();
+                //Die();
+                
             }
             else
             {
@@ -186,5 +191,19 @@ public class EnemyBehavior : MonoBehaviour
     {
         onDeath.Invoke(gameObject);
         Destroy(this.gameObject);
+    }
+
+    public void Attack(DrillHealth drill)
+    {
+        if (attackTimer > 0)
+        {
+            attackTimer -= Time.deltaTime;
+        }
+        else
+        {
+            attackTimer = attackCooldown;
+            //how do i animate??
+            //Also drill health is set package-protected
+        }
     }
 }
