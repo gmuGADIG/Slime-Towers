@@ -19,24 +19,28 @@ public class PlayerCameraScript : MonoBehaviour
     private Vector3 camVelocity;
     private float zoomVelocity;
     private PolygonCollider2D playerCollider;
+
+    private Transform target;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
-        pTransform = player.transform;
         playerRB = player.GetComponent<Rigidbody2D>();
         pScript = player.GetComponent<PlayerMovement>();
         transform.parent = null;
         camComponent = gameObject.GetComponent<Camera>();
         playerCollider = player.GetComponent<PolygonCollider2D>();
+        target = player.transform;
     }
 
     // Update is called once per frame
     void FixedUpdate() {
-        Vector3 targetPos = new Vector3(pTransform.position.x, pTransform.position.y, -10);
-        //targetPos.x += 1.5f * playerRB.velocity.x;
-        //targetPos.y += 1.5f * playerRB.velocity.y;
+        Vector3 targetPos = new Vector3(target.position.x, target.position.y, -10);
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref camVelocity, smoothing);
         camComponent.orthographicSize = Mathf.SmoothDamp(camComponent.orthographicSize, zoomTarget, ref zoomVelocity, smoothing);
+    }
+
+    public void setCameraTarget(Transform target) {
+        this.target = target;
     }
 }

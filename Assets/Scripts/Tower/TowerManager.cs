@@ -117,7 +117,7 @@ public class TowerManager : MonoBehaviour
     {
         int i = position.y, k = position.x;
         bool hasMaterials = false;
-        //This needs more time should you want to show off towers I recommend commenting out
+        
         if (tower.Equals(Tower_Type.None))
         {
             hasMaterials = true;
@@ -133,10 +133,12 @@ public class TowerManager : MonoBehaviour
                     tempRecipe.material = recipes[j].materials[z].material;
                     tempRecipe.amount = recipes[j].materials[z].amount;
                     bool hasMatInve = Inventory.materials.TryGetValue(tempRecipe.material, out int invAmount);
-                    Debug.Log(invAmount);
                     if (!hasMatInve)
                     {
                         towerGrid[i, k] = Instantiate(towerPlaceholder, new Vector3(k * DISTANCEBETWEENCELLS + gridStart.x, i * DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
+                        towerGrid[i, k].GetComponent<Tower>().setPosition(k, i);
+                        towerGrid[i, k].transform.SetParent(transform);
+                        towerGrid[i, k].GetComponent<Tower>().setDestroyMode(destroy);
                         return;
                     }
                     if (invAmount < tempRecipe.amount)
@@ -150,9 +152,12 @@ public class TowerManager : MonoBehaviour
         if (!hasMaterials)
         {
             towerGrid[i, k] = Instantiate(towerPlaceholder, new Vector3(k * DISTANCEBETWEENCELLS + gridStart.x, i * DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
+            towerGrid[i, k].GetComponent<Tower>().setPosition(k, i);
+            towerGrid[i, k].transform.SetParent(transform);
+            towerGrid[i, k].GetComponent<Tower>().setDestroyMode(destroy);
             return;
         }
-        //To here
+
         towerGrid[i, k] = Instantiate(destroy ? towerPlaceholder : towerTypes[selectedTower], new Vector3(k * DISTANCEBETWEENCELLS + gridStart.x, i * DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
         towerGrid[i, k].GetComponent<Tower>().setPosition(k, i);
         towerGrid[i, k].transform.SetParent(transform);
@@ -173,7 +178,7 @@ public class TowerManager : MonoBehaviour
             enemyManager.resetPathMarkers();
             return;
         }
-        //And here
+
         for (int j = 0; j < recipes.Length; j++)
         {
             if (tower.Equals(recipes[j].towerType))
@@ -192,7 +197,7 @@ public class TowerManager : MonoBehaviour
 
             }
         }
-        //To here
+
     }
     
     //Setting the mode the player is in should eventually be changed to something else
