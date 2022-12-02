@@ -89,7 +89,7 @@ public class InventoryUI : MonoBehaviour
 
         inventoryText.text = "\0";
         foreach(MaterialType m in activeMaterials) {
-            inventoryText.text = m.ToString() + ": " + Inventory.materials[m] + "\n";
+            inventoryText.text = m.ToString() + ": " + Inventory.materials[m] + "\n" + inventoryText.text;
         }
     } 
 }
