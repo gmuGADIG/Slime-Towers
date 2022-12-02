@@ -9,46 +9,52 @@ public class SlimeDropdown : MonoBehaviour
     private TMPro.TMP_Dropdown slimes;
     public GameObject picture;
     public GameObject name;
-    public GameObject Description;
-    public TMP_Text nameText;
-    Sprite IceSlime, FireSlime, ZapSlime, PoisonSlime;
+    public GameObject description;
+    TMP_Text descriptionText, nameText;
+    public Sprite BlueSlime, IceSlime, FireSlime, ZapSlime;
     
     // Start is called before the first frame update
     void Start()
     {
         slimes = gameObject.GetComponent<TMPro.TMP_Dropdown>();
-        /*nameText = name.GetComponent<TMP_Text>();
-        IceSlime = Resources.Load<Sprite>("Ice Slime_3");
-        FireSlime = Resources.Load<Sprite>("Fire Slime");
-        ZapSlime = Resources.Load<Sprite>("Zap Slime");
-        PoisonSlime = Resources.Load<Sprite>("Super Slime");*/
+        nameText = name.GetComponent<TMP_Text>();
+        descriptionText = description.GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(slimes.value);
     }
 
     public void slimeValueChanged()
     {
-        /*switch (slimes.value)
+        switch (slimes.value)
         {
             case 0:
-                picture.GetComponent<Image>().sprite = IceSlime;
+                picture.GetComponent<Image>().sprite = BlueSlime;
+                nameText.text = ("Blue Slime");
+                descriptionText.text = ("The Blue Slime is the most common slime variant. They are found in most areas.");
                 break;
             case 1:
-                picture.GetComponent<Image>().sprite = FireSlime;
+                picture.GetComponent<Image>().sprite = IceSlime;
+                nameText.text = ("Ice Slime");
+                descriptionText.text = ("The Ice Slime is the more frigid brother of the Blue Slime. Often found in Icy Caves, they create layers of slimy ice to insulate themselves.");
                 break;
             case 2:
-                picture.GetComponent<Image>().sprite = ZapSlime;
+                picture.GetComponent<Image>().sprite = FireSlime;
+                nameText.text = ("Fire Slime");
+                descriptionText.text = ("The Fire Slime took the opposite evolutionary path of the Ice Slime. They dwell in Fire Caves and absorb the surrounding heat for energy.");
                 break;
             case 3:
-                picture.GetComponent<Image>().sprite = PoisonSlime;
+                picture.GetComponent<Image>().sprite = ZapSlime;
+                nameText.text = ("Zap Slime");
+                descriptionText.text = ("The Zap Slime is slightly different from the other slime types. These slimes are found in isolated areas with a high concentration of plasma.");
                 break;
             default:
-                picture.GetComponent<Image>().sprite = IceSlime;
+                picture.GetComponent<Image>().sprite = BlueSlime;
+                nameText.text = ("Blue Slime");
+                descriptionText.text = ("The Blue Slime is the most common slime variant. They are found in most areas.");
                 break;
-        }*/
+        }
     }
 }
