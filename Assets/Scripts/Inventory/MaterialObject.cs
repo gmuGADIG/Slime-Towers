@@ -28,7 +28,7 @@ public class MaterialObject : MonoBehaviour {
         if(collision.gameObject.tag == "Player")
         {
             Inventory inventory = Inventory.inventory;
-            inventory.AddItem(material, 1); //TODO multi-item pickups?
+            inventory.AddItem(material, 5); //TODO multi-item pickups?
             inventory.logStatus();
 
             gameObject.GetComponent<BoxCollider2D>().enabled = false;

@@ -7,7 +7,7 @@ public class GameStart : MonoBehaviour
 {   
     public void HandleButton()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Hub");
         Debug.Log("Button Clicked");
         SceneManager.UnloadScene("Title Menu");
     }

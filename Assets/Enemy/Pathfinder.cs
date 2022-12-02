@@ -36,12 +36,17 @@ public class Pathfinder : MonoBehaviour
 
     void placeMarkers(List<Vector2Int> path)
     {
+        GameObject scene = GameObject.Find("Hub");
         ClearMarkers();
         path.Reverse();
         GameObject prev = null;
         foreach (Vector2Int pos in path)
         {
+
             GameObject marker = Instantiate(pathfindingNode);
+            if(scene != null){
+                marker.transform.parent = scene.transform;
+            }
             marker.transform.position = towerManager.getTower(pos).transform.position;
             marker.GetComponent<PathfindingNode>().nextNode = prev;
             pathfindingNodes.Add(marker);

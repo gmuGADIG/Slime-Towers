@@ -77,12 +77,14 @@ public class DrillHealth : MonoBehaviour {
         input.SetActive(false);
         playerPresent = true;
         drillCamera.enabled = true;
+        Camera.main.enabled = false;
         manager.setGameState(GameState.ATTACK);
     }
 
     public void playerExit(){
         player.SetActive(true);
         playerPresent = false;
+        Camera.main.enabled = true;
         player.GetComponent<PlayerMovement>().playerCam.enabled = true;
     }
 
