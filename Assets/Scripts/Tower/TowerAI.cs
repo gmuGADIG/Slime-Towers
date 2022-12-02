@@ -272,7 +272,7 @@ public class TowerAI : MonoBehaviour
                 AOETHitTimer = AOETTimeToHit;
                 foreach (GameObject enemy in TargetedEnemyList)
                 {
-                    enemy.GetComponent<SpriteRenderer>().color = Color.red;
+                    enemy.GetComponent<EnemyBehavior>().Burn(5, 5, 1);
                 }
             }
         }
@@ -309,6 +309,7 @@ public class TowerAI : MonoBehaviour
                         Debug.Log("Did Hit");
                         hitEnemy = true;
                         hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        hit.collider.GetComponent<EnemyBehavior>().Burn(5, 5, 1);
                     }
                     else
                     {
@@ -351,6 +352,7 @@ public class TowerAI : MonoBehaviour
                         Debug.Log("Did Hit");
                         hitEnemy = true;
                         hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        hit.collider.GetComponent<EnemyBehavior>().Burn(5, 5, 1);
                     }
                     else
                     {
@@ -504,7 +506,7 @@ public class TowerAI : MonoBehaviour
                 AOETHitTimer = AOETTimeToHit;
                 foreach (GameObject enemy in TargetedEnemyList)
                 {
-                    enemy.GetComponent<SpriteRenderer>().color = Color.red;
+                    enemy.GetComponent<EnemyBehavior>().Stun(2);
                 }
             }
         }
@@ -541,6 +543,7 @@ public class TowerAI : MonoBehaviour
                         Debug.Log("Did Hit");
                         hitEnemy = true;
                         hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        hit.collider.GetComponent<EnemyBehavior>().Stun(2);
                     }
                     else
                     {
@@ -583,6 +586,7 @@ public class TowerAI : MonoBehaviour
                         Debug.Log("Did Hit");
                         hitEnemy = true;
                         hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        hit.collider.GetComponent<EnemyBehavior>().Stun(2);
                     }
                     else
                     {

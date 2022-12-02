@@ -438,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 9173562484201843743, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
       propertyPath: towerTypes.Array.data[0]
       value: 
-      objectReference: {fileID: 4785848389424379859, guid: c61922842e9db39409586a76d5efb71f, type: 3}
+      objectReference: {fileID: 89054771649452953, guid: 715ab647af3033f418fb3b08cabda6ff, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632e4f2950e970e409a66f17a8df9028, type: 3}
 --- !u!1 &109187667
@@ -2333,6 +2333,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothing: 1
+  lookAhead: 0
+  zoomTarget: 6
 --- !u!1 &1890557099 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8477915029739128750, guid: f1c92d7a18592d64a8725f7d7b71543d, type: 3}

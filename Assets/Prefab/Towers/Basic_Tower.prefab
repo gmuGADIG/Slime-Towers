@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4785848389424379859
+--- !u!1 &89054771649452953
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7005094135638506443}
-  - component: {fileID: 4026569770925597157}
+  - component: {fileID: 2477477973844580225}
+  - component: {fileID: 8410440178939940271}
+  - component: {fileID: 8731122535193573618}
   m_Layer: 0
-  m_Name: Default_Tower_AI
+  m_Name: Basic_Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7005094135638506443
+--- !u!4 &2477477973844580225
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4785848389424379859}
+  m_GameObject: {fileID: 89054771649452953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8956847429530233405}
+  - {fileID: 4547439763514115703}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4026569770925597157
+--- !u!212 &8410440178939940271
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4785848389424379859}
+  m_GameObject: {fileID: 89054771649452953}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,7 +86,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &8956847429530233394
+--- !u!114 &8731122535193573618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89054771649452953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca706b055236b04e9dbbabd795fa4d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerName: TowerAI
+  towerType: 1
+  slime: 0
+  spriteRenderer: {fileID: 0}
+  upgradePopup: {fileID: 5222672149269210214, guid: c7ad9729202c97849a524e05f56a2311, type: 3}
+  selected: 0
+--- !u!1 &4547439763514115704
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,12 +112,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8956847429530233405}
-  - component: {fileID: 8956847429530233404}
-  - component: {fileID: 4199498005867970049}
-  - component: {fileID: 8956847429530233407}
-  - component: {fileID: 5005372161449238152}
-  - component: {fileID: 8997165302668583837}
+  - component: {fileID: 4547439763514115703}
+  - component: {fileID: 4547439763514115702}
+  - component: {fileID: 8723824564729238091}
+  - component: {fileID: 4547439763514115701}
+  - component: {fileID: 441487321300497090}
+  - component: {fileID: 4578620659826692055}
   m_Layer: 0
   m_Name: Tower AI
   m_TagString: Tower
@@ -106,28 +125,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8956847429530233405
+--- !u!4 &4547439763514115703
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8956847429530233394}
+  m_GameObject: {fileID: 4547439763514115704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7005094135638506443}
+  m_Father: {fileID: 2477477973844580225}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8956847429530233404
+--- !u!114 &4547439763514115702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8956847429530233394}
+  m_GameObject: {fileID: 4547439763514115704}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ca706b055236b04e9dbbabd795fa4d0, type: 3}
@@ -136,23 +155,23 @@ MonoBehaviour:
   towerName: TowerAI
   towerType: 1
   slime: 1
-  spriteRenderer: {fileID: 4776954093406427289}
+  spriteRenderer: {fileID: 0}
   upgradePopup: {fileID: 5222672149269210214, guid: c7ad9729202c97849a524e05f56a2311, type: 3}
   selected: 0
---- !u!114 &4199498005867970049
+--- !u!114 &8723824564729238091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8956847429530233394}
+  m_GameObject: {fileID: 4547439763514115704}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0adc403ae483c541939ecf3e57084d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TowerScrtipt: {fileID: 0}
-  TargetSize: 10
+  TargetSize: 20
   TargetedEnemy: {fileID: 0}
   TargetedEnemyList: []
   hitEnemy: 0
@@ -160,10 +179,10 @@ MonoBehaviour:
   SlimeFire: {fileID: 21300000, guid: 3ec21ea34732371448ce74834a76d7cb, type: 3}
   SlimeIce: {fileID: 21300000, guid: a5d5dd15e4f787d4c9270909c5ee1743, type: 3}
   SlimeZap: {fileID: 21300000, guid: fdc70fd2dba192b4ca586f65966d4950, type: 3}
-  SlimeBaseRenderer: {fileID: 4026569770925597157}
+  SlimeBaseRenderer: {fileID: 89054771649452953}
   defaultTower: 1
   DefaultBase: {fileID: 21300000, guid: ae07665e9cb160c4c8f48427ec39aa58, type: 3}
-  timeToHit: 0.5
+  timeToHit: 3
   hitTimer: 0
   rotationSpeed: 20
   sniperTower: 0
@@ -172,26 +191,23 @@ MonoBehaviour:
   STHitTimer: 0
   STRotationSpeed: 3
   AOETower: 0
-  AOEBase: {fileID: 0}
-  AOESlimeefault: {fileID: 0}
-  AOESlimeFire: {fileID: 0}
-  AOESlimeIce: {fileID: 0}
-  AOESlimeZap: {fileID: 0}
+  AOEBase: {fileID: 21300000, guid: de395e6e5bb1f084d97363414eaa15aa, type: 3}
+  AOESlimedefault: {fileID: 21300000, guid: de395e6e5bb1f084d97363414eaa15aa, type: 3}
+  AOESlimeFire: {fileID: 21300000, guid: 81de78911642e204b83a142dcc77034b, type: 3}
+  AOESlimeIce: {fileID: 21300000, guid: 17469a74c65af9640b76255ac23108e6, type: 3}
+  AOESlimeZap: {fileID: 21300000, guid: a88eac9d4c750e4448d16a226cf3dada, type: 3}
   AOETTimeToHit: 5
   AOETHitTimer: 0
   AOETRotationSpeed: 3
   wallTower: 0
-  wallDefault: {fileID: 7482667652216324306, guid: 2dcca27a244cd154083fc2cf1b78b08c, type: 3}
-  wallFire: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  wallIce: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  wallZap: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
---- !u!212 &8956847429530233407
+  wallBase: {fileID: 0}
+--- !u!212 &4547439763514115701
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8956847429530233394}
+  m_GameObject: {fileID: 4547439763514115704}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -237,13 +253,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5005372161449238152
+--- !u!61 &441487321300497090
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8956847429530233394}
+  m_GameObject: {fileID: 4547439763514115704}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -263,13 +279,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!58 &8997165302668583837
+--- !u!58 &4578620659826692055
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8956847429530233394}
+  m_GameObject: {fileID: 4547439763514115704}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -278,4 +294,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 6
