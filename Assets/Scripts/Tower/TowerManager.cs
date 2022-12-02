@@ -7,6 +7,7 @@ public class TowerManager : MonoBehaviour
 {
     //Constants for the grid specifically the size of the grid and the distance between the cells
     public static int GRIDSIZE = 10;
+    public int GridSize;
     public static int DISTANCEBETWEENCELLS = 1;
     public int RESTRICTEDDISTANCE = 10;
     //The 2D array that holds all of the towers
@@ -17,6 +18,8 @@ public class TowerManager : MonoBehaviour
     public GameObject towerPlaceholder;
     //The tower that represents restricted grids
     public GameObject restricted;
+    //The Tower that represents collided grids
+    public GameObject collided;
     //The active towers for pathfinding to use
     public List<GameObject> activeTowers = new List<GameObject>();
     //The tower types of the game
@@ -66,6 +69,9 @@ public class TowerManager : MonoBehaviour
     {
         return towerTypes[selectedTower].GetComponent<Tower>().getType();
     }
+    void Awake(){
+        GRIDSIZE = GridSize;
+    }
 
     //Puts the placeholder tower to all the grid
     void Start()
@@ -98,6 +104,10 @@ public class TowerManager : MonoBehaviour
             setRestricted(getClosestNode(pathfinder.endPoint.transform.position));
         }
         enemyManager.resetPathMarkers();
+        Invoke("resetPathThing",.25f);
+    }
+    void resetPathThing(){
+        enemyManager.resetPathMarkers();
     }
     //Giving true will stop the ability to place towers and false gives the ability again
     public void stopBuilding(bool buildMode)
@@ -124,6 +134,15 @@ public class TowerManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void setCollided(Vector2Int pos){
+        int x = pos.x; int y = pos.y;
+        Destroy(towerGrid[y, x]);
+        towerGrid[y, x] = Instantiate(collided, new Vector3(x * DISTANCEBETWEENCELLS + gridStart.x, y * DISTANCEBETWEENCELLS + gridStart.y), new Quaternion());
+        towerGrid[y, x].GetComponent<Tower>().setPosition(x, y);
+        towerGrid[y, x].transform.SetParent(transform);
+        
     }
 
 

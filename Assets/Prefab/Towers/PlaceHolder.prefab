@@ -48,10 +48,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerName: Tower
+  towerType: 0
   slime: 0
   spriteRenderer: {fileID: 4472277294801973316}
   upgradePopup: {fileID: 0}
   selected: 0
+  WallLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!212 &4472277294801973316
 SpriteRenderer:
   m_ObjectHideFlags: 0

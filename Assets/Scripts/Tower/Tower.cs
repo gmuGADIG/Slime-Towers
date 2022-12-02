@@ -51,9 +51,17 @@ public class Tower : MonoBehaviour
 	protected GameObject currentUpgradePopup;
 
 	public bool selected = false;
+	public LayerMask WallLayer;
 
 	public void Awake()
 	{
+	}
+
+	public void Start(){
+		if(towerType == Tower_Type.None && (Physics2D.OverlapPoint(transform.position,WallLayer) != null)){
+			//Debug.Log("Tower "+ position.ToString() + " Collided");
+			GameObject.Find("TowerManager").GetComponent<TowerManager>().setCollided(position);
+		}
 	}
 
 	public Vector2Int getPosition()
