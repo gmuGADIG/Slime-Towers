@@ -5,9 +5,6 @@ using UnityEngine;
 public class laser : MonoBehaviour
 {
 
-    public Transform startPoint;
-    public Transform endPoint;
-
     LineRenderer laserLine;
     // Start is called before the first frame update
     void Start()
@@ -17,23 +14,9 @@ public class laser : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
+    public void SetLaser(Vector2 orgin, Vector2 target)
     {
-
-        RaycastHit2D shootDaLaser = Physics2D.Raycast(transform.position, Vector2.right);
-
-
-        if (shootDaLaser)
-        {
-            laserLine.SetPosition(1, shootDaLaser.point);
-        }
-
-        else
-        {
-            laserLine.SetPosition(1, transform.position + Vector3.right * 100);
-        }
-
-        
+        laserLine.SetPosition(0, orgin);
+        laserLine.SetPosition(1, target);
     }
 }
