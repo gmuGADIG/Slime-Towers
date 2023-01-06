@@ -44,7 +44,7 @@ public class ManagerScript : MonoBehaviour
         enemiesSpawned = 0;
         enemiesAlive = 0;
         gamePaused = false;
-        playerMoveScript = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        playerMoveScript = GameObject.Find("O_Player").GetComponent<PlayerMovement>();
         audioManager = FindObjectOfType<AudioListener>();
         setGameState(GameState.EXPLORE);
         
@@ -52,7 +52,7 @@ public class ManagerScript : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        playerCam = GameObject.Find("Player").GetComponent<Camera>();
+        playerCam = GameObject.Find("O_Player").GetComponent<Camera>();
     }
 
     // Update is called once per frame

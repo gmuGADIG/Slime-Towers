@@ -24,7 +24,7 @@ public class PlayerCameraScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.Find("O_Player");
         playerRB = player.GetComponent<Rigidbody2D>();
         pScript = player.GetComponent<PlayerMovement>();
         transform.parent = null;

@@ -113,7 +113,6 @@ GameObject:
   - component: {fileID: 5128221163863346759}
   - component: {fileID: 5128221163863346753}
   - component: {fileID: 4125439303232890721}
-  - component: {fileID: 8396816778623071955}
   - component: {fileID: 7492831413272696621}
   - component: {fileID: 8372276440029460153}
   m_Layer: 0
@@ -248,18 +247,6 @@ MonoBehaviour:
   canMove: 1
   velocity: {x: 0, y: 0}
   rigidBody: {fileID: 5128221163863346759}
---- !u!114 &8396816778623071955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5128221163863346779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a572897eaf13f1409420be80edfd9b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7492831413272696621
 MonoBehaviour:
   m_ObjectHideFlags: 0
