@@ -55,14 +55,7 @@ public class PlayerMovement : MonoBehaviour
             //player movement
             inputX = Input.GetAxis("Horizontal");
             inputY = Input.GetAxis("Vertical");
-            if ( inputX != 0 || inputY != 0 ) 
-            {
-                animator.SetBool("IsMoving", true);
-            }
-            else
-            {
-                animator.SetBool("IsMoving", false);
-            }
+            animator.SetBool("IsMoving", inputX != 0 || inputY != 0 );
             //sprint
             if (Input.GetKey("left shift")){
                 rigidBody.velocity = new Vector2(inputX, inputY) * sprintSpeed;
@@ -89,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(velocity);
         if ( rigidBody.velocity != Vector2.zero )
         {
-            float facingAngle = Mathf.Atan2(rigidBody.velocity.y, rigidBody.velocity.x)* Mathf.Rad2Deg;
+            float facingAngle = Mathf.Atan2(rigidBody.velocity.y, rigidBody.velocity.x) * Mathf.Rad2Deg;
             transform.eulerAngles = Vector3.forward * (facingAngle - 90);
         }
     }
