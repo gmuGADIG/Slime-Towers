@@ -4826,6 +4826,7 @@ GameObject:
   - component: {fileID: 3133581995409709947}
   - component: {fileID: 6534385708582743481}
   - component: {fileID: 6869032310009583359}
+  - component: {fileID: 8984191175486912443}
   m_Layer: 0
   m_Name: O_ZapSlime
   m_TagString: Slime
@@ -4893,7 +4894,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 1679741615, guid: 0de93149246fc96419b8a0bef2ef531a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -4965,6 +4966,7 @@ MonoBehaviour:
   yLimit: 10
   lowerTimeLimit: 1
   upperTimeLimit: 3
+  animator: {fileID: 8984191175486912443}
   material: 8
 --- !u!61 &6869032310009583359
 BoxCollider2D:
@@ -4992,3 +4994,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.25}
   m_EdgeRadius: 0.05
+--- !u!95 &8984191175486912443
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3133581995409709941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05e3f818625146b45beeb625c8e6cda8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
