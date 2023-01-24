@@ -50,18 +50,18 @@ public class TowerAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TowerScrtipt = SlimeBaseRenderer.GetComponent<Tower>();
+        TowerScrtipt = GetComponent<Tower>();
             //FindObjectOfType<Tower>();
         hitTimer = timeToHit;
         GetComponent<CircleCollider2D>().radius = TargetSize;
 
         if (defaultTower)
         {
-            GetComponent<SpriteRenderer>().sprite = DefaultBase;
+            GetComponentInChildren<SpriteRenderer>().sprite = DefaultBase;
         }
         else if (sniperTower)
         {
-            GetComponent<SpriteRenderer>().sprite = STBase;
+            GetComponentInChildren<SpriteRenderer>().sprite = STBase;
         }
         else if (AOETower)
         {

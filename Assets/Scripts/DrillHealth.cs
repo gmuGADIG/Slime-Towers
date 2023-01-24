@@ -12,6 +12,7 @@ public class DrillHealth : MonoBehaviour {
 
     public GameObject player;
     public Camera drillCamera;
+    public Camera playerCamera;
     public GameObject slimeProjectile;
     public Transform slimeProjectileTransform;
     public float attackCooldown = 2.5f; //custom cooldowns for slime projectiles ?
@@ -21,6 +22,7 @@ public class DrillHealth : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start(){
+        playerCamera = Camera.main;
     }
 
     // Update is called once per frame
@@ -77,14 +79,14 @@ public class DrillHealth : MonoBehaviour {
         input.SetActive(false);
         playerPresent = true;
         drillCamera.enabled = true;
-        Camera.main.enabled = false;
+        playerCamera.enabled = false;
         manager.setGameState(GameState.ATTACK);
     }
 
     public void playerExit(){
         player.SetActive(true);
         playerPresent = false;
-        Camera.main.enabled = true;
+        playerCamera.enabled = true;
         player.GetComponent<PlayerMovement>().playerCam.enabled = true;
     }
 
