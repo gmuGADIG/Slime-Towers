@@ -42,6 +42,6 @@ EditorBuildSettings:
     path: Assets/Final Scenes/Fice Cave.unity
     guid: 7a705ead9f46c2d41a375f7555d50757
   - enabled: 1
-    path: Assets/Final Scenes/Old Final Scenes/Crystal Cave Final.unity
+    path: Assets/Final Scenes/Crystal Cave Final.unity
     guid: a645109fbcd174d4aab3ddec3dc4fb0b
   m_configObjects: {}
