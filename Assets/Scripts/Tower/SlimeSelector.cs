@@ -56,33 +56,39 @@ public class SlimeSelector : MonoBehaviour
 
 	public void setSlime(string slime)
 	{
+		Debug.Log(slime);
+		Inventory.inventory.logStatus();
 		Slime_Type slimeType = Slime_Type.None;
+		int amt;
+		Debug.Log(Inventory.materials.TryGetValue(SlimeTowers.MaterialType.SLIME, out amt));
+		Debug.Log(amt);
 		int invAmount;
 		bool hasMat = false;
-		if (slimeType.Equals("Default"))
+		if (slime == "Default")
 		{
 			slimeType = Slime_Type.Default;
 			hasMat = Inventory.materials.TryGetValue(SlimeTowers.MaterialType.SLIME, out invAmount);
 		}
-		else if (slimeType.Equals("Zap"))
+		else if (slime == "Zap")
 		{
 			slimeType = Slime_Type.Zap;
 			hasMat = Inventory.materials.TryGetValue(SlimeTowers.MaterialType.ZAP_SLIME, out invAmount);
 		}
-		else if (slimeType.Equals("Fire"))
+		else if (slime == "Fire")
 		{
 			slimeType = Slime_Type.Fire;
 			hasMat = Inventory.materials.TryGetValue(SlimeTowers.MaterialType.FIRE_SLIME, out invAmount);
 		}
-		else if (slimeType.Equals("Ice"))
+		else if (slime == "Ice")
 		{
 			slimeType = Slime_Type.Ice;
 			hasMat = Inventory.materials.TryGetValue(SlimeTowers.MaterialType.ICE_SLIME, out invAmount);
 		}
-		else if (slimeType.Equals("Remove"))
+		else if (slime == "Remove")
 		{
 			slimeType = Slime_Type.None;
 		}
+		Debug.Log(hasMat);
 		towerParent.GetComponent<Tower>().setSlime(slimeType);
 		Destroy(gameObject);
 	}
