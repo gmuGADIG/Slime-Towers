@@ -10,22 +10,31 @@ namespace CleverCrow.Fluid.Dialogues.Examples {
     public class DialoguePlayback : MonoBehaviour {
         private DialogueController _ctrl;
 
+        [TextArea]
+        [Tooltip("Doesn't do anything. Just comments shown in inspector")]
+        public string Notes = "This component shouldn't be removed, it does important stuff.";
+
         public DialogueGraph dialogue;
 
         public GameObjectOverride[] gameObjectOverrides;
 
         [Header("Graphics")]
         public GameObject speakerContainer;
-        public TMP_Text nameArea;
+        public TMP_Text nameTag;
         public Image portrait;
         public TMP_Text lines;
 
         public RectTransform choiceList;
         public ChoiceButton choicePrefab;
 
+        [Header("Additional actions")]
+        public Behaviour[] enableOnEnd;
+
         private IEnumerator CurrShowTextRoutine;
 
-        private void Start () {
+        private void OnEnable () {
+            
+            GameState currGameState = ManagerScript.gm.getGameState();
             var database = new DatabaseInstanceExtended();
            _ctrl = new DialogueController(database);
            speakerContainer.SetActive(true);
@@ -34,7 +43,7 @@ namespace CleverCrow.Fluid.Dialogues.Examples {
            _ctrl.Events.SpeakWithAudio.AddListener((actor, text, audioClip) => {
                if (audioClip) Debug.Log($"Audio Clip Detected ${audioClip.name}");
 
-               nameArea.text = actor.DisplayName;
+               nameTag.text = actor.DisplayName;
                ClearChoices();
                portrait.sprite = actor.Portrait;
                CurrShowTextRoutine = ShowText(text);
@@ -43,7 +52,7 @@ namespace CleverCrow.Fluid.Dialogues.Examples {
            });
 
            _ctrl.Events.Choice.AddListener((actor, text, choices) => {
-               nameArea.text = actor.DisplayName;
+               nameTag.text = actor.DisplayName;
                ClearChoices();
                portrait.sprite = actor.Portrait;
                CurrShowTextRoutine = ShowText(text);
@@ -58,6 +67,10 @@ namespace CleverCrow.Fluid.Dialogues.Examples {
 
            _ctrl.Events.End.AddListener(() => {
                speakerContainer.SetActive(false);
+               ManagerScript.gm.setGameState(currGameState);
+               foreach (Behaviour action in enableOnEnd) {
+                    action.enabled = true;
+               }
            });
 
            _ctrl.Events.NodeEnter.AddListener((node) => {
@@ -65,6 +78,7 @@ namespace CleverCrow.Fluid.Dialogues.Examples {
            });
 
            _ctrl.Play(dialogue, gameObjectOverrides.ToArray<IGameObjectOverride>());
+           ManagerScript.gm.setGameState(GameState.DIALOGUE);
         }
 
         private void ClearChoices () {
@@ -96,6 +110,9 @@ namespace CleverCrow.Fluid.Dialogues.Examples {
 
             lines.text = "";
             int currIndex = 0;
+            float timer = 0f; //Tracks the amount of time since the last character was printed
+            float timeInterval = 0.02f; //The amount of time to wait between each character print
+
             yield return null; //Needed to delay routine from immediately showing all text
             while (lines.text.Length < text.Length) {
 
@@ -127,8 +144,15 @@ namespace CleverCrow.Fluid.Dialogues.Examples {
                 }
 
                 //At this point currIndex is not the index of a valid pair of tags
-                lines.text = lines.text.Insert(currIndex, (text[currIndex]).ToString());
-                currIndex += 1;
+
+                //Text should only appear at a certain time rate independent of frame rate,
+                //But the current method still needs to be called each frame
+                timer += Time.deltaTime;
+                if (timer >= timeInterval) {
+                    lines.text = lines.text.Insert(currIndex, (text[currIndex]).ToString());
+                    currIndex += 1;
+                    timer = 0f;
+                }
                 yield return null;
             }
             lines.text = text; //Just in case

@@ -9,7 +9,7 @@ public class GameStart : MonoBehaviour
     {
         SceneManager.LoadScene("Hub");
         Debug.Log("Button Clicked");
-        SceneManager.UnloadScene("Title Menu");
+        //SceneManager.UnloadScene("Title Menu");
     }
 
     public void optionsButton(){

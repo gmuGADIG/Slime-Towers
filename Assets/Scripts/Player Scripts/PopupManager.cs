@@ -49,7 +49,13 @@ public class PopupManager : MonoBehaviour
         Debug.Log(obj.popup_text());
         objectShowing = obj;
         popupText.text = obj.popup_text();
+        popupText.enabled = true;
+        popupPanel.enabled = true;
+    }
 
+    public void show_popup(string text) {
+        popupText.text = text;
+        popupText.enabled = true;
         popupPanel.enabled = true;
     }
 
@@ -59,6 +65,7 @@ public class PopupManager : MonoBehaviour
     public void hide_popup()
     {
         popupText.text = " ";
+        popupText.enabled = false;
         popupPanel.enabled = false;
     }
 
@@ -87,5 +94,7 @@ public class PopupManager : MonoBehaviour
             }
         }
     }*/
+
+    
 
 }

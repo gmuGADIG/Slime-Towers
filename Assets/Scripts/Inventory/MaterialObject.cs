@@ -27,14 +27,16 @@ public class MaterialObject : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Player")
         {
-            Inventory inventory = Inventory.inventory;
-            inventory.AddItem(material, 5); //TODO multi-item pickups?
-            inventory.logStatus();
+            if (collision.gameObject.GetComponent<PlayerMovement>().canInteract) {
+                Inventory inventory = Inventory.inventory;
+                inventory.AddItem(material, 5); //TODO multi-item pickups?
+                inventory.logStatus();
 
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            collectEffect.Play();
-            Destroy(gameObject,5);
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                collectEffect.Play();
+                Destroy(gameObject,5);
+            }
         }
     }
 }
