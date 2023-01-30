@@ -7,10 +7,9 @@ namespace SlimeTowers
         SLIME,
         FIRE_SLIME,
         ICE_SLIME,
-        SLUDGE_SLIME,
         SUPER_SLIME,
-        VINE_SLIME,
-        ZAP_SLIME
+        ZAP_SLIME,
+        COMBO_SLIME
         
     }
 

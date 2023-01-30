@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6815928267179850825}
   - component: {fileID: 3406269100157979275}
   - component: {fileID: 3078217918978568653}
+  - component: {fileID: 5346745416188789200}
   m_Layer: 0
   m_Name: O_IceSlime
   m_TagString: Slime
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 325793591, guid: 38faa8d220c3d4337a92557a4925a1bb, type: 3}
+  m_Sprite: {fileID: 301633080, guid: 6ab78d2f9f8fd4e4aae6d66e07381603, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,7 +128,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -153,6 +154,7 @@ MonoBehaviour:
   yLimit: 4
   lowerTimeLimit: 2
   upperTimeLimit: 6
+  animator: {fileID: 5346745416188789200}
   material: 4
 --- !u!61 &3078217918978568653
 BoxCollider2D:
@@ -171,7 +173,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -180,6 +182,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.25, y: 2.25}
   m_EdgeRadius: 0.05
+--- !u!95 &5346745416188789200
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6815928267179850823}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c00d65bbffc3dec4da2d83c82283906c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6815928268200158403
 GameObject:
   m_ObjectHideFlags: 0

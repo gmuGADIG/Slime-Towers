@@ -17,6 +17,7 @@ public class SlimeBehavior : MonoBehaviour, IInteractable
     private Vector2 direction;
     private Vector2 startingPosition;
 
+    public Animator animator;
     [SerializeField]
     private MaterialType material;
 
@@ -33,6 +34,9 @@ public class SlimeBehavior : MonoBehaviour, IInteractable
     void Update()
     {
         rigidbody.velocity = direction * speed;
+        animator.SetBool("IsMoving", rigidbody.velocity != Vector2.zero);
+        float facingAngle = Mathf.Atan2(rigidbody.velocity.y, rigidbody.velocity.x) * Mathf.Rad2Deg;
+        transform.eulerAngles = Vector3.forward * (facingAngle - 90);
         leash();
     }
 

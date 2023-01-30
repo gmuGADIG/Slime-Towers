@@ -242,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drillControllable: {fileID: 0}
   playerCam: {fileID: 8034556882421006285}
+  animator: {fileID: 1709692147466401601}
   speed: 5
   sprintSpeed: 7.5
   accel: 2

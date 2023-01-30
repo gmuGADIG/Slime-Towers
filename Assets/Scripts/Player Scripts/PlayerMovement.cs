@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     //player movement variables
     public Camera playerCam;
+    public Animator animator;
     Vector2 movement;
     float inputX, inputY;
     
@@ -54,12 +55,15 @@ public class PlayerMovement : MonoBehaviour
             //player movement
             inputX = Input.GetAxis("Horizontal");
             inputY = Input.GetAxis("Vertical");
-                //sprint
+            animator.SetBool("IsMoving", inputX != 0 || inputY != 0 );
+            //sprint
             if (Input.GetKey("left shift")){
-                rigidBody.velocity = new Vector2(inputX, inputY) * (speed + sprintSpeed);
+                rigidBody.velocity = new Vector2(inputX, inputY) * sprintSpeed;
+                animator.SetBool("IsSprinting", true);
             }
             else {
                 rigidBody.velocity = new Vector2(inputX, inputY) * speed;
+                animator.SetBool("IsSprinting", false);
             }
         }
 
@@ -74,7 +78,13 @@ public class PlayerMovement : MonoBehaviour
         Vector3 worldPosition = playerCam.ScreenToWorldPoint(Input.mousePosition);
         //Debug.Log("mousePosition: " + worldPosition.ToString());
 
+        // finish this part
         transform.Translate(velocity);
+        if ( rigidBody.velocity != Vector2.zero )
+        {
+            float facingAngle = Mathf.Atan2(rigidBody.velocity.y, rigidBody.velocity.x) * Mathf.Rad2Deg;
+            transform.eulerAngles = Vector3.forward * (facingAngle - 90);
+        }
     }
 
 
@@ -109,5 +119,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
 
 }
