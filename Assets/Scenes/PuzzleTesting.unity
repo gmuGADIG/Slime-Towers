@@ -130,29 +130,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -3364938387012653623, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-      propertyPath: m_Color.b
-      value: 0.054901935
-      objectReference: {fileID: 0}
-    - target: {fileID: -3364938387012653623, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-      propertyPath: m_Color.g
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: -3364938387012653623, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-      propertyPath: m_Color.r
-      value: 0.35851076
-      objectReference: {fileID: 0}
     - target: {fileID: 1789649490924233811, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
       propertyPath: m_Name
       value: laserextender (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789649490924233811, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789649490924233811, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-      propertyPath: m_TagString
-      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 1789649490924233813, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
       propertyPath: m_RootOrder
@@ -359,6 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drillControllable: {fileID: 0}
   playerCam: {fileID: 1665643641}
+  animator: {fileID: 0}
   speed: 5
   sprintSpeed: 7.5
   accel: 2
@@ -661,37 +642,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
---- !u!1 &314998646 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1789649490924233811, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-  m_PrefabInstance: {fileID: 759135869}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &314998647
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314998646}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &433824437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,29 +1149,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -3364938387012653623, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-      propertyPath: m_Color.b
-      value: 0.054901935
-      objectReference: {fileID: 0}
-    - target: {fileID: -3364938387012653623, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-      propertyPath: m_Color.g
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: -3364938387012653623, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-      propertyPath: m_Color.r
-      value: 0.35851076
-      objectReference: {fileID: 0}
     - target: {fileID: 1789649490924233811, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
       propertyPath: m_Name
       value: laserextender (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789649490924233811, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789649490924233811, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-      propertyPath: m_TagString
-      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 1789649490924233813, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
       propertyPath: m_RootOrder
@@ -1701,37 +1631,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1146890181 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1789649490924233811, guid: 9220a42d384f1fa4393d2155212e100b, type: 3}
-  m_PrefabInstance: {fileID: 27751891}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1146890182
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146890181}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1001 &1152936301
 PrefabInstance:
   m_ObjectHideFlags: 0
