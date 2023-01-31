@@ -74,7 +74,7 @@ namespace CleverCrow.Fluid.Dialogues.Examples {
            });
 
            _ctrl.Events.NodeEnter.AddListener((node) => {
-               Debug.Log($"Node Enter: {node.GetType()} - {node.UniqueId}");
+               //Debug.Log($"Node Enter: {node.GetType()} - {node.UniqueId}");
            });
 
            _ctrl.Play(dialogue, gameObjectOverrides.ToArray<IGameObjectOverride>());
