@@ -6,7 +6,8 @@ public class laserscript : MonoBehaviour
 {
 
     public GameObject laserObject;
-    private GameObject laser;
+    protected GameObject laser;
+    public LayerMask laserLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +23,13 @@ public class laserscript : MonoBehaviour
 
     public void generateLaser()
     {
-        RaycastHit2D cast = Physics2D.Raycast(transform.position, transform.rotation * Vector2.right);
+        RaycastHit2D cast = Physics2D.Raycast(transform.position, transform.rotation * Vector2.right,100, laserLayer);
         if (cast.collider != null)
         {
             if(cast.collider.GetComponent<ILaserTarget>() != null)
             {
                 
-                cast.collider.GetComponent<ILaserTarget>().OnLaserHit();
+                cast.collider.GetComponent<ILaserTarget>().OnLaserHit(this);
                 
             }
             laser.GetComponent<laser>().SetLaser(transform.position, cast.point);
@@ -39,6 +40,7 @@ public class laserscript : MonoBehaviour
 
 
     }
+
 
 
 }

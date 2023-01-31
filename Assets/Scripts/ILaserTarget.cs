@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ILaserTarget
 {
-    public void OnLaserHit();
+    public void OnLaserHit(laserscript source);
 }
