@@ -1,0 +1,334 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7500913395538457940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d8d0566afe4d5fa9596c80df966df6, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: 
+  _uniqueId: ee93b969-e8fc-4694-9d84-fcc16f8371f5
+  rect:
+    serializedVersion: 2
+    x: 49853
+    y: 50070
+    width: 100
+    height: 57
+  nodeTitle: 
+  children:
+  - {fileID: -486566860528958570}
+  conditions: []
+  enterActions: []
+  exitActions: []
+--- !u!114 &-7411819794431996466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: a1e645e4-186a-46f2-993f-249caac272ac
+  rect:
+    serializedVersion: 2
+    x: 50965
+    y: 50072
+    width: 200
+    height: 142
+  nodeTitle: 
+  children:
+  - {fileID: 1185098057188474060}
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: d2590b6a60d7fcc47b36bcfde1f13703, type: 2}
+  audio: {fileID: 0}
+  dialogue: Keep an eye out for <color=#F0F>colored words</color> sprinkled throughout
+    the dialogue.
+--- !u!114 &-6666107751897538674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: daf5c6b0-14e5-41ea-aea3-f880aae5cc34
+  rect:
+    serializedVersion: 2
+    x: 50688
+    y: 50112
+    width: 200
+    height: 142
+  nodeTitle: 
+  children:
+  - {fileID: -7411819794431996466}
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: 5412d07e33f262542b3e7e5d7c37476f, type: 2}
+  audio: {fileID: 0}
+  dialogue: I'm the drill guy
+--- !u!114 &-1815263548272935438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb407621a43446dac370b409a9ddc29, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  text: Path 2
+  children:
+  - {fileID: 7464159328624110558}
+  _uniqueId: 3896efca-8abd-46f2-b788-672e43f99f1c
+--- !u!114 &-1345143585455632285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: 099a2550-5283-40f8-90d5-aa7b75ff21b6
+  rect:
+    serializedVersion: 2
+    x: 51641
+    y: 49989
+    width: 200
+    height: 182
+  nodeTitle: 
+  children: []
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices:
+  - {fileID: 6947574448317011923}
+  - {fileID: -1815263548272935438}
+  actor: {fileID: 11400000, guid: 5412d07e33f262542b3e7e5d7c37476f, type: 2}
+  audio: {fileID: 0}
+  dialogue: There are even branching paths
+--- !u!114 &-486566860528958570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: f0c765c7-a25c-4c96-8dc4-4df772837270
+  rect:
+    serializedVersion: 2
+    x: 50067
+    y: 50073
+    width: 200
+    height: 142
+  nodeTitle: 
+  children:
+  - {fileID: 1800208965770014045}
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: d2590b6a60d7fcc47b36bcfde1f13703, type: 2}
+  audio: {fileID: 0}
+  dialogue: Hello! I'm the Mole Man!
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35851dfd8754a74b333944d50d05bbd, type: 3}
+  m_Name: TestDialogue
+  m_EditorClassIdentifier: 
+  _nodes:
+  - {fileID: -7500913395538457940}
+  - {fileID: -486566860528958570}
+  - {fileID: 1800208965770014045}
+  - {fileID: -6666107751897538674}
+  - {fileID: -7411819794431996466}
+  - {fileID: 1185098057188474060}
+  - {fileID: -1345143585455632285}
+  - {fileID: 3649596624618151252}
+  - {fileID: 7464159328624110558}
+  root: {fileID: -7500913395538457940}
+  scrollPosition: {x: 50396.445, y: 49881}
+--- !u!114 &1185098057188474060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: 5c666b16-87cc-4433-bfe6-725ca457443f
+  rect:
+    serializedVersion: 2
+    x: 51257
+    y: 50067
+    width: 200
+    height: 162
+  nodeTitle: 
+  children:
+  - {fileID: -1345143585455632285}
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices:
+  - {fileID: 3319572471889771401}
+  actor: {fileID: 11400000, guid: d2590b6a60d7fcc47b36bcfde1f13703, type: 2}
+  audio: {fileID: 0}
+  dialogue: I worked really hard to make sure that <size=70><b>YOU</b> CAN DO <i>LOTS</i>
+    OF STUFF!!!</size>
+--- !u!114 &1800208965770014045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: 464cbf0a-af04-4a75-8653-a9f350417e9e
+  rect:
+    serializedVersion: 2
+    x: 50394
+    y: 50102
+    width: 200
+    height: 142
+  nodeTitle: 
+  children:
+  - {fileID: -6666107751897538674}
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: 0f2604c1553801443a3e6d9dec9bdcf0, type: 2}
+  audio: {fileID: 0}
+  dialogue: I'm the expedition lead
+--- !u!114 &3319572471889771401
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb407621a43446dac370b409a9ddc29, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  text: Wow!
+  children:
+  - {fileID: -1345143585455632285}
+  _uniqueId: fa57e048-1f9b-4f1d-9bbe-11f159b78d30
+--- !u!114 &3649596624618151252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: 866092b4-eda5-4efb-996e-a5d5ba284bad
+  rect:
+    serializedVersion: 2
+    x: 51940
+    y: 49982
+    width: 200
+    height: 142
+  nodeTitle: 
+  children:
+  - {fileID: -1345143585455632285}
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: 0f2604c1553801443a3e6d9dec9bdcf0, type: 2}
+  audio: {fileID: 0}
+  dialogue: And you can loop back
+--- !u!114 &6947574448317011923
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb407621a43446dac370b409a9ddc29, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  text: Path 1
+  children:
+  - {fileID: 3649596624618151252}
+  _uniqueId: 23e6e72d-fe39-4b20-ba74-cb63c6d015ec
+--- !u!114 &7464159328624110558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: ba8fea77-2209-44ac-9ead-dab2d1f0de31
+  rect:
+    serializedVersion: 2
+    x: 51937
+    y: 50255
+    width: 200
+    height: 142
+  nodeTitle: 
+  children: []
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: d2590b6a60d7fcc47b36bcfde1f13703, type: 2}
+  audio: {fileID: 0}
+  dialogue: We go away once the dialogue is done.

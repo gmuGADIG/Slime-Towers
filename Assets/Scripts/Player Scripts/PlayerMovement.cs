@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed = 7.5f;
     public float accel = 2f;
     public bool canMove = true;
+    public bool canInteract = false;
 
     public Vector2 velocity;
 
@@ -55,16 +56,22 @@ public class PlayerMovement : MonoBehaviour
             //player movement
             inputX = Input.GetAxis("Horizontal");
             inputY = Input.GetAxis("Vertical");
-            animator.SetBool("IsMoving", inputX != 0 || inputY != 0 );
-            //sprint
-            if (Input.GetKey("left shift")){
-                rigidBody.velocity = new Vector2(inputX, inputY) * sprintSpeed;
-                animator.SetBool("IsSprinting", true);
-            }
-            else {
-                rigidBody.velocity = new Vector2(inputX, inputY) * speed;
-                animator.SetBool("IsSprinting", false);
-            }
+        }
+        else {
+            //Set player inputs to 0 so they stop moving
+            inputX = 0f;
+            inputY = 0f;
+        }
+        animator.SetBool("IsMoving", inputX != 0 || inputY != 0 );
+
+        //sprint
+        if (Input.GetKey("left shift") && canMove){
+            rigidBody.velocity = new Vector2(inputX, inputY) * sprintSpeed;
+            animator.SetBool("IsSprinting", true);
+        }
+        else {
+            rigidBody.velocity = new Vector2(inputX, inputY) * speed;
+            animator.SetBool("IsSprinting", false);
         }
 
         //player interact
@@ -89,18 +96,20 @@ public class PlayerMovement : MonoBehaviour
 
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.tag.Equals("Drill")){
-            //highlight drill
-            drillPresent = true;
-            drillControllable = collision.GetComponent<DrillHealth>();
-        }
-        else if ( collision.tag.Equals("Interactable") || collision.tag.Equals("Slime" ) ) {
-            popupManager.objectShowing = collision.GetComponent<IInteractable>();
-            popupManager.show_popup( popupManager.objectShowing );
-        }
-        else {
-            mostRecent = collision.gameObject;  //stores object in script
-            items.Add(collision.gameObject);
+        if (canInteract) {
+            if (collision.tag.Equals("Drill")){
+                //highlight drill
+                drillPresent = true;
+                drillControllable = collision.GetComponent<DrillHealth>();
+            }
+            else if ( collision.tag.Equals("Interactable") || collision.tag.Equals("Slime" ) ) {
+                popupManager.objectShowing = collision.GetComponent<IInteractable>();
+                popupManager.show_popup( popupManager.objectShowing );
+            }
+            else {
+                mostRecent = collision.gameObject;  //stores object in script
+                items.Add(collision.gameObject);
+            }
         }
     }
 

@@ -44,15 +44,14 @@ public class ManagerScript : MonoBehaviour
         enemiesSpawned = 0;
         enemiesAlive = 0;
         gamePaused = false;
-        playerMoveScript = GameObject.Find("O_Player").GetComponent<PlayerMovement>();
         audioManager = FindObjectOfType<AudioListener>();
-        setGameState(GameState.EXPLORE);
-        
     }
 
     // Start is called before the first frame update
     void Start() {
         playerCam = GameObject.Find("O_Player").GetComponent<Camera>();
+        playerMoveScript = GameObject.Find("O_Player").GetComponent<PlayerMovement>();
+        setGameState(GameState.EXPLORE);
     }
 
     // Update is called once per frame
@@ -81,6 +80,7 @@ public class ManagerScript : MonoBehaviour
                 Time.timeScale = 1f;
                 AudioListener.volume = 1f;
                 playerMoveScript.canMove = true;
+                playerMoveScript.canInteract = true;
                 if (sendSignals) {
                     StartExplore.Invoke();
                 }
@@ -89,6 +89,7 @@ public class ManagerScript : MonoBehaviour
                 Time.timeScale = 1f;
                 AudioListener.volume = 1f;
                 playerMoveScript.canMove = false;
+                playerMoveScript.canInteract = true;
                 if (sendSignals) {
                     StartAttack.Invoke();
                 }
@@ -97,6 +98,7 @@ public class ManagerScript : MonoBehaviour
                 Time.timeScale = 1f;
                 AudioListener.volume = 0.5f;
                 playerMoveScript.canMove = false;
+                playerMoveScript.canInteract = false;
                 break;
             default:
                 break;

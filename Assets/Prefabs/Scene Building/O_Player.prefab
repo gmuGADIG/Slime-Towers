@@ -247,6 +247,7 @@ MonoBehaviour:
   sprintSpeed: 7.5
   accel: 2
   canMove: 1
+  canInteract: 1
   velocity: {x: 0, y: 0}
   rigidBody: {fileID: 5128221163863346759}
 --- !u!114 &7492831413272696621

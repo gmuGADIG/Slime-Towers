@@ -1,0 +1,271 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7820646405154918884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: d5ca785b-e4dd-4744-98ce-5fd51cbca7fb
+  rect:
+    serializedVersion: 2
+    x: 51373
+    y: 50077
+    width: 200
+    height: 142
+  nodeTitle: 
+  children:
+  - {fileID: 1068822010533172752}
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: 0f2604c1553801443a3e6d9dec9bdcf0, type: 2}
+  audio: {fileID: 0}
+  dialogue: "You went too far from our area of operation \u2014 <color=#57bcff><b>Zone
+    12</b></color> was blocked off for a reason, you know. Your team said the ground
+    collapsed right under you."
+--- !u!114 &-3565125337341548876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: 5af56f2e-e176-48dd-ab07-ef266e109dba
+  rect:
+    serializedVersion: 2
+    x: 50847
+    y: 50083
+    width: 200
+    height: 142
+  nodeTitle: 
+  children:
+  - {fileID: 4099249846918376210}
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: 0f2604c1553801443a3e6d9dec9bdcf0, type: 2}
+  audio: {fileID: 0}
+  dialogue: Listen, Unit 328, your location went offline for a few minutes there.
+    Glad you're okay...
+--- !u!114 &-1443017756538227718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: 3dcfd57d-9696-47ee-80bc-04b072f28f73
+  rect:
+    serializedVersion: 2
+    x: 50356
+    y: 50085
+    width: 200
+    height: 162
+  nodeTitle: 
+  children: []
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices:
+  - {fileID: 3079217870523033660}
+  actor: {fileID: 11400000, guid: 0f2604c1553801443a3e6d9dec9bdcf0, type: 2}
+  audio: {fileID: 0}
+  dialogue: This is your <color=red><b>Expedition Lead</b></color>!
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35851dfd8754a74b333944d50d05bbd, type: 3}
+  m_Name: TutorialPart1
+  m_EditorClassIdentifier: 
+  _nodes:
+  - {fileID: 2611313129362616411}
+  - {fileID: 6353054534480275209}
+  - {fileID: -1443017756538227718}
+  - {fileID: 5753734988923093919}
+  - {fileID: -3565125337341548876}
+  - {fileID: 4099249846918376210}
+  - {fileID: -7820646405154918884}
+  - {fileID: 1068822010533172752}
+  root: {fileID: 2611313129362616411}
+  scrollPosition: {x: 50279.863, y: 49992}
+--- !u!114 &1068822010533172752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: 4985ab28-9b08-453a-89ca-caa7d43de318
+  rect:
+    serializedVersion: 2
+    x: 51622
+    y: 50065
+    width: 200
+    height: 142
+  nodeTitle: 
+  children: []
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: 0f2604c1553801443a3e6d9dec9bdcf0, type: 2}
+  audio: {fileID: 0}
+  dialogue: <size=30><color=#c0c0c0ff>Typical seasonal hires...</color></size>
+--- !u!114 &2611313129362616411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d8d0566afe4d5fa9596c80df966df6, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: 
+  _uniqueId: d17c3345-2354-4305-bfc5-ca5e3dc9746a
+  rect:
+    serializedVersion: 2
+    x: 49914
+    y: 50153
+    width: 100
+    height: 57
+  nodeTitle: 
+  children:
+  - {fileID: 6353054534480275209}
+  conditions: []
+  enterActions: []
+  exitActions: []
+--- !u!114 &3079217870523033660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb407621a43446dac370b409a9ddc29, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  text: I'm up!
+  children:
+  - {fileID: 5753734988923093919}
+  _uniqueId: b9622e92-92a3-4ac0-978c-8555a49cb1e1
+--- !u!114 &4099249846918376210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: 6e9b87d7-9ced-4a96-a873-711ce56ab70a
+  rect:
+    serializedVersion: 2
+    x: 51118
+    y: 50080
+    width: 200
+    height: 142
+  nodeTitle: 
+  children:
+  - {fileID: -7820646405154918884}
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: 0f2604c1553801443a3e6d9dec9bdcf0, type: 2}
+  audio: {fileID: 0}
+  dialogue: <size=30><color=#c0c0c0ff>...that saves me some paperwork...</color></size>
+--- !u!114 &5753734988923093919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: 446b1c09-72ae-4d61-87a1-95eb989610d3
+  rect:
+    serializedVersion: 2
+    x: 50601
+    y: 50083
+    width: 200
+    height: 142
+  nodeTitle: 
+  children:
+  - {fileID: -3565125337341548876}
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: 0f2604c1553801443a3e6d9dec9bdcf0, type: 2}
+  audio: {fileID: 0}
+  dialogue: You're up? <i>Finally</i>.
+--- !u!114 &6353054534480275209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f157564dbc846468ec0ac2b6f7d545e, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _uniqueId: 92613672-5aea-4201-a8ff-07335b72038b
+  rect:
+    serializedVersion: 2
+    x: 50082
+    y: 50096
+    width: 200
+    height: 142
+  nodeTitle: 
+  children:
+  - {fileID: -1443017756538227718}
+  conditions: []
+  enterActions: []
+  exitActions: []
+  choices: []
+  actor: {fileID: 11400000, guid: 0f2604c1553801443a3e6d9dec9bdcf0, type: 2}
+  audio: {fileID: 0}
+  dialogue: Unit 328! Unit 328! Come in, Unit 328!
