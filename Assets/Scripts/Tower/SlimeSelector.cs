@@ -86,8 +86,10 @@ public class SlimeSelector : MonoBehaviour
 		}
 		else if (slime == "Remove")
 		{
+			//Inventory.inventory.AddItem((SlimeTowers.MaterialType)slimeType, 1);
 			slimeType = Slime_Type.None;
 		}
+
 		Debug.Log(hasMat);
 		towerParent.GetComponent<Tower>().setSlime(slimeType);
 		Destroy(gameObject);
