@@ -884,7 +884,7 @@ MonoBehaviour:
     - m_Text: Ice Slime
       m_Image: {fileID: 17373166, guid: 38faa8d220c3d4337a92557a4925a1bb, type: 3}
     - m_Text: Fire Slime
-      m_Image: {fileID: 1228302054, guid: c367258f8df059040920e0b7b13ccab6, type: 3}
+      m_Image: {fileID: 2009857554, guid: ecf1b84943f4a6a49ad2408602ee59bc, type: 3}
     - m_Text: Zap Slime
       m_Image: {fileID: -739715318, guid: 0de93149246fc96419b8a0bef2ef531a, type: 3}
   m_OnValueChanged:
@@ -920,7 +920,7 @@ MonoBehaviour:
   description: {fileID: 7757532342479721455}
   BlueSlime: {fileID: -1220741362, guid: c367258f8df059040920e0b7b13ccab6, type: 3}
   IceSlime: {fileID: 17373166, guid: 38faa8d220c3d4337a92557a4925a1bb, type: 3}
-  FireSlime: {fileID: 1228302054, guid: c367258f8df059040920e0b7b13ccab6, type: 3}
+  FireSlime: {fileID: 2009857554, guid: ecf1b84943f4a6a49ad2408602ee59bc, type: 3}
   ZapSlime: {fileID: -82791569, guid: 0de93149246fc96419b8a0bef2ef531a, type: 3}
 --- !u!1 &1084850519692826221
 GameObject:
@@ -1094,7 +1094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1287397959685100904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2961,7 +2961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6659265670003110660
 RectTransform:
   m_ObjectHideFlags: 0
