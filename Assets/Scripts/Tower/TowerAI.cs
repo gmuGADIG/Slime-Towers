@@ -27,6 +27,7 @@ public class TowerAI : MonoBehaviour
     public float timeToHit = 5f;
     public float hitTimer;
     public float rotationSpeed = 3.0f;
+    public GameObject bullet;
     
     [Header("Sniper Tower  Settings")]
     public bool sniperTower;
@@ -34,6 +35,7 @@ public class TowerAI : MonoBehaviour
     public float STTimeToHit = 5f;
     public float STHitTimer;
     public float STRotationSpeed = 3.0f;
+    public GameObject sniperBullet;
     
     [Header("Aoe Tower  Settings")]
     public bool AOETower;
@@ -42,6 +44,7 @@ public class TowerAI : MonoBehaviour
     public float AOETTimeToHit = 5f;
     public float AOETHitTimer;
     public float AOETRotationSpeed = 3.0f;
+    public GameObject AoE;
 
     [Header("Wall Tower  Settings")]
     public bool wallTower;
@@ -154,6 +157,7 @@ public class TowerAI : MonoBehaviour
             if (AOETHitTimer <= 0 && TargetedEnemy != null)
             {
                 AOETHitTimer = AOETTimeToHit;
+                Instantiate(AoE,transform.position,Quaternion.identity);
                 foreach (GameObject enemy in TargetedEnemyList)
                 {
                     enemy.GetComponent<SpriteRenderer>().color = Color.red;
@@ -192,7 +196,8 @@ public class TowerAI : MonoBehaviour
                         Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.yellow, .5f);
                         Debug.Log("Did Hit");
                         hitEnemy = true;
-                        hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        Instantiate(sniperBullet,transform.position,Quaternion.identity).GetComponent<bulletScript>().end = hit.collider.GetComponent<EnemyBehavior>();
+                        //hit.collider.GetComponent<EnemyBehavior>().health -= 5;
                     }
                     else
                     {
@@ -234,7 +239,8 @@ public class TowerAI : MonoBehaviour
                         Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.yellow, .5f);
                         Debug.Log("Did Hit");
                         hitEnemy = true;
-                        hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        Instantiate(bullet,transform.position,Quaternion.identity).GetComponent<bulletScript>().end = hit.collider.GetComponent<EnemyBehavior>();
+                        //hit.collider.GetComponent<EnemyBehavior>().health -= 5;
                     }
                     else
                     {
@@ -270,6 +276,7 @@ public class TowerAI : MonoBehaviour
             if (AOETHitTimer <= 0 && TargetedEnemy != null)
             {
                 AOETHitTimer = AOETTimeToHit;
+                Instantiate(AoE, transform.position, Quaternion.identity);
                 foreach (GameObject enemy in TargetedEnemyList)
                 {
                     enemy.GetComponent<EnemyBehavior>().Burn(5, 5, 1);
@@ -308,7 +315,8 @@ public class TowerAI : MonoBehaviour
                         Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.yellow, .5f);
                         Debug.Log("Did Hit");
                         hitEnemy = true;
-                        hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        Instantiate(sniperBullet, transform.position, Quaternion.identity).GetComponent<bulletScript>().end = hit.collider.GetComponent<EnemyBehavior>();
+                        //hit.collider.GetComponent<EnemyBehavior>().health -= 5;
                         hit.collider.GetComponent<EnemyBehavior>().Burn(5, 5, 1);
                     }
                     else
@@ -351,7 +359,8 @@ public class TowerAI : MonoBehaviour
                         Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.yellow, .5f);
                         Debug.Log("Did Hit");
                         hitEnemy = true;
-                        hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        Instantiate(bullet, transform.position, Quaternion.identity).GetComponent<bulletScript>().end = hit.collider.GetComponent<EnemyBehavior>();
+                        //hit.collider.GetComponent<EnemyBehavior>().health -= 5;
                         hit.collider.GetComponent<EnemyBehavior>().Burn(5, 5, 1);
                     }
                     else
@@ -388,6 +397,7 @@ public class TowerAI : MonoBehaviour
             if (AOETHitTimer <= 0 && TargetedEnemy != null)
             {
                 AOETHitTimer = AOETTimeToHit;
+                Instantiate(AoE, transform.position, Quaternion.identity);
                 foreach (GameObject enemy in TargetedEnemyList)
                 {
                     enemy.GetComponent<SpriteRenderer>().color = Color.red;
@@ -426,7 +436,8 @@ public class TowerAI : MonoBehaviour
                         Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.yellow, .5f);
                         Debug.Log("Did Hit");
                         hitEnemy = true;
-                        hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        Instantiate(sniperBullet, transform.position, Quaternion.identity).GetComponent<bulletScript>().end = hit.collider.GetComponent<EnemyBehavior>();
+                        //hit.collider.GetComponent<EnemyBehavior>().health -= 5;
                     }
                     else
                     {
@@ -468,7 +479,8 @@ public class TowerAI : MonoBehaviour
                         Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.yellow, .5f);
                         Debug.Log("Did Hit");
                         hitEnemy = true;
-                        hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        Instantiate(bullet, transform.position, Quaternion.identity).GetComponent<bulletScript>().end = hit.collider.GetComponent<EnemyBehavior>();
+                        //hit.collider.GetComponent<EnemyBehavior>().health -= 5;
                     }
                     else
                     {
@@ -503,6 +515,7 @@ public class TowerAI : MonoBehaviour
             AOETHitTimer -= Time.deltaTime;
             if (AOETHitTimer <= 0 && TargetedEnemy != null)
             {
+                Instantiate(AoE, transform.position, Quaternion.identity);
                 AOETHitTimer = AOETTimeToHit;
                 foreach (GameObject enemy in TargetedEnemyList)
                 {
@@ -542,7 +555,8 @@ public class TowerAI : MonoBehaviour
                         Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.yellow, .5f);
                         Debug.Log("Did Hit");
                         hitEnemy = true;
-                        hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        Instantiate(sniperBullet, transform.position, Quaternion.identity).GetComponent<bulletScript>().end = hit.collider.GetComponent<EnemyBehavior>();
+                        //hit.collider.GetComponent<EnemyBehavior>().health -= 5;
                         hit.collider.GetComponent<EnemyBehavior>().Stun(2);
                     }
                     else
@@ -585,7 +599,8 @@ public class TowerAI : MonoBehaviour
                         Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 1000, Color.yellow, .5f);
                         Debug.Log("Did Hit");
                         hitEnemy = true;
-                        hit.collider.GetComponent<EnemyBehavior>().health -= 5;
+                        Instantiate(bullet, transform.position, Quaternion.identity).GetComponent<bulletScript>().end = hit.collider.GetComponent<EnemyBehavior>();
+                        //hit.collider.GetComponent<EnemyBehavior>().health -= 5;
                         hit.collider.GetComponent<EnemyBehavior>().Stun(2);
                     }
                     else
