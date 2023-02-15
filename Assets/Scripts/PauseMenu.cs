@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -38,5 +39,10 @@ public class PauseMenu : MonoBehaviour
     {
         Instantiate(beastiary, new Vector3(2.0f, 0, 0), Quaternion.identity);
         Destroy(pauseMenu);
+    }
+
+    public void menuButtonPressed()
+    {
+        SceneManager.LoadScene("Title Menu");
     }
 }
