@@ -4967,7 +4967,7 @@ MonoBehaviour:
   lowerTimeLimit: 1
   upperTimeLimit: 3
   animator: {fileID: 8984191175486912443}
-  material: 8
+  material: 6
 --- !u!61 &6869032310009583359
 BoxCollider2D:
   m_ObjectHideFlags: 0
