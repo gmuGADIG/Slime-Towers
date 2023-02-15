@@ -8,6 +8,7 @@ public class MaterialObject : MonoBehaviour {
 
     public ParticleSystem collectEffect;
     public AudioClip collectSound;
+    public AudioSource audioSource;
     [SerializeField]
     private MaterialType material;
 
@@ -15,6 +16,7 @@ public class MaterialObject : MonoBehaviour {
     void Start()
     {
         collectEffect = GetComponentInChildren<ParticleSystem>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class MaterialObject : MonoBehaviour {
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 collectEffect.Play();
+                audioSource.PlayOneShot(collectSound,1.0f);
                 Destroy(gameObject,5);
             }
         }

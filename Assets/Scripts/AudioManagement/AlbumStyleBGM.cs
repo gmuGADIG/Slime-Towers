@@ -55,7 +55,7 @@ public class AlbumStyleBGM : MonoBehaviour
         //just for debugging purposes -- instantly ends current song to roll a new one
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            audioSource.Stop();
+           // audioSource.Stop();
         }
 
     }
