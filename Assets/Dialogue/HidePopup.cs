@@ -6,7 +6,7 @@ public class HidePopup : MonoBehaviour
 {
     public Behaviour[] nextScripts;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         PopupManager.instance.hide_popup();
         foreach(Behaviour action in nextScripts) {

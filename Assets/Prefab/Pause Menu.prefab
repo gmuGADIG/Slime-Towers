@@ -533,7 +533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 278580525388267408, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_Name
-      value: Bestiary Button
+      value: Codex Button
       objectReference: {fileID: 0}
     - target: {fileID: 6280028778946469330, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_Pivot.x
@@ -633,9 +633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8947032985181844666, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_text
-      value: 'Bestiary
-
-'
+      value: Codex
       objectReference: {fileID: 0}
     - target: {fileID: 8947032985181844666, guid: 93878a5af10ed8747b6b68f1b7f58f84, type: 3}
       propertyPath: m_fontStyle
