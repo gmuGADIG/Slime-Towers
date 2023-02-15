@@ -18,11 +18,13 @@ public class DrillHealth : MonoBehaviour {
     public float attackCooldown = 2.5f; //custom cooldowns for slime projectiles ?
     public float slimeSpeed = 1.5f;
 
+    public Wave wave;
 
 
     // Start is called before the first frame update
     void Start(){
         playerCamera = Camera.main;
+        wave.onWaveComplete.AddListener(playerExit);
     }
 
     // Update is called once per frame
@@ -39,7 +41,7 @@ public class DrillHealth : MonoBehaviour {
             //play drill animation
 
             //player attack
-            if (Input.GetButtonDown("Fire1") && Time.time > attackCooldown){
+            /*if (Input.GetButtonDown("Fire1") && Time.time > attackCooldown){
 
                 Debug.Log("Firing");
                 Instantiate(slimeProjectile, slimeProjectileTransform.position, Quaternion.identity);
@@ -50,24 +52,24 @@ public class DrillHealth : MonoBehaviour {
             }
             else if (Input.GetButtonDown("Fire1") && Time.time < attackCooldown) {
                 Debug.Log("recharging... Can't fire");
-            }
+            }*/
 
             //playerExit
-            if (Input.GetKeyDown(KeyCode.E) && (manager.getGameState() != GameState.ATTACK) ) {
+            /*if (Input.GetKeyDown(KeyCode.E) && (manager.getGameState() != GameState.ATTACK) ) {
                 playerExit();
             }
             //player feedback(attack phase still underway)
             else if (Input.GetKeyDown(KeyCode.E) && (manager.getGameState() == GameState.ATTACK)) {
                 Debug.Log("Sah', not safe to go out sah'");
-            }
+            }*/
 
 
 
             //*debugger code for game state switch
-            if (Input.GetKeyDown(KeyCode.T)) {
+            /*if (Input.GetKeyDown(KeyCode.T)) {
                 manager.setGameState(GameState.EXPLORE);
                 Debug.Log("Switching gamestate to EXPLORE");
-            }
+            }*/
         }
         else{
             //play drill stop animation
@@ -86,6 +88,7 @@ public class DrillHealth : MonoBehaviour {
     public void playerExit(){
         player.SetActive(true);
         playerPresent = false;
+        drillCamera.enabled = false;
         playerCamera.enabled = true;
         player.GetComponent<PlayerMovement>().playerCam.enabled = true;
     }

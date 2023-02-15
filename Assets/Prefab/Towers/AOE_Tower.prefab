@@ -104,6 +104,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   upgradePopup: {fileID: 5222672149269210214, guid: c7ad9729202c97849a524e05f56a2311, type: 3}
   selected: 0
+  WallLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &4547439763514115704
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,6 +161,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   upgradePopup: {fileID: 5222672149269210214, guid: c7ad9729202c97849a524e05f56a2311, type: 3}
   selected: 0
+  WallLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &8723824564729238091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,11 +191,13 @@ MonoBehaviour:
   timeToHit: 0.5
   hitTimer: 0
   rotationSpeed: 20
+  bullet: {fileID: 7660936910909305340, guid: 6de4963f5dffa4d4aa3cf931cb7b5038, type: 3}
   sniperTower: 0
   STBase: {fileID: 21300000, guid: 8296086150a6e4744bc3ae7dc0a308b4, type: 3}
   STTimeToHit: 4.5
   STHitTimer: 0
   STRotationSpeed: 3
+  sniperBullet: {fileID: 7660936910909305340, guid: 2fc03883cebf26f4c9434004f9c22816, type: 3}
   AOETower: 1
   AOEBase: {fileID: 21300000, guid: de395e6e5bb1f084d97363414eaa15aa, type: 3}
   AOESlimedefault: {fileID: 21300000, guid: de395e6e5bb1f084d97363414eaa15aa, type: 3}
@@ -199,6 +207,7 @@ MonoBehaviour:
   AOETTimeToHit: 7
   AOETHitTimer: 0
   AOETRotationSpeed: 3
+  AoE: {fileID: 6479018888488895946, guid: e555c927c8ffd34498123c79bdbe0746, type: 3}
   wallTower: 0
   wallBase: {fileID: 0}
 --- !u!212 &4547439763514115701
