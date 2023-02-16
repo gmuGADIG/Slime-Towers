@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Final Scenes/Crystal Cave Final.unity
     guid: a8b87f12a0986fc44b38ed236b8b6210
+  - enabled: 1
+    path: Assets/Final Scenes/Credits.unity
+    guid: e4c0a8b12ad78d64a9a634c519f865b2
   m_configObjects: {}
