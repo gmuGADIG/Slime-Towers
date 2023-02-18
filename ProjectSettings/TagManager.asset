@@ -9,6 +9,7 @@ TagManager:
   - Tower
   - enemy
   - Slime
+  - AlbumBGM
   layers:
   - Default
   - TransparentFX

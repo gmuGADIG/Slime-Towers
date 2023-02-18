@@ -8,7 +8,9 @@ using System.Collections.Generic;
 public class MasterVolumeDisplay : MonoBehaviour {
   public Slider sliderUI;
   public TMP_Text sliderText;
-    public AudioMixerGroup group;
+  public AudioMixerGroup group;
+  public AudioSource audioSource;
+  public AudioClip moveSliderSFX;
 
     public void Start() {
         sliderText = GetComponent<TMP_Text>();
@@ -18,6 +20,7 @@ public class MasterVolumeDisplay : MonoBehaviour {
         val = Mathf.Pow(10, (val)/40);
         Debug.Log(val);
         sliderUI.value = val;
+        audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -25,6 +28,7 @@ public class MasterVolumeDisplay : MonoBehaviour {
     {
         group.audioMixer.SetFloat(group.name+"Vol", Mathf.Log10(value)*40);
         sliderText.text = sliderName + Mathf.RoundToInt(sliderUI.normalizedValue * 100) + "%";
+        
     }
 
     public void ShowMasterSliderValue () {
@@ -43,5 +47,10 @@ public class MasterVolumeDisplay : MonoBehaviour {
         //Debug.Log(sliderMessage);
         //sliderText.text = sliderMessage;
         SliderChanged(sliderUI.value, "SFX Volume: ");
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(moveSliderSFX, 1.0f);
+        }
+        
     }
 }

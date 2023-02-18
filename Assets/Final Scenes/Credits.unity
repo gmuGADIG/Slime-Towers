@@ -1135,7 +1135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 0}
-  creditsSpeed: 0.26
+  creditsSpeed: 0.6
   imagePhase: 0
   gameArt:
   - {fileID: 1457248028}
